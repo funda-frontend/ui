@@ -14,7 +14,7 @@
     },
     "scripts": {
         "start": "npm run storybook",
-        "build": "build-storybook -o public -q",
+        "build": "build-storybook -o public --quiet",
         "storybook": "start-storybook",
         "release": "npx semantic-release"
     },
