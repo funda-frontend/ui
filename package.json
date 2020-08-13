@@ -14,6 +14,7 @@
     },
     "scripts": {
         "start": "npm run storybook",
+        "build": "build-storybook -s public",
         "preinstall": "npm run autoExport",
         "autoExport": "node src/auto-export-components.js",
         "storybook": "start-storybook",
