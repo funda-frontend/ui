@@ -15,8 +15,6 @@
     "scripts": {
         "start": "npm run storybook",
         "build": "build-storybook -o public -q",
-        "postinstall": "npm run autoExport",
-        "autoExport": "node ./src/auto-export-components.js",
         "storybook": "start-storybook",
         "release": "npx semantic-release"
     },
