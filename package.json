@@ -14,7 +14,9 @@
     },
     "scripts": {
         "start": "npm run storybook",
-        "build": "build-storybook -s public",
+        "build": "build-storybook -o public -q",
+        "postinstall": "npm run autoExport",
+        "autoExport": "node ./src/auto-export-components.js",
         "storybook": "start-storybook",
         "release": "npx semantic-release"
     },
@@ -33,7 +35,7 @@
         "@storybook/addon-knobs": "^5.3.19",
         "@storybook/addon-notes": "^5.3.19",
         "@storybook/addon-storysource": "^5.3.19",
-        "lodash": "4.17.19",
+        "lodash": "^4.17.19",
         "vue": "^2.6.11"
     },
     "husky": {
