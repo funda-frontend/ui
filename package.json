@@ -40,7 +40,7 @@
         "@storybook/addon-knobs": "^6.0.5",
         "@storybook/addon-notes": "^5.3.19",
         "@storybook/addon-storysource": "^6.0.5",
-        "lodash": "^4.17.19",
+        "lodash": "^4.17.20",
         "vue": "^2.6.11"
     },
     "husky": {
