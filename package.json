@@ -6,7 +6,7 @@
     "files": [
         "src"
     ],
-    "description": "Funda Vue.js components library",
+    "description": "funda's vue.js components library",
     "main": "index.js",
     "repository": "github:funda-frontend/ui",
     "publishConfig": {
