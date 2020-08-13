@@ -16,7 +16,9 @@
         "start": "npm run storybook",
         "build": "build-storybook -o public --quiet",
         "storybook": "start-storybook",
-        "release": "npx semantic-release"
+        "release": "npx semantic-release",
+        "preinstall": "autoExport",
+        "autoExport": "node ./src/auto-export-components.js"
     },
     "devDependencies": {
         "@babel/core": "^7.10.4",
