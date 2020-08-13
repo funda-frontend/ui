@@ -1,0 +1,48 @@
+{
+    "name": "@funda/ui",
+    "version": "1.0.0",
+    "author": "funda",
+    "license": "MIT",
+    "files": [
+        "src"
+    ],
+    "description": "Funda Vue.js components library",
+    "main": "index.js",
+    "repository": "github:funda-frontend/ui",
+    "publishConfig": {
+        "access": "public"
+    },
+    "scripts": {
+        "start": "npm run storybook",
+        "preinstall": "npm run autoExport",
+        "autoExport": "node src/auto-export-components.js",
+        "storybook": "start-storybook",
+        "release": "npx semantic-release"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.10.4",
+        "@storybook/vue": "^5.3.19",
+        "babel-loader": "^8.1.0",
+        "babel-preset-vue": "^2.0.2",
+        "eslint-plugin-vue": "^6.2.2",
+        "husky": "^4.2.5",
+        "lint-staged": "^10.2.11",
+        "vue-loader": "^15.9.3",
+        "vue-template-compiler": "^2.6.11"
+    },
+    "dependencies": {
+        "@storybook/addon-knobs": "^5.3.19",
+        "@storybook/addon-notes": "^5.3.19",
+        "@storybook/addon-storysource": "^5.3.19",
+        "lodash": "4.17.19",
+        "vue": "^2.6.11"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "*.{js,vue}": "eslint --fix"
+    }
+}
