@@ -32,7 +32,7 @@
         "vue-template-compiler": "^2.6.11"
     },
     "dependencies": {
-        "@storybook/addon-knobs": "^5.3.19",
+        "@storybook/addon-knobs": "^6.0.10",
         "@storybook/addon-notes": "^5.3.19",
         "@storybook/addon-storysource": "^5.3.19",
         "lodash": "^4.17.19",
