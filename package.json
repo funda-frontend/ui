@@ -22,7 +22,7 @@
     },
     "devDependencies": {
         "@babel/core": "^7.10.4",
-        "@storybook/vue": "^5.3.19",
+        "@storybook/vue": "^6.0.12",
         "babel-loader": "^8.1.0",
         "babel-preset-vue": "^2.0.2",
         "eslint-plugin-vue": "^6.2.2",
