@@ -2,7 +2,7 @@ import { action } from '@storybook/addon-actions';
 import UiButton from '@/components/ui-button.vue';
 
 export default {
-    title: 'UI Button',
+    title: 'Button',
     // Our exports that end in "Data" are not stories.
     excludeStories: /.*Data$/,
 };
@@ -13,7 +13,6 @@ export const actionsData = {
 
 export const buttonData = {
     label: 'Button',
-    type: ''
   };
 
 const buttonTemplate = `<ui-button :button="button" @handleClick="onClick"></ui-button>`;
