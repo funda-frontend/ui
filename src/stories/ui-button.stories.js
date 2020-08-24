@@ -1,3 +1,4 @@
+import { action } from '@storybook/addon-actions';
 import UiButton from '@/components/ui-button.vue';
 
 export default {
@@ -6,11 +7,15 @@ export default {
     excludeStories: /.*Data$/,
 };
 
+export const actionsData = {
+    onClick: action('onClick'),
+};
+
 export const buttonData = {
-    label: 'Just a label'
+    label: 'Button'
   };
 
-const buttonTemplate = `<ui-button :button="button"></ui-button>`;
+const buttonTemplate = `<ui-button :button="button" @handleClick="onClick"></ui-button>`;
 
 export const Default = () => ({
     components: { UiButton },
@@ -20,4 +25,33 @@ export const Default = () => ({
           default: () => buttonData,
         },
     },
+    methods: actionsData
+});
+
+export const Primary = () => ({
+    components: { UiButton },
+    template: buttonTemplate,
+    props: {
+        button: {
+          default: () => ({
+              ...buttonData,
+              label: 'Primary button'
+          })
+        },
+    },
+    methods: actionsData
+});
+
+export const Secondary = () => ({
+    components: { UiButton },
+    template: buttonTemplate,
+    props: {
+        button: {
+          default: () => ({
+              ...buttonData,
+              label: 'Secondary button'
+          })
+        },
+    },
+    methods: actionsData
 });

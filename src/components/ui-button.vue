@@ -1,6 +1,6 @@
 <template>
-    <button class="fd-btn">
-        {{ this.button.label }}
+    <button class="fd-btn" @click="handleClick">
+        {{ button.label }}
     </button>
 </template>
 
@@ -20,5 +20,10 @@ button {
         default: () => ({}),
       },
     },
+    methods: {
+        handleClick(e) {
+            this.$emit('handleClick', e);
+        }
+    }
   };
 </script>
