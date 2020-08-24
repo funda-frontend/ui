@@ -18,7 +18,8 @@
         "storybook": "start-storybook",
         "release": "npx semantic-release",
         "prepublish": "npm run autoExport",
-        "autoExport": "node ./src/auto-export-components.js"
+        "autoExport": "node ./src/auto-export-components.js",
+        "test": "jest"
     },
     "devDependencies": {
         "@babel/core": "^7.11.4",
