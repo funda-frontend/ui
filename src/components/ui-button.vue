@@ -17,7 +17,15 @@ button {
       button: {
         type: Object,
         required: true,
-        default: () => ({}),
+        default: () => ({
+            label: {
+                type: String,
+                required: true
+            },
+            type: {
+                type: String,
+            }
+        }),
       },
     },
     methods: {
