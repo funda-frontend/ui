@@ -1,4 +1,4 @@
-import UiInput from '../components/ui-input.vue';
+import UiInput from '@/components/ui-input.vue';
 import { withKnobs, boolean } from '@storybook/addon-knobs';
 
 export default {
