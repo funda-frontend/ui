@@ -12,7 +12,8 @@ export const actionsData = {
 };
 
 export const buttonData = {
-    label: 'Button'
+    label: 'Button',
+    type: ''
   };
 
 const buttonTemplate = `<ui-button :button="button" @handleClick="onClick"></ui-button>`;
@@ -35,7 +36,7 @@ export const Primary = () => ({
         button: {
           default: () => ({
               ...buttonData,
-              label: 'Primary button'
+              type: 'fd-btn--primary'
           })
         },
     },
@@ -49,7 +50,7 @@ export const Secondary = () => ({
         button: {
           default: () => ({
               ...buttonData,
-              label: 'Secondary button'
+              type: 'fd-btn--secondary'
           })
         },
     },

@@ -1,5 +1,5 @@
 <template>
-    <button class="fd-btn" @click="handleClick">
+    <button class="fd-btn" :class="button.type" @click="handleClick">
         {{ button.label }}
     </button>
 </template>
