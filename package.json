@@ -32,14 +32,14 @@
         "husky": "^4.2.5",
         "lint-staged": "^10.2.11",
         "vue-loader": "^15.9.3",
-        "vue-template-compiler": "^2.6.11"
+        "vue-template-compiler": "^2.6.12"
     },
     "dependencies": {
         "@storybook/addon-knobs": "^6.0.16",
         "@storybook/addon-notes": "^5.3.19",
         "@storybook/addon-storysource": "^6.0.16",
         "lodash": "^4.17.20",
-        "vue": "^2.6.11"
+        "vue": "^2.6.12"
     },
     "husky": {
         "hooks": {
