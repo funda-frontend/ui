@@ -31,6 +31,7 @@
         "eslint-plugin-vue": "^6.2.2",
         "husky": "^4.2.5",
         "lint-staged": "^10.2.11",
+        "semantic-release": "^17.1.1",
         "vue-loader": "^15.9.3",
         "vue-template-compiler": "^2.6.12"
     },
