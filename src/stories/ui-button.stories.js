@@ -18,7 +18,7 @@ storiesOf('Components/Button', module)
         template: buttonTemplate,
         props: {
             button: {
-              default: () => buttonData,
+                default: () => buttonData,
             },
         },
         methods: actionsData
@@ -28,11 +28,11 @@ storiesOf('Components/Button', module)
         template: buttonTemplate,
         props: {
             button: {
-              default: () => ({
-                  ...buttonData,
-                  type: 'btn--primary',
-                  label: 'Primary Button'
-              })
+                default: () => ({
+                    ...buttonData,
+                    type: 'btn--primary',
+                    label: 'Primary Button'
+                })
             },
         },
         methods: actionsData
@@ -42,11 +42,25 @@ storiesOf('Components/Button', module)
         template: buttonTemplate,
         props: {
             button: {
-              default: () => ({
-                  ...buttonData,
-                  type: 'btn--secondary',
-                  label: 'Secondary Button'
-              })
+                default: () => ({
+                    ...buttonData,
+                    type: 'btn--secondary',
+                    label: 'Secondary Button'
+                })
+            },
+        },
+        methods: actionsData
+    }))
+    .add('link', () => ({
+        components: { UiButton },
+        template: buttonTemplate,
+        props: {
+            button: {
+                default: () => ({
+                    ...buttonData,
+                    label: 'Link button',
+                    url: 'https://www.funda.nl'
+                })
             },
         },
         methods: actionsData

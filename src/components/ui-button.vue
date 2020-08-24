@@ -1,6 +1,7 @@
 <template>
     <button class="fd-btn" :class="button.type" @click="handleClick">
-        <span v-if="button.label">{{ button.label }}</span>
+        <a v-if="button.url" :href="button.url" target="_blank" :title="button.label" rel="noopener">{{ button.label }}</a>
+        <span v-else-if="button.label">{{ button.label }}</span>
         <slot v-else/>
     </button>
 </template>
@@ -13,9 +14,11 @@
         type: Object,
         required: true,
         default: () => ({
+            url: {
+                type: String,
+            },
             label: {
                 type: String,
-                required: true
             },
             type: {
                 type: String,
