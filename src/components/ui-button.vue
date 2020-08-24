@@ -12,7 +12,6 @@
     props: {
       button: {
         type: Object,
-        required: true,
         default: () => ({
             url: {
                 type: String,
@@ -28,7 +27,7 @@
     },
     methods: {
         handleClick(e) {
-            this.$emit('handleClick', e);
+            this.$emit('handleClick');
         }
     }
   };
