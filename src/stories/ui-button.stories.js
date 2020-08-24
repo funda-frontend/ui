@@ -1,6 +1,6 @@
 import { storiesOf } from '@storybook/vue'
 import { action } from '@storybook/addon-actions';
-import { withKnobs } from '@storybook/addon-knobs';
+import { withKnobs, object } from '@storybook/addon-knobs';
 import UiButton from '@/components/ui-button.vue';
 
 const actionsData = {
@@ -18,7 +18,7 @@ storiesOf('Components/Button', module)
         template: buttonTemplate,
         props: {
             button: {
-                default: () => buttonData,
+                default: object('button', { ...buttonData }),
             },
         },
         methods: actionsData
@@ -28,11 +28,11 @@ storiesOf('Components/Button', module)
         template: buttonTemplate,
         props: {
             button: {
-                default: () => ({
+                default: object('button', {
                     ...buttonData,
                     type: 'btn--primary',
                     label: 'Primary Button'
-                })
+                }),
             },
         },
         methods: actionsData
@@ -42,11 +42,11 @@ storiesOf('Components/Button', module)
         template: buttonTemplate,
         props: {
             button: {
-                default: () => ({
+                default: object('button', {
                     ...buttonData,
                     type: 'btn--secondary',
                     label: 'Secondary Button'
-                })
+                }),
             },
         },
         methods: actionsData
@@ -56,11 +56,11 @@ storiesOf('Components/Button', module)
         template: buttonTemplate,
         props: {
             button: {
-                default: () => ({
+                default: object('button', {
                     ...buttonData,
                     label: 'Link button',
                     url: 'https://www.funda.nl'
-                })
+                }),
             },
         },
         methods: actionsData
