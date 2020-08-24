@@ -17,7 +17,7 @@
         "build": "build-storybook -o public --quiet",
         "storybook": "start-storybook",
         "release": "npx semantic-release",
-        "preinstall": "npm run autoExport",
+        "prepublish": "npm run autoExport",
         "autoExport": "node ./src/auto-export-components.js"
     },
     "devDependencies": {
