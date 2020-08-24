@@ -1,6 +1,7 @@
 <template>
     <button class="fd-btn" :class="button.type" @click="handleClick">
-        {{ button.label }}
+        <span v-if="button.label">{{ button.label }}</span>
+        <slot v-else/>
     </button>
 </template>
 
@@ -31,6 +32,11 @@
 </script>
 
 <style lang="scss" scoped>
+$color-orange-2: #f7a100;
+$color-white: #FFFFFF;
+$default-radius: 2px;
+$default-transition: .25s cubic-bezier(.23,1,.32,1);
+
 button {
     line-height: 1.5;
     display: inline-flex;
@@ -38,8 +44,8 @@ button {
     height: 2.75em;
     white-space: nowrap;
     border: 1px solid transparent;
-    border-radius: 2px;
-    transition: background .25s cubic-bezier(.23,1,.32,1),box-shadow .25s cubic-bezier(.23,1,.32,1);
+    border-radius: $default-radius;
+    transition: background $default-transition, box-shadow $default-transition;
     touch-action: manipulation;
     vertical-align: middle;
     cursor: pointer;
@@ -57,7 +63,7 @@ button {
 }
 
 .btn--primary {
-    background-color: #f7a100;
+    background-color: $color-orange-2;
     color: #fff;
     box-shadow: 0 1px 0 rgba(0,0,0,.1), inset 0 0 0 rgba(0,0,0,.1);
 
@@ -65,7 +71,7 @@ button {
     &:focus,
     &:active {
         background-color: #de9000;
-        color: #fff;
+        color: $color-white;
     }
 
     &:active {

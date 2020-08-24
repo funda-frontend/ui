@@ -1,57 +1,53 @@
+import { storiesOf } from '@storybook/vue'
 import { action } from '@storybook/addon-actions';
+import { withKnobs } from '@storybook/addon-knobs';
 import UiButton from '@/components/ui-button.vue';
 
-export default {
-    title: 'Button',
-    // Our exports that end in "Data" are not stories.
-    excludeStories: /.*Data$/,
-};
-
-export const actionsData = {
+const actionsData = {
     onClick: action('onClick'),
 };
 
-export const buttonData = {
-    label: 'Button',
-  };
+const buttonData = {};
 
-const buttonTemplate = `<ui-button :button="button" @handleClick="onClick"></ui-button>`;
+const buttonTemplate = `<ui-button :button="button" @handleClick="onClick">Default Button</ui-button>`;
 
-export const Default = () => ({
-    components: { UiButton },
-    template: buttonTemplate,
-    props: {
-        button: {
-          default: () => buttonData,
+storiesOf('Components/Button', module)
+    .addDecorator(withKnobs)
+    .add('default', () => ({
+        components: { UiButton },
+        template: buttonTemplate,
+        props: {
+            button: {
+              default: () => buttonData,
+            },
         },
-    },
-    methods: actionsData
-});
-
-export const Primary = () => ({
-    components: { UiButton },
-    template: buttonTemplate,
-    props: {
-        button: {
-          default: () => ({
-              ...buttonData,
-              type: 'btn--primary'
-          })
+        methods: actionsData
+    }))
+    .add('primary', () => ({
+        components: { UiButton },
+        template: buttonTemplate,
+        props: {
+            button: {
+              default: () => ({
+                  ...buttonData,
+                  type: 'btn--primary',
+                  label: 'Primary Button'
+              })
+            },
         },
-    },
-    methods: actionsData
-});
-
-export const Secondary = () => ({
-    components: { UiButton },
-    template: buttonTemplate,
-    props: {
-        button: {
-          default: () => ({
-              ...buttonData,
-              type: 'btn--secondary'
-          })
+        methods: actionsData
+    }))
+    .add('secondary', () => ({
+        components: { UiButton },
+        template: buttonTemplate,
+        props: {
+            button: {
+              default: () => ({
+                  ...buttonData,
+                  type: 'btn--secondary',
+                  label: 'Secondary Button'
+              })
+            },
         },
-    },
-    methods: actionsData
-});
+        methods: actionsData
+    }));
