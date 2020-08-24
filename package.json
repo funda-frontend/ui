@@ -40,6 +40,7 @@
         "vue-template-compiler": "^2.6.12"
     },
     "dependencies": {
+        "@storybook/addon-actions": "^6.0.16",
         "@storybook/addon-knobs": "^6.0.16",
         "@storybook/addon-notes": "^5.3.19",
         "@storybook/addon-storysource": "^6.0.16",
