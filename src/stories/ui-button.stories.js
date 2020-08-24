@@ -35,7 +35,7 @@ export const Primary = () => ({
         button: {
           default: () => ({
               ...buttonData,
-              type: 'fd-btn--primary'
+              type: 'btn--primary'
           })
         },
     },
@@ -49,7 +49,7 @@ export const Secondary = () => ({
         button: {
           default: () => ({
               ...buttonData,
-              type: 'fd-btn--secondary'
+              type: 'btn--secondary'
           })
         },
     },
