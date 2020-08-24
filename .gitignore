@@ -5,6 +5,7 @@ public
 # local env files
 .env.local
 .env.*.local
+coverage
 
 # Log files
 npm-debug.log*
