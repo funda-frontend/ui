@@ -5,6 +5,9 @@ module.exports = extendConfig({
     extend: {
       padding: {
         33: '2rem'
+      },
+      height: {
+        11: '2.75rem'
       }
     }
   }
