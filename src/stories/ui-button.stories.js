@@ -32,7 +32,7 @@ export const SecondaryAlt = () => ({
 
 export const Tertiary = () => ({
   components: { UiButtonTertiary },
-  template: '<ui-button-tertiary>Testing button text</ui-tertiary-button>',
+  template: '<ui-button-tertiary>Testing button text</ui-button-tertiary>',
 });
 
 export const TertiaryAlt = () => ({

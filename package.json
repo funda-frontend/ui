@@ -15,7 +15,7 @@
     "scripts": {
         "start": "npm run storybook",
         "build": "build-storybook -o public --quiet",
-        "storybook": "start-storybook",
+        "storybook": "start-storybook -s ./static",
         "release": "npx semantic-release",
         "prepublish": "npm run autoExport",
         "autoExport": "node ./src/auto-export-components.js",
