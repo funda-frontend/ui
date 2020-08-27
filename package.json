@@ -24,6 +24,7 @@
     "devDependencies": {
         "@babel/core": "^7.11.4",
         "@babel/preset-env": "^7.11.0",
+        "@funda/tailwind-config": "^1.1.0",
         "@semantic-release/changelog": "^5.0.1",
         "@semantic-release/commit-analyzer": "^8.0.1",
         "@semantic-release/git": "^9.0.0",
@@ -32,6 +33,7 @@
         "@storybook/vue": "^6.0.16",
         "@testing-library/jest-dom": "^5.11.4",
         "@testing-library/vue": "^5.0.4",
+        "autoprefixer": "^9.8.6",
         "babel-eslint": "^10.1.0",
         "babel-jest": "^26.3.0",
         "babel-loader": "^8.1.0",
@@ -43,9 +45,9 @@
         "jest-serializer-vue": "^2.0.2",
         "jest-watch-typeahead": "^0.6.0",
         "lint-staged": "^10.2.11",
-        "sass": "^1.26.10",
-        "sass-loader": "^10.0.1",
+        "postcss-loader": "^3.0.0",
         "semantic-release": "^17.1.1",
+        "tailwindcss": "^1.7.5",
         "vue-jest": "^3.0.6",
         "vue-loader": "^15.9.3",
         "vue-template-compiler": "^2.6.12"

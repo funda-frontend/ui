@@ -1,5 +1,5 @@
 <template>
-    <div class="fd-form-control__input">
+    <div class="fd-border-dashed fd-border-4 fd-border-orange-1">
         <input
             :id="id"
             v-model.lazy="imodel"
