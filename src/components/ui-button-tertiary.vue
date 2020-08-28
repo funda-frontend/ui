@@ -1,5 +1,5 @@
 <template>
-    <ui-button class="fd-text-blue-2 fd-border-0 hover:fd-text-blue-1">
+    <ui-button class="ui-text-blue-2 ui-border-0 hover:ui-text-blue-1">
         <slot/>
     </ui-button>
 </template>

@@ -1,5 +1,5 @@
 <template>
-    <button class="fd-leading-6 fd-inline-flex fd-h-11 fd-whitespace-no-wrap fd-border-solid fd-rounded-sm fd-align-middle fd-cursor-pointer fd-text-center fd-items-center fd-justify-center">
+    <button class="ui-leading-6 ui-inline-flex ui-h-11 ui-whitespace-no-wrap ui-border-solid ui-rounded-sm ui-align-middle ui-cursor-pointer ui-text-center ui-items-center ui-justify-center">
         <slot/>
     </button>
 </template>
