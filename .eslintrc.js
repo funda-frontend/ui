@@ -1,20 +1,24 @@
 module.exports = {
-    "env": {
-        "browser": true,
-        "es2020": true
-    },
-    "extends": [
-        "plugin:vue/essential",
+    extends: [
+        'eslint:recommended',
+        'plugin:vue/recommended',
+        'prettier/vue',
+        'plugin:prettier/recommended',
     ],
-    "parser": "vue-eslint-parser",
-    "parserOptions": {
-        "parser": "babel-eslint",
-        "ecmaVersion": 12,
-        "sourceType": "module",
+    rules: {
+        quotes: ['warn', 'single', { avoidEscape: true }],
+        'no-console': ['warn'],
     },
-    "plugins": [
-        "vue"
-    ],
-    "rules": {
-    }
+    parser: 'vue-eslint-parser',
+    parserOptions: {
+        parser: 'babel-eslint',
+        ecmaVersion: 2020,
+    },
+    env: {
+        browser: true,
+        commonjs: true,
+        es6: true,
+        node: true,
+        jest: true,
+    },
 };
