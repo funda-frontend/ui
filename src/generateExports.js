@@ -1,14 +1,20 @@
 /*
  * This code's final goal is to produce a file, listing all component imports, and export them.
- * 
+ *
  * @const `dir` The directory holding the components for our list.
  * @var `indexPath.` The file to which we'll write the list, the end result.
  * @const `extension` The component's file type extension.
- * 
+ *
  * Hint: Read this code starting at autoExportComponents(); to understand it's overall cohereance.
-*/
+ */
 const { join, resolve } = require('path');
-const { readdirSync, existsSync, unlink, writeFile, appendFile } = require('fs');
+const {
+    readdirSync,
+    existsSync,
+    unlink,
+    writeFile,
+    appendFile,
+} = require('fs');
 const { camelCase, upperFirst } = require('lodash');
 
 const dir = join(resolve(), 'src/components');
@@ -27,7 +33,7 @@ function getFilesFromDir() {
 
 function removeExtensionFromFiles(items) {
     let componentsArr = [];
-    items.forEach(item => {
+    items.forEach((item) => {
         let tempItem = {};
         tempItem['name'] = createComponentName(item);
         tempItem['file'] = item;
@@ -54,15 +60,15 @@ function getComponents() {
 }
 
 function createDataString() {
-    if(components && components.length) {
-        components.forEach(component => {
-        data += `
+    if (components && components.length) {
+        components.forEach((component) => {
+            data += `
 import ${component.name} from './components/${component.file}'; `;
         });
 
         data += `
 
-export { ${components.map(component => component.name)} };`;
+export { ${components.map((component) => component.name)} };`;
     }
 }
 
@@ -79,7 +85,7 @@ function createIndexFile() {
 }
 
 function addDataToFile() {
-    appendFile(indexPath, data, (err) => logError(err));
+    appendFile(indexPath, data.trim(), (err) => logError(err));
 }
 
 function exportComponents() {
