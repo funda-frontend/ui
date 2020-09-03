@@ -1,5 +1,4 @@
 <template>
-    <div class="fd-form-control__input">
         <input
             :id="id"
             v-model.lazy="imodel"
@@ -10,7 +9,6 @@
             :disabled="disabled"
             @input="$emit('update:model', $event.target.value)"
         />
-    </div>
 </template>
 
 <script>
