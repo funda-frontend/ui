@@ -4,7 +4,8 @@
     "author": "funda",
     "license": "MIT",
     "files": [
-        "src"
+        "src/components/",
+        "src/index.js"
     ],
     "description": "funda's vue.js components library",
     "main": "index.js",
@@ -56,9 +57,6 @@
         "vue-template-compiler": "^2.6.12"
     },
     "dependencies": {
-        "@storybook/addon-knobs": "^6.0.16",
-        "@storybook/addon-notes": "^5.3.19",
-        "@storybook/addon-storysource": "^6.0.16",
         "lodash": "^4.17.20",
         "vue": "^2.6.12"
     },
