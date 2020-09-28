@@ -50,7 +50,7 @@
         "lint-staged": "^10.2.11",
         "postcss-loader": "^3.0.0",
         "semantic-release": "^17.1.1",
-        "tailwindcss": "^1.7.5",
+        "tailwindcss": "^1.8.10",
         "vue-eslint-parser": "^7.1.0",
         "vue-jest": "^3.0.6",
         "vue-loader": "^15.9.3",
