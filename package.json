@@ -23,7 +23,7 @@
         "test": "jest"
     },
     "devDependencies": {
-        "@babel/core": "^7.11.4",
+        "@babel/core": "^7.11.6",
         "@babel/preset-env": "^7.11.0",
         "@funda/tailwind-config": "^2.0.0",
         "@semantic-release/changelog": "^5.0.1",
