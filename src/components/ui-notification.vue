@@ -3,9 +3,9 @@
         :class="cssClasses"
         class="ui-items-center ui-flex ui-rounded-sm ui-p-3"
     >
-        <span class="ui-mr-3" :aria-label="tone">
+        <span class="ui-mr-3" :aria-label="type">
             <svg
-                v-if="tone === 'information'"
+                v-if="type === 'information'"
                 class="ui-align-middle ui-w-6 ui-h-6 ui-text-dark-2"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 48 48"
@@ -19,7 +19,7 @@
             </svg>
 
             <svg
-                v-if="tone === 'error'"
+                v-if="type === 'error'"
                 class="ui-align-middle ui-w-6 ui-h-6 ui-text-red-1"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 48 48"
@@ -51,7 +51,7 @@
             </svg>
 
             <svg
-                v-if="tone === 'success'"
+                v-if="type === 'success'"
                 class="ui-align-middle ui-w-6 ui-h-6 ui-text-green-1"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 48 48"
@@ -68,7 +68,7 @@
             </svg>
 
             <svg
-                v-if="tone === 'warning'"
+                v-if="type === 'warning'"
                 class="ui-align-middle ui-w-6 ui-h-6 ui-text-yellow-1"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 48 48"
@@ -102,34 +102,14 @@
             </svg>
         </span>
 
-        <p class="ui-m-0 ui-flex-auto">
-            <slot />
-        </p>
-
-        <button
-            type="button"
-            class="ui-leading-6 ui-rounded-sm ui-px-6 ui-h-11 ui-inline-flex ui-text-center ui-items-center ui-justify-centerui-align-middle ui-cursor-pointer ui-whitespace-no-wrap ui-ml-3 ui-bg-transparent ui-border-none ui-p-0 ui-h-auto ui-border-0 ui-text-dark-2"
-            aria-label="Close"
-        >
-            <span aria-hidden="true">
-                <svg
-                    class="ui-align-middle ui-w-6 ui-h-6"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 48 48"
-                >
-                    <path
-                        d="M26.12 24l10.61-10.61a1.5 1.5 0 0 0 0-2.12 1.5 1.5 0 0 0-2.12 0L24 21.88 13.39 11.27a1.5 1.5 0 1 0-2.12 2.12L21.88 24 11.27 34.61a1.5 1.5 0 1 0 2.12 2.12L24 26.12l10.61 10.61a1.5 1.5 0 0 0 2.12 0 1.5 1.5 0 0 0 0-2.12z"
-                    ></path>
-                </svg>
-            </span>
-        </button>
+        <slot name="notificationBody" />
     </div>
 </template>
 
 <script>
 export default {
     props: {
-        tone: {
+        type: {
             type: String,
             default: 'information',
             validator: (value) =>
@@ -143,7 +123,7 @@ export default {
                 error: 'ui-bg-red-2',
                 success: 'ui-bg-green-2',
                 warning: 'ui-bg-yellow-2',
-            }[this.tone];
+            }[this.type];
         },
     },
 };
