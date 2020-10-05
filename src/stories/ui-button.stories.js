@@ -23,7 +23,10 @@ export default {
 const Template = (args, { argTypes }) => ({
     props: Object.keys(argTypes),
     components: { UiButton },
-    template: '<ui-button :tone="tone">Example button</ui-button>',
+    template: `<div>
+            <ui-button :tone="tone">Example button</ui-button>
+            <ui-button href="#" :tone="tone">Example link</ui-button>
+        </div>`,
 });
 
 export const Button = Template.bind({});
