@@ -48,7 +48,7 @@
         "jest-serializer-vue": "^2.0.2",
         "jest-watch-typeahead": "^0.6.1",
         "lint-staged": "^10.4.0",
-        "postcss-loader": "^4.0.2",
+        "postcss-loader": "^4.0.3",
         "semantic-release": "^17.1.2",
         "tailwindcss": "^1.8.10",
         "vue-eslint-parser": "^7.1.0",
