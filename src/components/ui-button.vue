@@ -1,8 +1,8 @@
 <template>
-    <button
-        :class="cssClasses"
-        class="ui-leading-6 ui-inline-flex ui-h-11 ui-whitespace-no-wrap ui-border-solid ui-rounded-sm ui-align-middle ui-cursor-pointer ui-text-center ui-items-center ui-justify-center"
-    >
+    <a v-if="href" :href="href" :class="cssClasses">
+        <slot />
+    </a>
+    <button v-else :class="cssClasses">
         <slot />
     </button>
 </template>
@@ -10,6 +10,10 @@
 <script>
 export default {
     props: {
+        href: {
+            type: String,
+            default: null,
+        },
         tone: {
             type: String,
             default: 'primary',
@@ -26,7 +30,7 @@ export default {
     },
     computed: {
         cssClasses() {
-            return {
+            const specificClasses = {
                 primary:
                     'ui-px-6 ui-border ui-bg-orange-2 ui-border-orange-2 ui-text-white ui-shadow hover:ui-bg-orange-1 hover:ui-border-orange-1',
                 'primary-alt':
@@ -39,7 +43,12 @@ export default {
                 transparent:
                     'ui-px-6 ui-border ui-text-white ui-bg-transparent hover:ui-bg-white hover:ui-bg-opacity-25',
             }[this.tone];
+            return this.defaultClasses + specificClasses;
         },
+    },
+    created() {
+        this.defaultClasses =
+            'ui-leading-6 ui-inline-flex ui-h-11 ui-whitespace-no-wrap ui-border-solid ui-rounded-sm ui-align-middle ui-cursor-pointer ui-text-center ui-items-center ui-justify-center ';
     },
 };
 </script>
