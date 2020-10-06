@@ -1,3 +1,11 @@
+## [1.0.1](https://github.com/funda-frontend/ui/compare/v1.0.0...v1.0.1) (2020-10-06)
+
+
+### Bug Fixes
+
+* **button:** anchors can look like buttons ([32068f3](https://github.com/funda-frontend/ui/commit/32068f3560729e20cc373b01b8ed4a4f5884b99c))
+* **release:** change tokens ([918f661](https://github.com/funda-frontend/ui/commit/918f6614ba0e1e26e30a798fbbc5a513200dc1a3))
+
 # 1.0.0 (2020-10-06)
 
 
