@@ -23,5 +23,7 @@ jobs:
         if: github.actor == 'dependabot[bot]' || github.actor == 'dependabot-preview[bot]'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          UPDATE_LABELS: dependencies
+          UPDATE_METHOD: rebase
           MERGE_LABELS: dependencies
           MERGE_METHOD: rebase
