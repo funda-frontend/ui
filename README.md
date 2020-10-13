@@ -4,3 +4,6 @@
 # Funda UI component library
 
 This project is currently a work in progress, hence it's barebone's appearance and lack of actual components.
+
+# Latest
+https://funda-frontend.github.io/ui/latest/
