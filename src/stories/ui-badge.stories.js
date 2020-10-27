@@ -7,7 +7,7 @@ export default {
 
 const Template = () => ({
     components: { UiBadge },
-    template: '<ui-badge>Badge</ui-button>',
+    template: '<ui-badge>Badge</ui-badge>',
 });
 
 export const Badge = Template.bind({});
