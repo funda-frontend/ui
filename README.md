@@ -4,8 +4,6 @@
 # Funda UI component library
 
 This project is currently a work in progress, you'll find some components but it's incomplete at the moment.
-Find the list of components and their development status here:<br>
-[Component & directive development status - Intranet page](https://intranet.funda.nl/pages/viewpage.action?spaceKey=prodev&title=Vue+component+library#Vuecomponentlibrary-Component&directivedevelopmentstatus)
 
 # Latest
 https://funda-frontend.github.io/ui/latest/
