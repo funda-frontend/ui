@@ -3,15 +3,16 @@
         class="ui-fixed ui-top-0 ui-right-0 ui-overflow-x-hidden ui-z-175 ui-max-w-sm"
     >
         <div
-            class="ui-shadow ui-relative ui-rounded-sm ui-bg-white ui-border-solid ui-border-l-4 ui-border-blue-2 ui-flex ui-items-baseline ui-p-4 ui-pr-10 ui-m-3"
+            class="ui-shadow ui-relative ui-rounded-sm ui-bg-white ui-border-solid ui-border-l-4 ui-flex ui-items-baseline ui-p-4 ui-pr-10 ui-m-3"
+            :class="borderClass"
         >
-            <span class="ui-text-green-1 ui-mr-3" aria-label="Success">
+            <span :class="textClass" class="ui-mr-3" :aria-label="type">
                 <svg
-                    class="ui-text-green-1"
+                    :class="textClass"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 48 48"
                 >
-                    <g id="Sucess">
+                    <g :id="type">
                         <path
                             d="M33.91,18.66a1.5,1.5,0,0,0-2.12,0l-11,11L16.23,25a1.5,1.5,0,1,0-2.12,2.12l5.65,5.65h0a1.5,1.5,0,0,0,2.12,0h0l12-12A1.5,1.5,0,0,0,33.91,18.66Z"
                         />
@@ -53,5 +54,37 @@ export default {
     components: {
         UiButton,
     },
+    props: {
+        type: {
+            type: String,
+            default: 'information',
+            validator: (value) =>
+                ['information', 'error', 'success', 'warning'].includes(value),
+        },
+    },
+    computed: {
+        textClass() {
+            return {
+                information: 'ui-text-blue-2',
+                error: 'ui-text-red-2',
+                success: 'ui-text-green-2',
+                warning: 'ui-text-yellow-2',
+            }[this.type];
+        },
+        borderClass() {
+            return {
+                information: 'ui-border-blue-2',
+                error: 'ui-border-red-1',
+                success: 'ui-border-green-1',
+                warning: 'ui-border-yellow-1',
+            }[this.type];
+        },
+    },
 };
 </script>
+
+<style scoped>
+svg:not([fill]) {
+    fill: currentColor;
+}
+</style>
