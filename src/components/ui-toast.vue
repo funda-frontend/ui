@@ -4,7 +4,7 @@
     >
         <div
             class="toast__content ui-shadow ui-relative ui-rounded-sm ui-bg-white ui-border-solid ui-border-l-4 ui-flex ui-p-4 ui-pr-10 ui-m-3"
-            :class="cssClasses"
+            :class="[borderColorClass, animationClass]"
         >
             <div class="ui-mr-3" :aria-label="type">
                 <svg
@@ -150,15 +150,27 @@ export default {
             validator: (value) =>
                 ['information', 'error', 'success', 'warning'].includes(value),
         },
+        animation: {
+            type: String,
+            default: 'none',
+            validator: (value) =>
+                ['none', 'animation--fade-right'].includes(value),
+        },
     },
     computed: {
-        cssClasses() {
+        borderColorClass() {
             return {
                 information: 'ui-border-blue-2',
                 error: 'ui-border-red-1',
                 success: 'ui-border-green-1',
                 warning: 'ui-border-yellow-1',
             }[this.type];
+        },
+        animationClass() {
+            if (this.animation === 'none') {
+                return false;
+            }
+            return 'animation--fade-right';
         },
     },
 };
@@ -171,6 +183,26 @@ export default {
 
 .toast__content:hover > .toast__close {
     opacity: 1;
+}
+
+.animation--fade-right {
+    -webkit-animation: fd-fade-right 0.6s 1 ease-out;
+    animation: fd-fade-right 0.6s 1 ease-out;
+}
+
+@keyframes fd-fade-right {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
 
 svg:not([fill]) {
