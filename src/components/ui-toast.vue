@@ -3,7 +3,7 @@
         class="toast ui-fixed ui-top-0 ui-right-0 ui-overflow-x-hidden ui-z-175 ui-max-w-sm"
     >
         <div
-            class="toast__content ui-shadow ui-relative ui-rounded-sm ui-bg-white ui-border-solid ui-border-l-4 ui-flex ui-items-baseline ui-p-4 ui-pr-10 ui-m-3"
+            class="toast__content ui-shadow ui-relative ui-rounded-sm ui-bg-white ui-border-solid ui-border-l-4 ui-flex ui-p-4 ui-pr-10 ui-m-3"
             :class="cssClasses"
         >
             <div class="ui-mr-3" :aria-label="type">
@@ -165,6 +165,10 @@ export default {
 </script>
 
 <style scoped>
+.toast__close {
+    transition: opacity 0.25s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
 .toast__content:hover > .toast__close {
     opacity: 1;
 }
