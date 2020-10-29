@@ -1,8 +1,5 @@
 <template>
-    <div
-        :class="cssClasses"
-        class="ui-items-center ui-flex ui-rounded-sm ui-p-3"
-    >
+    <div :class="cssClasses" class="ui-items-center ui-flex ui-rounded ui-p-3">
         <span class="ui-mr-3" :aria-label="type">
             <svg
                 v-if="type === 'information'"
