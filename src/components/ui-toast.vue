@@ -1,9 +1,9 @@
 <template>
     <div
-        class="toast ui-fixed ui-top-0 ui-right-0 ui-overflow-x-hidden ui-z-175 ui-max-w-sm"
+        class="ui-fixed ui-top-0 ui-right-0 ui-overflow-x-hidden ui-z-175 ui-max-w-sm"
     >
         <div
-            class="toast__content ui-shadow ui-relative ui-rounded-sm ui-bg-white ui-border-solid ui-border-l-4 ui-flex ui-p-4 ui-pr-10 ui-m-3"
+            class="ui-group ui-shadow ui-relative ui-rounded-sm ui-bg-white ui-border-solid ui-border-l-4 ui-flex ui-p-4 ui-pr-10 ui-m-3"
             :class="[borderColorClass, animationClass]"
         >
             <div class="ui-mr-3" :aria-label="type">
@@ -118,7 +118,7 @@
 
             <ui-button
                 tone="tertiary"
-                class="toast__close ui-top-0 ui-right-0 ui-absolute ui-px-2 ui-opacity-0"
+                class="ui-top-0 ui-right-0 ui-absolute ui-px-2 ui-opacity-0 group-hover:ui-opacity-100"
             >
                 <span class="ui-w-6 ui-h-6" aria-hidden="true">
                     <svg
@@ -177,14 +177,6 @@ export default {
 </script>
 
 <style scoped>
-.toast__close {
-    transition: opacity 0.25s cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-.toast__content:hover > .toast__close {
-    opacity: 1;
-}
-
 .animation--fade-right {
     -webkit-animation: fd-fade-right 0.6s 1 ease-out;
     animation: fd-fade-right 0.6s 1 ease-out;
