@@ -1,7 +1,7 @@
 import UiLabel from '@/components/ui-label.vue';
 
 export default {
-    title: 'Forms',
+    title: 'Forms/Label',
     component: UiLabel,
 };
 

@@ -1,7 +1,7 @@
 import UiButton from '@/components/ui-button.vue';
 
 export default {
-    title: 'Forms',
+    title: 'Forms/Button',
     component: UiButton,
     argTypes: {
         tone: {
