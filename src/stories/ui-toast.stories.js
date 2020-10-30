@@ -10,10 +10,9 @@ export default {
                 options: ['information', 'error', 'success', 'warning'],
             },
         },
-        animation: {
+        show: {
             control: {
-                type: 'select',
-                options: ['none', 'animation--fade-right'],
+                options: [true, false],
             },
         },
     },
@@ -23,11 +22,11 @@ const Template = (args, { argTypes }) => ({
     props: Object.keys(argTypes),
     components: { UiToast },
     template:
-        '<ui-toast :type="type" :animation="animation">Toast lorem ipsum sitamet doloris.</ui-toast>',
+        '<ui-toast :type="type" :show="show">Toast lorem ipsum sitamet doloris.</ui-toast>',
 });
 
 export const Toast = Template.bind({});
 Toast.args = {
     type: 'information',
-    animation: 'none',
+    show: true,
 };
