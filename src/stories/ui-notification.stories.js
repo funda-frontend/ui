@@ -1,7 +1,7 @@
 import UiNotification from '@/components/ui-notification.vue';
 
 export default {
-    title: 'Informational',
+    title: 'Informational/Notification',
     component: UiNotification,
     argTypes: {
         type: {
