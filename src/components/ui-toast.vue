@@ -123,6 +123,7 @@
                 <ui-button
                     tone="tertiary"
                     class="ui-top-0 ui-right-0 ui-absolute ui-px-2 ui-opacity-0 group-hover:ui-opacity-100"
+                    @click="close"
                 >
                     <span class="ui-w-6 ui-h-6" aria-hidden="true">
                         <svg
@@ -168,6 +169,11 @@ export default {
                 success: 'ui-border-green-1',
                 warning: 'ui-border-yellow-1',
             }[this.type];
+        },
+    },
+    methods: {
+        close() {
+            this.$emit('close');
         },
     },
 };
