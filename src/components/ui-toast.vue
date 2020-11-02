@@ -2,7 +2,7 @@
     <div
         class="ui-fixed ui-top-0 ui-right-0 ui-overflow-x-hidden ui-z-175 ui-max-w-sm"
     >
-        <transition name="animation--fade-right">
+        <transition name="ui-animate-fade-right">
             <div
                 v-if="show"
                 class="ui-group ui-shadow ui-relative ui-rounded-sm ui-bg-white ui-border-solid ui-border-l-4 ui-flex ui-p-4 ui-pr-10 ui-m-3"
@@ -174,31 +174,6 @@ export default {
 </script>
 
 <style scoped>
-.animation--fade-right-enter-active {
-    -webkit-animation: fd-fade-right 0.6s 1 ease-out;
-    animation: fd-fade-right 0.6s 1 ease-out;
-}
-
-.animation--fade-right-leave-active {
-    -webkit-animation: fd-fade-right 0.6s 1 ease-out reverse;
-    animation: fd-fade-right 0.6s 1 ease-out reverse;
-}
-
-@keyframes fd-fade-right {
-    0% {
-        opacity: 0;
-        transform: translateX(100%);
-    }
-
-    50% {
-        opacity: 1;
-    }
-
-    100% {
-        transform: translateX(0);
-    }
-}
-
 svg:not([fill]) {
     fill: currentColor;
 }
