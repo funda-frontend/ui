@@ -11,7 +11,7 @@
                 <div class="ui-mr-3" :aria-label="type">
                     <svg
                         v-if="type === 'information'"
-                        class="ui-align-middle ui-w-6 ui-h-6 ui-text-blue-2"
+                        class="ui-align-middle ui-w-6 ui-h-6 ui-text-blue-2 ui-fill-current"
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 48 48"
                     >
@@ -34,7 +34,7 @@
 
                     <svg
                         v-if="type === 'error'"
-                        class="ui-align-middle ui-w-6 ui-h-6 ui-text-red-1"
+                        class="ui-align-middle ui-w-6 ui-h-6 ui-text-red-1 ui-fill-current"
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 48 48"
                     >
@@ -66,7 +66,7 @@
 
                     <svg
                         v-if="type === 'success'"
-                        class="ui-align-middle ui-w-6 ui-h-6 ui-text-green-1"
+                        class="ui-align-middle ui-w-6 ui-h-6 ui-text-green-1 ui-fill-current"
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 48 48"
                     >
@@ -83,7 +83,7 @@
 
                     <svg
                         v-if="type === 'warning'"
-                        class="ui-align-middle ui-w-6 ui-h-6 ui-text-yellow-1"
+                        class="ui-align-middle ui-w-6 ui-h-6 ui-text-yellow-1 ui-fill-current"
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 48 48"
                     >
@@ -127,7 +127,7 @@
                 >
                     <span class="ui-w-6 ui-h-6" aria-hidden="true">
                         <svg
-                            class="ui-align-middle ui-w-6 ui-h-6"
+                            class="ui-align-middle ui-w-6 ui-h-6 ui-fill-current"
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 48 48"
                         >
@@ -178,9 +178,3 @@ export default {
     },
 };
 </script>
-
-<style scoped>
-svg:not([fill]) {
-    fill: currentColor;
-}
-</style>
