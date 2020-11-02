@@ -122,7 +122,7 @@
 
                 <ui-button
                     tone="tertiary"
-                    class="ui-top-0 ui-right-0 ui-absolute ui-px-2 ui-opacity-0 group-hover:ui-opacity-100"
+                    class="ui-top-0 ui-right-0 ui-absolute ui-px-2 ui-opacity-0 group-hover:ui-opacity-100 focus:ui-outline-none active:ui-outline-none hover:ui-outline-none"
                     @click="close"
                 >
                     <span class="ui-w-6 ui-h-6" aria-hidden="true">

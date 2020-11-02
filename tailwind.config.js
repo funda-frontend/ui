@@ -29,5 +29,6 @@ module.exports = extendConfig({
     },
     variants: {
         opacity: ['group-hover'],
+        outline: ['active, focus'],
     },
 });
