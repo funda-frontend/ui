@@ -157,7 +157,7 @@ export default {
         },
         show: {
             type: Boolean,
-            default: true,
+            default: false,
         },
     },
     computed: {
