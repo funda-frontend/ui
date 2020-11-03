@@ -19,12 +19,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Auto merge
-        uses: pascalgn/automerge-action@v0.12.0
+        uses: harupy/comment-on-pr@master
         if: github.actor == 'dependabot[bot]' || github.actor == 'dependabot-preview[bot]'
         env:
-          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-          UPDATE_LABELS: "dependencies"
-          UPDATE_METHOD: "rebase"
-          MERGE_LABELS: "automerge, dependencies, !wip"
-          MERGE_METHOD: "rebase"
-          MERGE_DELETE_BRANCH: "true"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          filename: merge.md
