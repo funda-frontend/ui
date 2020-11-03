@@ -1,3 +1,32 @@
+# [1.1.0](https://github.com/funda-frontend/ui/compare/v1.0.0...v1.1.0) (2020-11-03)
+
+
+### Bug Fixes
+
+* **button:** anchors can look like buttons ([32068f3](https://github.com/funda-frontend/ui/commit/32068f3560729e20cc373b01b8ed4a4f5884b99c))
+* **button:** fix mismatching end tag ([e365091](https://github.com/funda-frontend/ui/commit/e365091fde5bf1e6b44e0150596f8aa08fd8753c))
+* **label:** create label component and add it to storybook ([d10f3e3](https://github.com/funda-frontend/ui/commit/d10f3e3375274fa5a935126a76dc3f9bbbcc7bee))
+* **navigation:** migrate navigation after deprecated support for duplicate kinds from storybook ([b354da0](https://github.com/funda-frontend/ui/commit/b354da05ec307a79fce586d30ada50fd995b58a7))
+* **readme:** remove internal link from readme copy ([2051717](https://github.com/funda-frontend/ui/commit/20517172c21d28015b5d04ef3cd6ef26e731bceb))
+* **readme:** update the readme to reflect the current situation better ([829ab47](https://github.com/funda-frontend/ui/commit/829ab47e61aa7b781aec5402385ba6ac62968b05))
+* **release:** change tokens ([1a78b0b](https://github.com/funda-frontend/ui/commit/1a78b0ba4d5b78b4574cabb77bbb0238b7312d3f))
+* **toast:** add icons and hovered close button ([da95f34](https://github.com/funda-frontend/ui/commit/da95f347cefb7bcdacb0ef79f04dd34320b81477))
+* **toast:** add rainbow unicorn awesome sparkling tailwind custom animation ([814aa67](https://github.com/funda-frontend/ui/commit/814aa67050a4f9c359d6c21d7f6ff9abee00f7c1))
+* **toast:** add story and basic knobs WIP ([9993591](https://github.com/funda-frontend/ui/commit/9993591efc1a76bc8720ffbfc07ba47fda879e05))
+* **toast:** add superAwesomeDeluxeTm tailwind svg color fill class ([4b07a9b](https://github.com/funda-frontend/ui/commit/4b07a9bcbdada1f2e21f0a8c954c1243be879f6d))
+* **toast:** add transition on close btn and fix text alignment ([7939a27](https://github.com/funda-frontend/ui/commit/7939a2744490ace060c1891c9fa52877165b4b07))
+* **toast:** hide the toast by default ([764ce08](https://github.com/funda-frontend/ui/commit/764ce08d6149ef71de6c9e49b36cb907c72effa6))
+* **toast:** remove outline on hover, focus and active states ([eff96aa](https://github.com/funda-frontend/ui/commit/eff96aaffb558c313bdb75d24c0237176b57dcb4))
+* **toast:** remove unneeded classes and add tailwind hover for close button ([4d5a347](https://github.com/funda-frontend/ui/commit/4d5a3478a3a52ee813d49fb951b8e13692a70d68))
+
+
+### Features
+
+* **toast:** add animation to toast ([38b51a3](https://github.com/funda-frontend/ui/commit/38b51a3f32a7d1f7930ddf0ce1a501585e3fcfc2))
+* **toast:** add basic template and styles of toast ([ee58790](https://github.com/funda-frontend/ui/commit/ee587900d0322a7bc42601a9037e678a4837aa18))
+* **toast:** add close event on close button click ([bbcad5b](https://github.com/funda-frontend/ui/commit/bbcad5b0e3188ccb97aa3955773ea4257c6f8904))
+* **toast:** add vue transition animation ([e9f2ca1](https://github.com/funda-frontend/ui/commit/e9f2ca110297d7a5404f0027b777d436c521ca72))
+
 # 1.0.0 (2020-10-06)
 
 
