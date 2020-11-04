@@ -9,14 +9,17 @@
             v-bind="$attrs"
             v-on="$listeners"
         />
-        <p v-if="!isValid" class="ui-text-red-1 ui-mt-1">
-            {{ validationMessage }}
-        </p>
+        <ui-error-message v-if="!isValid" :message="validationMessage" />
     </div>
 </template>
 
 <script>
+import UiErrorMessage from '@/components/ui-error-message.vue';
+
 export default {
+    components: {
+        UiErrorMessage,
+    },
     inheritAttrs: false,
     props: {
         type: {
