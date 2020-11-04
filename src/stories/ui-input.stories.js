@@ -37,7 +37,7 @@ const Template = (args, { argTypes }) => ({
     props: Object.keys(argTypes),
     components: { UiInput },
     template:
-        '<ui-input :prefixText="prefixText" :sufixText="sufixText" @change="onChange" :type="type" :isValid="isValid" placeHolder="placeHolder" :validationMessage="validationMessage" :value="value"/>',
+        '<ui-input :prefixText="prefixText" :sufixText="sufixText" @change="onChange" :type="type" :isValid="isValid" placeHolder="placeHolder" :validationMessage="validationMessage" :value="value" />',
 });
 
 export const Input = Template.bind({});
