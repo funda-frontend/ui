@@ -29,7 +29,7 @@ const Template = (args, { argTypes }) => ({
     props: Object.keys(argTypes),
     components: { UiSelect },
     template:
-        '<ui-select @change="onChange" data-renan :options="options" :selected="selected">Select</ui-select>',
+        '<ui-select @change="onChange" :options="options" :selected="selected">Select</ui-select>',
 });
 
 export const Select = Template.bind({});
