@@ -1,3 +1,12 @@
+# [1.2.0](https://github.com/funda-frontend/ui/compare/v1.1.0...v1.2.0) (2020-11-04)
+
+
+### Features
+
+* **select:** add select component ([4e58f30](https://github.com/funda-frontend/ui/commit/4e58f30da3ae00dc472c9cd85e12f60d4d857192))
+* **select:** add select component ([fae0ed6](https://github.com/funda-frontend/ui/commit/fae0ed6b70500194c7e52bc4174cbf1339c5242e))
+* **select:** add select component ([ddf1f66](https://github.com/funda-frontend/ui/commit/ddf1f66064f0e8bc96f5d72ffc10f065c00473c0))
+
 # [1.1.0](https://github.com/funda-frontend/ui/compare/v1.0.0...v1.1.0) (2020-11-03)
 
 
