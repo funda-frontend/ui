@@ -3,8 +3,9 @@
         class="ui-relative ui-container ui-rounded-sm ui-rounded-sm ui-border ui-border-light-1 ui-bg-white ui-cursor-pointer ui-shadow-sm"
     >
         <select
-            class="ui-container ui-cursor-pointer ui-outline-none ui-text-base ui-font-normal ui-leading-normal ui-p-2 ui-pl-4"
-            @change="onChange"
+            class="ui-appearance-none ui-container ui-cursor-pointer ui-outline-none ui-text-base ui-font-normal ui-leading-normal ui-p-2 ui-pl-4"
+            v-bind="$attrs"
+            v-on="$listeners"
         >
             <option
                 v-for="option in options"
@@ -32,6 +33,7 @@
 
 <script>
 export default {
+    inheritAttrs: false,
     props: {
         options: {
             type: Array,
@@ -42,18 +44,5 @@ export default {
             required: true,
         },
     },
-    methods: {
-        onChange() {
-            this.$emit('change');
-        },
-    },
 };
 </script>
-<style scoped>
-select {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    text-indent: 1px;
-    text-overflow: '';
-}
-</style>
