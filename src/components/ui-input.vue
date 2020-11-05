@@ -1,31 +1,27 @@
 <template>
-    <div class="ui-relative ui-container">
-        <ui-label v-if="prefixText"> {{ prefixText }} </ui-label>
+    <div class="ui-relative">
+        <template v-if="hasPrefix">
+            <slot name="prefix"></slot>
+        </template>
         <input
-            :value="value"
-            :type="type"
-            :class="isValid !== true ? 'ui-border-red-1' : 'ui-border-light-1'"
-            class="ui-container ui-rounded-sm ui-rounded-sm ui-border ui-bg-white ui-shadow-sm ui-p-2 ui-pl-4 ui-outline-none ui-text-base ui-font-normal"
-            :placeholder="placeHolder"
+            class="ui-w-full ui-rounded-sm ui-border ui-bg-white ui-shadow-sm ui-py-2 ui-px-4 ui-outline-none ui-text-base ui-font-normal"
+            :class="{
+                'ui-border-light-1 focus:ui-border-dark-3': isValid,
+                'ui-border-red-1 focus:ui-border-red-1': !isValid,
+                'ui-pl-12': hasPrefix,
+                'ui-pr-12': hasSufix,
+            }"
             v-bind="$attrs"
             v-on="$listeners"
         />
-        <ui-label v-if="sufixText && isValid" class="ui-text-dark-2 ui-text-xs">
-            {{ sufixText }}
-        </ui-label>
-        <ui-error-message v-if="!isValid" :message="validationMessage" />
+        <template v-if="hasSufix">
+            <slot name="sufix"></slot>
+        </template>
     </div>
 </template>
 
 <script>
-import UiErrorMessage from '@/components/ui-error-message.vue';
-import UiLabel from '@/components/ui-label.vue';
-
 export default {
-    components: {
-        UiErrorMessage,
-        UiLabel,
-    },
     inheritAttrs: false,
     props: {
         type: {
@@ -33,24 +29,15 @@ export default {
             default: 'text',
             validator: (value) => ['text', 'number'].includes(value),
         },
-        value: {
-            type: String,
+        hasPrefix: {
+            type: Boolean,
         },
-        placeHolder: {
-            type: String,
-        },
-        prefixText: {
-            type: String,
-        },
-        sufixText: {
-            type: String,
+        hasSufix: {
+            type: Boolean,
         },
         isValid: {
             type: Boolean,
             default: true,
-        },
-        validationMessage: {
-            type: String,
         },
     },
 };

@@ -15,6 +15,16 @@ export default {
                 options: [true, false],
             },
         },
+        hasPrefix: {
+            control: {
+                options: [true, false],
+            },
+        },
+        hasSufix: {
+            control: {
+                options: [true, false],
+            },
+        },
         validationMessage: {
             control: {
                 type: 'text',
@@ -36,8 +46,10 @@ export default {
 const Template = (args, { argTypes }) => ({
     props: Object.keys(argTypes),
     components: { UiInput },
-    template:
-        '<ui-input :prefixText="prefixText" :sufixText="sufixText" @change="onChange" :type="type" :isValid="isValid" placeHolder="placeHolder" :validationMessage="validationMessage" :value="value" />',
+    template: `<ui-input :hasPrefix="hasPrefix" :hasSufix="hasSufix" @change="onChange" :type="type" :isValid="isValid" :placeHolder="placeHolder" :value="value">
+                <template v-slot:prefix><div class="ui-text-light-1 ui-py-2 ui-px-4 ui-absolute ui-top-0 ui-left-0">PF</div></template>
+                <template v-slot:sufix><div class="ui-text-light-1 ui-py-2 ui-px-4 ui-absolute ui-top-0 ui-right-0">SF</div></template>
+               </ui-input>`,
 });
 
 export const Input = Template.bind({});
@@ -46,8 +58,16 @@ Input.args = {
     isValid: true,
     value: 'lorem ipsum sitamet doloris.',
     placeHolder: 'PlaceHolder',
-    validationMessage: 'Ooops',
     onChange() {},
-    sufixText: 'Sufix text',
-    prefixText: 'Prefix text',
+};
+
+export const InputExtras = Template.bind({});
+InputExtras.args = {
+    type: 'text',
+    isValid: true,
+    value: 'lorem ipsum sitamet doloris.',
+    placeHolder: 'PlaceHolder',
+    onChange() {},
+    hasSufix: true,
+    hasPrefix: true,
 };
