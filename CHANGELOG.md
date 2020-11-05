@@ -1,3 +1,11 @@
+# [1.3.0](https://github.com/funda-frontend/ui/compare/v1.2.0...v1.3.0) (2020-11-05)
+
+
+### Features
+
+* **input:** update input with sufix prefix ([8061d85](https://github.com/funda-frontend/ui/commit/8061d858c47f256710859334b010ce788a319463))
+* **ipnut:** add input component ([0ff77d6](https://github.com/funda-frontend/ui/commit/0ff77d682350eeb0de157c3f2efd0a6a104007cd))
+
 # [1.2.0](https://github.com/funda-frontend/ui/compare/v1.1.0...v1.2.0) (2020-11-04)
 
 
