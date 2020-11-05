@@ -32,23 +32,23 @@ export default {
         cssClasses() {
             const specificClasses = {
                 primary:
-                    'ui-px-6 ui-border ui-bg-orange-2 ui-border-orange-2 ui-text-white ui-shadow hover:ui-bg-orange-1 hover:ui-border-orange-1',
+                    'px-6 border bg-orange-2 border-orange-2 text-white shadow hover:bg-orange-1 hover:border-orange-1',
                 'primary-alt':
-                    'ui-px-6 ui-border ui-bg-blue-2 ui-text-white ui-border-blue-2 ui-shadow hover:ui-bg-blue-1 hover:ui-border-blue-1',
+                    'px-6 border bg-blue-2 text-white border-blue-2 shadow hover:bg-blue-1 hover:border-blue-1',
                 secondary:
-                    'ui-px-6 ui-border ui-bg-white ui-border-blue-2 ui-text-blue-2 hover:ui-text-blue-1 hover:ui-bg-blue-5 hover:ui-border-blue-1 ui-shadow',
+                    'px-6 border bg-white border-blue-2 text-blue-2 hover:text-blue-1 hover:bg-blue-5 hover:border-blue-1 shadow',
                 'secondary-alt':
-                    'ui-px-6 ui-border ui-bg-blue-5 ui-border-blue-2 ui-text-blue-1 hover:ui-bg-white hover:ui-text-blue-2 hover:ui-border-blue-2 ui-shadow',
-                tertiary: 'ui-text-blue-2 ui-border-0 hover:ui-text-blue-1',
+                    'px-6 border bg-blue-5 border-blue-2 text-blue-1 hover:bg-white hover:text-blue-2 hover:border-blue-2 shadow',
+                tertiary: 'text-blue-2 border-0 hover:text-blue-1',
                 transparent:
-                    'ui-px-6 ui-border ui-text-white ui-bg-transparent hover:ui-bg-white hover:ui-bg-opacity-25',
+                    'px-6 border text-white bg-transparent hover:bg-white hover:bg-opacity-25',
             }[this.tone];
             return this.defaultClasses + specificClasses;
         },
     },
     created() {
         this.defaultClasses =
-            'ui-leading-6 ui-inline-flex ui-h-11 ui-whitespace-no-wrap ui-border-solid ui-rounded-sm ui-align-middle ui-cursor-pointer ui-text-center ui-items-center ui-justify-center ';
+            'leading-6 inline-flex h-11 whitespace-no-wrap border-solid rounded-sm align-middle cursor-pointer text-center items-center justify-center ';
     },
 };
 </script>

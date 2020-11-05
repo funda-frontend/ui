@@ -18,18 +18,18 @@ const Template = (args, { argTypes }) => ({
     components: { UiNotification },
     template: `<ui-notification :type="type">
             <template v-slot:notificationBody>
-                <p class="ui-m-0 ui-flex-auto">    
+                <p class="m-0 flex-auto">    
                     Lorem ipsum dolor, sit amet. Nunc nec ante vel mi henderdit.
                 </p>
 
                 <button
                     type="button"
-                    class="ui-leading-6 ui-rounded-sm ui-px-6 ui-h-11 ui-inline-flex ui-text-center ui-items-center ui-justify-centerui-align-middle ui-cursor-pointer ui-whitespace-no-wrap ui-ml-3 ui-bg-transparent ui-border-none ui-p-0 ui-h-auto ui-border-0 ui-text-dark-2"
+                    class="leading-6 rounded-sm px-6 h-11 inline-flex text-center items-center justify-center align-middle cursor-pointer whitespace-no-wrap ml-3 bg-transparent border-none p-0 h-auto border-0 text-dark-2"
                     aria-label="Close"
                 >
                     <span aria-hidden="true">
                         <svg
-                            class="ui-align-middle ui-w-6 ui-h-6"
+                            class="align-middle w-6 h-6"
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 48 48"
                         >
