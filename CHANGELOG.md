@@ -1,3 +1,11 @@
+## [1.3.2](https://github.com/funda-frontend/ui/compare/v1.3.1...v1.3.2) (2020-11-06)
+
+
+### Bug Fixes
+
+* **prefix:** update input and error message without ui- prefix ([ac26bcc](https://github.com/funda-frontend/ui/commit/ac26bccdd839be28ea640ce02315b5ad4cf243be))
+* **toast:** relative import ([b1baea9](https://github.com/funda-frontend/ui/commit/b1baea9aa25424fbe0d17b9c69a5cea8e3a3f226))
+
 ## [1.3.1](https://github.com/funda-frontend/ui/compare/v1.3.0...v1.3.1) (2020-11-06)
 
 
