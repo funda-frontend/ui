@@ -47,8 +47,8 @@ const Template = (args, { argTypes }) => ({
     props: Object.keys(argTypes),
     components: { UiInput },
     template: `<ui-input :hasPrefix="hasPrefix" :hasSufix="hasSufix" @change="onChange" :type="type" :isValid="isValid" :placeHolder="placeHolder" :value="value">
-                <template v-slot:prefix><div class="ui-text-light-1 ui-py-2 ui-px-4 ui-absolute ui-top-0 ui-left-0">PF</div></template>
-                <template v-slot:sufix><div class="ui-text-light-1 ui-py-2 ui-px-4 ui-absolute ui-top-0 ui-right-0">SF</div></template>
+                <template v-slot:prefix><div class="text-light-1 py-2 px-4 absolute top-0 left-0">PF</div></template>
+                <template v-slot:sufix><div class="text-light-1 py-2 px-4 absolute top-0 right-0">SF</div></template>
                </ui-input>`,
 });
 
