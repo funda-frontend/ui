@@ -1,9 +1,9 @@
 <template>
-    <div :class="cssClasses" class="ui-items-center ui-flex ui-rounded ui-p-3">
-        <span class="ui-mr-3" :aria-label="type">
+    <div :class="cssClasses" class="items-center flex rounded p-3">
+        <span class="mr-3" :aria-label="type">
             <svg
                 v-if="type === 'information'"
-                class="ui-align-middle ui-w-6 ui-h-6 ui-text-dark-2"
+                class="align-middle w-6 h-6 text-dark-2"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 48 48"
             >
@@ -17,7 +17,7 @@
 
             <svg
                 v-if="type === 'error'"
-                class="ui-align-middle ui-w-6 ui-h-6 ui-text-red-1"
+                class="align-middle w-6 h-6 text-red-1"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 48 48"
             >
@@ -49,7 +49,7 @@
 
             <svg
                 v-if="type === 'success'"
-                class="ui-align-middle ui-w-6 ui-h-6 ui-text-green-1"
+                class="align-middle w-6 h-6 text-green-1"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 48 48"
             >
@@ -66,7 +66,7 @@
 
             <svg
                 v-if="type === 'warning'"
-                class="ui-align-middle ui-w-6 ui-h-6 ui-text-yellow-1"
+                class="align-middle w-6 h-6 text-yellow-1"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 48 48"
             >
@@ -116,10 +116,10 @@ export default {
     computed: {
         cssClasses() {
             return {
-                information: 'ui-bg-white',
-                error: 'ui-bg-red-2',
-                success: 'ui-bg-green-2',
-                warning: 'ui-bg-yellow-2',
+                information: 'bg-white',
+                error: 'bg-red-2',
+                success: 'bg-green-2',
+                warning: 'bg-yellow-2',
             }[this.type];
         },
     },

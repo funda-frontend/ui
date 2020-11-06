@@ -1,9 +1,9 @@
 <template>
     <div
-        class="ui-relative ui-container ui-rounded-sm ui-rounded-sm ui-border ui-border-light-1 ui-bg-white ui-cursor-pointer ui-shadow-sm"
+        class="relative container rounded-sm rounded-sm border border-light-1 bg-white cursor-pointer shadow-sm"
     >
         <select
-            class="ui-appearance-none ui-container ui-cursor-pointer ui-outline-none ui-text-base ui-font-normal ui-leading-normal ui-p-2 ui-pl-4"
+            class="appearance-none container cursor-pointer outline-none text-base font-normal leading-normal p-2 pl-4"
             v-bind="$attrs"
             v-on="$listeners"
         >
@@ -15,11 +15,9 @@
                 {{ option.text }}
             </option>
         </select>
-        <div
-            class="ui-absolute ui-p-2 ui-inline-flex ui-right-0 ui-top-0 ui-pointer-events-none"
-        >
+        <div class="absolute p-2 inline-flex right-0 top-0 pointer-events-none">
             <svg
-                class="ui-align-middle ui-w-6 ui-h-6 ui-text-blue-2 ui-fill-current"
+                class="align-middle w-6 h-6 text-blue-2 fill-current"
                 viewBox="0 0 48 48"
             >
                 <path
