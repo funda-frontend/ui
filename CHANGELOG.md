@@ -1,3 +1,11 @@
+## [1.3.1](https://github.com/funda-frontend/ui/compare/v1.3.0...v1.3.1) (2020-11-06)
+
+
+### Bug Fixes
+
+* **packages:** update packages, mainly to get the tailwind config w/o prefix ([6c63d17](https://github.com/funda-frontend/ui/commit/6c63d17641c002ebfd8197dcac7a82bbca895e5c))
+* **prefixes:** remove all ui prefixes in line with config ([cb5031e](https://github.com/funda-frontend/ui/commit/cb5031e570e6d11a5e96d6f456df774ed51f51a2))
+
 # [1.3.0](https://github.com/funda-frontend/ui/compare/v1.2.0...v1.3.0) (2020-11-05)
 
 
