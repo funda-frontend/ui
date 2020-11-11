@@ -1,9 +1,11 @@
 <template>
-    <div
-        class="relative container rounded-sm rounded-sm border border-light-1 bg-white cursor-pointer shadow-sm"
-    >
+    <div class="relative">
         <select
-            class="appearance-none container cursor-pointer outline-none text-base font-normal leading-normal p-2 pl-4"
+            class="appearance-none border rounded-sm bg-white shadow-sm w-full cursor-pointer outline-none text-base font-normal leading-normal p-2 pl-4"
+            :class="{
+                'border-light-1 focus:border-dark-3': isValid,
+                'border-red-1 focus:border-red-1': !isValid,
+            }"
             v-bind="$attrs"
             v-on="$listeners"
         >
@@ -40,6 +42,10 @@ export default {
         selected: {
             type: Number,
             required: true,
+        },
+        isValid: {
+            type: Boolean,
+            default: true,
         },
     },
 };
