@@ -1,3 +1,10 @@
+## [1.3.3](https://github.com/funda-frontend/ui/compare/v1.3.2...v1.3.3) (2020-11-11)
+
+
+### Bug Fixes
+
+* **error-message:** move error message to forms category ([f769612](https://github.com/funda-frontend/ui/commit/f769612fea0ca3203adfa942f9d9e19b9012b662))
+
 ## [1.3.2](https://github.com/funda-frontend/ui/compare/v1.3.1...v1.3.2) (2020-11-06)
 
 
