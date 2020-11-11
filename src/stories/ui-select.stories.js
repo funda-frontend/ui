@@ -23,13 +23,20 @@ const options = [
 export default {
     title: 'Forms/Select',
     component: UiSelect,
+    argTypes: {
+        isValid: {
+            control: {
+                options: [true, false],
+            },
+        },
+    },
 };
 
 const Template = (args, { argTypes }) => ({
     props: Object.keys(argTypes),
     components: { UiSelect },
     template:
-        '<ui-select @change="onChange" :options="options" :selected="selected">Select</ui-select>',
+        '<ui-select @change="onChange" :options="options" :selected="selected" :isValid="isValid">Select</ui-select>',
 });
 
 export const Select = Template.bind({});
@@ -37,4 +44,5 @@ Select.args = {
     selected,
     options,
     onChange() {},
+    isValid: true,
 };
