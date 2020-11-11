@@ -1,3 +1,15 @@
+# [1.4.0](https://github.com/funda-frontend/ui/compare/v1.3.3...v1.4.0) (2020-11-11)
+
+
+### Bug Fixes
+
+* **notification:** add rounded option ([3962406](https://github.com/funda-frontend/ui/commit/3962406fa8ac94e7a6f10d90cf5c8e891e1f1159))
+
+
+### Features
+
+* **card:** add card component and examples ([8e9bd07](https://github.com/funda-frontend/ui/commit/8e9bd07db11681d0a30f3674df505c48ba33b5c1))
+
 ## [1.3.3](https://github.com/funda-frontend/ui/compare/v1.3.2...v1.3.3) (2020-11-11)
 
 
