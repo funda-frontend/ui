@@ -1,9 +1,9 @@
 <template>
-    <div :class="cssClasses" class="items-center flex rounded p-3">
+    <div :class="cssClasses" class="items-center flex p-3">
         <span class="mr-3" :aria-label="type">
             <svg
                 v-if="type === 'information'"
-                class="align-middle w-6 h-6 text-dark-2"
+                class="align-middle w-6 h-6 text-dark-2 fill-current"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 48 48"
             >
@@ -17,7 +17,7 @@
 
             <svg
                 v-if="type === 'error'"
-                class="align-middle w-6 h-6 text-red-1"
+                class="align-middle w-6 h-6 text-red-1 fill-current"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 48 48"
             >
@@ -49,7 +49,7 @@
 
             <svg
                 v-if="type === 'success'"
-                class="align-middle w-6 h-6 text-green-1"
+                class="align-middle w-6 h-6 text-green-1 fill-current"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 48 48"
             >
@@ -66,7 +66,7 @@
 
             <svg
                 v-if="type === 'warning'"
-                class="align-middle w-6 h-6 text-yellow-1"
+                class="align-middle w-6 h-6 text-yellow-1 fill-current"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 48 48"
             >
@@ -112,22 +112,22 @@ export default {
             validator: (value) =>
                 ['information', 'error', 'success', 'warning'].includes(value),
         },
+        rounded: {
+            type: Boolean,
+            default: true,
+        },
     },
     computed: {
         cssClasses() {
-            return {
+            const type = {
                 information: 'bg-white',
                 error: 'bg-red-2',
                 success: 'bg-green-2',
                 warning: 'bg-yellow-2',
             }[this.type];
+            const rounded = this.rounded ? 'rounded' : '';
+            return `${type} ${rounded}`;
         },
     },
 };
 </script>
-
-<style scoped>
-svg:not([fill]) {
-    fill: currentColor;
-}
-</style>
