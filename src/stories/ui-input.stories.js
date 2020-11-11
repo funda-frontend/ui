@@ -25,11 +25,6 @@ export default {
                 options: [true, false],
             },
         },
-        validationMessage: {
-            control: {
-                type: 'text',
-            },
-        },
         value: {
             control: {
                 type: 'text',
