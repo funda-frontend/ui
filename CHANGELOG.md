@@ -1,3 +1,15 @@
+# [1.5.0](https://github.com/funda-frontend/ui/compare/v1.4.0...v1.5.0) (2020-11-11)
+
+
+### Bug Fixes
+
+* **select:** add focus and invalid ([f81a6eb](https://github.com/funda-frontend/ui/commit/f81a6ebd293ced5e2e4a70ba9871d52ebe3f4102))
+
+
+### Features
+
+* **form-group:** add form group and examples ([c07c381](https://github.com/funda-frontend/ui/commit/c07c381a75f441de87189d731e862a0c868cfc5c))
+
 # [1.4.0](https://github.com/funda-frontend/ui/compare/v1.3.3...v1.4.0) (2020-11-11)
 
 
