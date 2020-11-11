@@ -1,7 +1,7 @@
 import UiErrorMessage from '@/components/ui-error-message.vue';
 
 export default {
-    title: 'Visual/Error Message',
+    title: 'Forms/Error Message',
     component: UiErrorMessage,
     argTypes: {
         message: {
