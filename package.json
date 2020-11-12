@@ -27,6 +27,7 @@
         "@babel/core": "^7.11.6",
         "@babel/preset-env": "^7.11.0",
         "@funda/eslint-config": "^1.0.0",
+        "@funda/icons": "^1.2.0",
         "@funda/tailwind-config": "^3.0.0",
         "@semantic-release/changelog": "^5.0.1",
         "@semantic-release/commit-analyzer": "^8.0.1",
