@@ -1,16 +1,5 @@
 <template>
-    <p class="ui-text-red-1 ui-mt-1">
-        {{ message }}
+    <p class="text-red-1 mt-1">
+        <slot />
     </p>
 </template>
-
-<script>
-export default {
-    props: {
-        message: {
-            type: String,
-            required: true,
-        },
-    },
-};
-</script>

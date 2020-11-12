@@ -141,7 +141,7 @@
 </template>
 
 <script>
-import UiButton from '@/components/ui-button.vue';
+import UiButton from './ui-button.vue';
 
 export default {
     components: {

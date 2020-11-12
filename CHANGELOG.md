@@ -1,3 +1,42 @@
+# [1.5.0](https://github.com/funda-frontend/ui/compare/v1.4.0...v1.5.0) (2020-11-11)
+
+
+### Bug Fixes
+
+* **select:** add focus and invalid ([f81a6eb](https://github.com/funda-frontend/ui/commit/f81a6ebd293ced5e2e4a70ba9871d52ebe3f4102))
+
+
+### Features
+
+* **form-group:** add form group and examples ([c07c381](https://github.com/funda-frontend/ui/commit/c07c381a75f441de87189d731e862a0c868cfc5c))
+
+# [1.4.0](https://github.com/funda-frontend/ui/compare/v1.3.3...v1.4.0) (2020-11-11)
+
+
+### Bug Fixes
+
+* **notification:** add rounded option ([3962406](https://github.com/funda-frontend/ui/commit/3962406fa8ac94e7a6f10d90cf5c8e891e1f1159))
+
+
+### Features
+
+* **card:** add card component and examples ([8e9bd07](https://github.com/funda-frontend/ui/commit/8e9bd07db11681d0a30f3674df505c48ba33b5c1))
+
+## [1.3.3](https://github.com/funda-frontend/ui/compare/v1.3.2...v1.3.3) (2020-11-11)
+
+
+### Bug Fixes
+
+* **error-message:** move error message to forms category ([f769612](https://github.com/funda-frontend/ui/commit/f769612fea0ca3203adfa942f9d9e19b9012b662))
+
+## [1.3.2](https://github.com/funda-frontend/ui/compare/v1.3.1...v1.3.2) (2020-11-06)
+
+
+### Bug Fixes
+
+* **prefix:** update input and error message without ui- prefix ([ac26bcc](https://github.com/funda-frontend/ui/commit/ac26bccdd839be28ea640ce02315b5ad4cf243be))
+* **toast:** relative import ([b1baea9](https://github.com/funda-frontend/ui/commit/b1baea9aa25424fbe0d17b9c69a5cea8e3a3f226))
+
 ## [1.3.1](https://github.com/funda-frontend/ui/compare/v1.3.0...v1.3.1) (2020-11-06)
 
 

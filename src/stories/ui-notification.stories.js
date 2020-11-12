@@ -10,13 +10,18 @@ export default {
                 options: ['information', 'error', 'success', 'warning'],
             },
         },
+        rounded: {
+            control: {
+                options: [true, false],
+            },
+        },
     },
 };
 
 const Template = (args, { argTypes }) => ({
     props: Object.keys(argTypes),
     components: { UiNotification },
-    template: `<ui-notification :type="type">
+    template: `<ui-notification :type="type" :rounded="rounded">
             <template v-slot:notificationBody>
                 <p class="m-0 flex-auto">    
                     Lorem ipsum dolor, sit amet. Nunc nec ante vel mi henderdit.
@@ -46,5 +51,5 @@ const Template = (args, { argTypes }) => ({
 
 export const Notification = Template.bind({});
 Notification.args = {
-    type: 'information',
+    type: 'success',
 };
