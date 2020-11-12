@@ -1,16 +1,20 @@
 <template>
     <div>
-        <div v-for="item in items" :key="item.value" class="pt-2 pb-2">
+        <div v-for="item in items" :key="item.value" class="py-2">
             <input
-                :name="item.value"
-                class="absolute h-px w-px -m-px p-0"
+                :id="item.value"
+                name="funda_radio_input"
+                class="hidden"
                 type="radio"
+                v-bind="$attrs"
             />
-            <img
-                class="bg-blue-5 focus:bg-radio-button w-4 h-4 border border-blue-2 border-solid rounded-3xl"
-            />
-
-            <ui-label class="cursor-pointer" :for="item.value">
+            <ui-label
+                class="cursor-pointer flex py-1 hover:text-blue-1"
+                :for="item.value"
+            >
+                <img
+                    class="bg-blue-5 mr-2 mt-1 w-4 h-4 border border-blue-2 rounded-3xl"
+                />
                 {{ item.label }}
             </ui-label>
         </div>
@@ -22,6 +26,7 @@ export default {
     components: {
         UiLabel,
     },
+    inheritAttrs: false,
     props: {
         items: {
             type: [Array, String],
@@ -33,3 +38,24 @@ export default {
     },
 };
 </script>
+<style scoped>
+input[type='radio']:checked ~ label > img {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNiAxNiI+CiAgPGNpcmNsZSBjeD0iOCIgY3k9IjgiIHI9IjQiIGZpbGw9IiMwMDUxN2YiLz4KPC9zdmc+Cg==);
+}
+input[type='radio']:hover ~ label > img {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNiAxNiI+CiAgPGNpcmNsZSBjeD0iOCIgY3k9IjgiIHI9IjQiIGZpbGw9IiNjMWRiZTYiLz4KPC9zdmc+Cg==);
+}
+input[type='radio']:checked:hover ~ label > img {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNiAxNiI+CiAgPGNpcmNsZSBjeD0iOCIgY3k9IjgiIHI9IjQiIGZpbGw9IiMwMDUxN2YiLz4KPC9zdmc+Cg==);
+}
+input[type='radio']:disabled ~ label > img {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNiAxNiI+CiAgPGNpcmNsZSBjeD0iOCIgY3k9IjgiIHI9IjQiIGZpbGw9IiM5OTkiLz4KPC9zdmc+Cg==);
+    border-color: #ccc;
+}
+input[type='radio']:disabled:hover ~ label > img {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNiAxNiI+CiAgPGNpcmNsZSBjeD0iOCIgY3k9IjgiIHI9IjQiIGZpbGw9IiM5OTkiLz4KPC9zdmc+Cg==);
+}
+input[type='radio']:disabled ~ label {
+    color: #999;
+}
+</style>

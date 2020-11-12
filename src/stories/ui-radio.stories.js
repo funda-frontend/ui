@@ -4,15 +4,9 @@ export default {
     title: 'Forms/Radio',
     component: UiRadio,
     argTypes: {
-        type: {
+        disabled: {
             control: {
-                type: 'select',
-                options: ['Option 1', 'Option 2', 'Option 3'],
-            },
-        },
-        selected: {
-            control: {
-                type: 'text',
+                options: [true, false],
             },
         },
     },
@@ -21,7 +15,8 @@ export default {
 const Template = (args, { argTypes }) => ({
     props: Object.keys(argTypes),
     components: { UiRadio },
-    template: '<ui-radio :selected="selected" :items="items" />',
+    template:
+        '<ui-radio :selected="selected" :items="items" :disabled="disabled" />',
 });
 
 export const Input = Template.bind({});
@@ -41,4 +36,5 @@ Input.args = {
         },
     ],
     selected: 'option1',
+    disabled: false,
 };
