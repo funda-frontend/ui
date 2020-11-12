@@ -25,6 +25,12 @@ module.exports = extendConfig({
                 'fade-right-leave-active':
                     'fd-fade-right 0.6s 1 ease-out reverse',
             },
+            borderWidth: {
+                '3': '3px',
+            },
+            inset: {
+                '1/2': '50%',
+            },
         },
     },
     variants: {

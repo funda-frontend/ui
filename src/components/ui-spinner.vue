@@ -1,10 +1,8 @@
 <template>
-    <transition name="animate-fade">
-        <div v-if="show">
-            <div class="spinner animate-spin"></div>
-            <slot />
-        </div>
-    </transition>
+    <div
+        v-if="show"
+        class="spinner animate-spin absolute w-6 h-6 box-border border-3 border-blue-2 rounded-full -mt-3 -ml-3 inset-1/2"
+    ></div>
 </template>
 
 <script>
@@ -19,31 +17,8 @@ export default {
 </script>
 
 <style scoped>
-.animate-fade-enter-active,
-.animate-fade-leave-active {
-    transition: opacity 0.5s;
-}
-.animate-fade-enter,
-.animate-fade-leave-to {
-    opacity: 0;
-}
-
 .spinner {
-    opacity: 1;
-}
-
-.spinner:after {
     content: '';
-    box-sizing: border-box;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 48px;
-    height: 48px;
-    margin-top: -24px;
-    margin-left: -24px;
-    border-radius: 50%;
-    border: 3px solid blue; /*$blue-lighter */
     border-right-color: transparent;
 }
 </style>
