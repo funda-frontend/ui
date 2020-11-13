@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/funda-frontend/ui/compare/v1.7.0...v1.8.0) (2020-11-13)
+
+
+### Features
+
+* **icon:** add icon component ([ab1c1e9](https://github.com/funda-frontend/ui/commit/ab1c1e940cb0a1b07ed04832d8b03a7c6c8cd16e))
+
 # [1.7.0](https://github.com/funda-frontend/ui/compare/v1.6.0...v1.7.0) (2020-11-13)
 
 
