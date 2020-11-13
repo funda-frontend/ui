@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/funda-frontend/ui/compare/v1.5.0...v1.6.0) (2020-11-12)
+
+
+### Features
+
+* **textarea:** add textarea component ([73433db](https://github.com/funda-frontend/ui/commit/73433db5072f1f4da5e3f2c6ecc156300e0b7d84))
+
 # [1.5.0](https://github.com/funda-frontend/ui/compare/v1.4.0...v1.5.0) (2020-11-11)
 
 

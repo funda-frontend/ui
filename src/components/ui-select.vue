@@ -1,11 +1,14 @@
 <template>
     <div class="relative">
         <select
-            class="appearance-none border rounded-sm bg-white shadow-sm w-full cursor-pointer outline-none text-base font-normal leading-normal p-2 pl-4"
-            :class="{
-                'border-light-1 focus:border-dark-3': isValid,
-                'border-red-1 focus:border-red-1': !isValid,
-            }"
+            class="appearance-none cursor-pointer w-full rounded-sm border bg-white shadow-sm py-2 px-4 outline-none text-base font-normal"
+            :class="[
+                textFieldClasses,
+                {
+                    'border-light-1 focus:border-dark-3': isValid,
+                    'border-red-1 focus:border-red-1': !isValid,
+                },
+            ]"
             v-bind="$attrs"
             v-on="$listeners"
         >
