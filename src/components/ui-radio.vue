@@ -11,6 +11,7 @@
                     class="hidden"
                     type="radio"
                     v-bind="$attrs"
+                    v-on="$listeners"
                 />
                 <div
                     class="bg-blue-5 mr-2 mt-1 w-4 h-4 border border-blue-2 rounded-3xl"

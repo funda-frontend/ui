@@ -16,7 +16,7 @@ const Template = (args, { argTypes }) => ({
     props: Object.keys(argTypes),
     components: { UiRadio },
     template:
-        '<ui-radio :selected="selected" :items="items" :disabled="disabled" />',
+        '<ui-radio :selected="selected" :items="items" @change="onChange" :disabled="disabled" />',
 });
 
 export const Input = Template.bind({});
@@ -37,4 +37,7 @@ Input.args = {
     ],
     selected: 'option1',
     disabled: false,
+    onChange() {
+        console.log('renan');
+    },
 };
