@@ -9,17 +9,32 @@ export default {
                 options: [true, false],
             },
         },
+        tone: {
+            control: {
+                type: 'select',
+                options: ['primary', 'secondary', 'white'],
+            },
+        },
+        size: {
+            control: {
+                type: 'select',
+                options: ['small', 'medium', 'large'],
+            },
+        },
     },
 };
 
 const Template = (args, { argTypes }) => ({
     props: Object.keys(argTypes),
     components: { UiSpinner },
-    template: '<ui-spinner :show="show"></ui-spinner>',
+    template:
+        '<ui-spinner :size="size" :show="show" :tone="tone"></ui-spinner>',
 });
 
 export const Spinner = Template.bind({});
 
 Spinner.args = {
     show: true,
+    size: 'small',
+    tone: 'primary',
 };
