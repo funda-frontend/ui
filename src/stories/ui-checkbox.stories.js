@@ -1,7 +1,7 @@
 import UiCheckbox from '@/components/ui-checkbox.vue';
 
 export default {
-    title: 'Forms/CheckBox',
+    title: 'Forms/Checkbox',
     component: UiCheckbox,
     argTypes: {
         disabled: {
