@@ -69,5 +69,8 @@
     },
     "lint-staged": {
         "*.{js,vue}": "eslint --fix"
-    }
+    },
+    "eslint.workingDirectories": [
+        { "mode": "auto" }
+    ]
 }
