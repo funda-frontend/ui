@@ -1,3 +1,17 @@
+# [1.7.0](https://github.com/funda-frontend/ui/compare/v1.6.0...v1.7.0) (2020-11-13)
+
+
+### Bug Fixes
+
+* **linter:** fix issues that caused the linter to break ([20f1294](https://github.com/funda-frontend/ui/commit/20f12940b8ef2e898a4422a9e1b1fad2e7cb8eba))
+
+
+### Features
+
+* **spinner:** add basics for spinner WIP ([4889ec6](https://github.com/funda-frontend/ui/commit/4889ec6df39a89106726b1f0e62d0a10c85b7715))
+* **spinner:** add size and tone options, also improve spinner class name ([ed74600](https://github.com/funda-frontend/ui/commit/ed74600f81a1c6c29c401dcd7985288eeec9a0f8))
+* **spinner:** added basic styling ([afbd531](https://github.com/funda-frontend/ui/commit/afbd5317de605dbfde28f7d7ec5619e3815f4bcf))
+
 # [1.6.0](https://github.com/funda-frontend/ui/compare/v1.5.0...v1.6.0) (2020-11-12)
 
 
