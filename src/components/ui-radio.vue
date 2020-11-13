@@ -1,18 +1,18 @@
 <template>
     <div>
         <div v-for="item in items" :key="item.value" class="py-2">
+            <input
+                :id="item.value"
+                name="funda_radio_input"
+                class="hidden"
+                type="radio"
+                v-bind="$attrs"
+                v-on="$listeners"
+            />
             <ui-label
                 class="cursor-pointer flex py-1 hover:text-blue-1"
                 :for="item.value"
             >
-                <input
-                    :id="item.value"
-                    name="funda_radio_input"
-                    class="hidden"
-                    type="radio"
-                    v-bind="$attrs"
-                    v-on="$listeners"
-                />
                 <div
                     class="bg-blue-5 mr-2 mt-1 w-4 h-4 border border-blue-2 rounded-3xl"
                 ></div>
@@ -45,23 +45,31 @@ label {
     --input_hover: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNiAxNiI+CiAgPGNpcmNsZSBjeD0iOCIgY3k9IjgiIHI9IjQiIGZpbGw9IiNjMWRiZTYiLz4KPC9zdmc+Cg==);
     --input-disabled: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNiAxNiI+CiAgPGNpcmNsZSBjeD0iOCIgY3k9IjgiIHI9IjQiIGZpbGw9IiM5OTkiLz4KPC9zdmc+Cg==);
 }
-input[type='radio']:checked ~ div {
+input[type='radio']:checked ~ label > div {
     background-image: var(--input_checked);
 }
-input[type='radio']:hover ~ div {
+input[type='radio']:hover ~ label > div {
     background-image: var(--input_hover);
 }
-input[type='radio']:checked:hover ~ div {
+input[type='radio']:checked:hover ~ label > div {
     background-image: var(--input_checked);
 }
-input[type='radio']:disabled ~ div {
-    background-image: var(--input-disabled);
-    border-color: #ccc;
-}
-input[type='radio']:disabled:hover ~ div {
-    background-image: var(--input-disabled);
-}
-input[type='radio']:disabled ~ div {
+input[type='radio']:disabled ~ label {
     color: #999;
+}
+input[type='radio']:disabled ~ label > div {
+    border-color: #ccc;
+    background-color: #f7f7f7;
+}
+input[type='radio']:disabled:checked ~ label > div {
+    border-color: #ccc;
+    background-color: #f7f7f7;
+    background-image: var(--input-disabled);
+}
+input[type='radio']:disabled:checked:hover ~ label > div {
+    background-image: var(--input-disabled);
+}
+input[type='radio']:disabled:hover ~ label > div {
+    background-image: none;
 }
 </style>
