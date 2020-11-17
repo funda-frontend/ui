@@ -27,6 +27,21 @@ export default {
         data: {
             type: Array,
             required: true,
+            validator: (dataArr) => {
+                let isValid = true;
+
+                if (dataArr.length > 0) {
+                    dataArr.forEach((item) => {
+                        if (typeof item !== 'object' || Array.isArray(item)) {
+                            isValid = false;
+                        }
+                    });
+                } else {
+                    isValid = false;
+                }
+
+                return isValid;
+            },
         },
     },
 };
