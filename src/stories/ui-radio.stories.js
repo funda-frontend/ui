@@ -37,7 +37,5 @@ Input.args = {
     ],
     selected: 'option1',
     disabled: false,
-    onChange() {
-        console.log('renan');
-    },
+    onChange() {},
 };
