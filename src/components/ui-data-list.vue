@@ -31,11 +31,3 @@ export default {
     },
 };
 </script>
-
-<style scoped>
-.fd-data-list__dt,
-.fd-data-list__dd {
-    -webkit-margin-start: 0;
-    margin-inline-start: 0;
-}
-</style>
