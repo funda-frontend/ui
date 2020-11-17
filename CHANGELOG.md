@@ -1,3 +1,10 @@
+## [1.8.1](https://github.com/funda-frontend/ui/compare/v1.8.0...v1.8.1) (2020-11-17)
+
+
+### Bug Fixes
+
+* **checkbox:** minor copy change ([becbabf](https://github.com/funda-frontend/ui/commit/becbabf3ea8c876ca21e5d310c30bdac37dbe332))
+
 # [1.8.0](https://github.com/funda-frontend/ui/compare/v1.7.0...v1.8.0) (2020-11-13)
 
 
