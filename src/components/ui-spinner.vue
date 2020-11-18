@@ -1,7 +1,7 @@
 <template>
     <div
         v-if="show"
-        class="ui-spinner animate-spin absolute box-border border-3 rounded-full inset-1/2"
+        class="ui-spinner animate-spin absolute box-border border-2 rounded-full inset-1/2"
         :class="[sizeClasses, toneClasses]"
     ></div>
 </template>
