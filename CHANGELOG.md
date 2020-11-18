@@ -1,3 +1,19 @@
+# [1.9.0](https://github.com/funda-frontend/ui/compare/v1.8.1...v1.9.0) (2020-11-18)
+
+
+### Bug Fixes
+
+* **data-list:** add prop validation ([8ef54e3](https://github.com/funda-frontend/ui/commit/8ef54e3714740c657a35dcd6d8e276284d3afbb5))
+* **data-list:** improve component naming ([2726ddf](https://github.com/funda-frontend/ui/commit/2726ddf453a5a9b0fba91ad786bd506b7247030a))
+* **data-list:** remove css ([4c42a02](https://github.com/funda-frontend/ui/commit/4c42a02befa8a4774b06f0c7b29f1b38ff310da8))
+
+
+### Features
+
+* **data-list:** add dd and dt components and adjust story ([c31d82f](https://github.com/funda-frontend/ui/commit/c31d82f668f082e2c472624dc74c583cae5a6bdb))
+* **data-list:** add tailwind styles ([db81495](https://github.com/funda-frontend/ui/commit/db81495a95c82fce83e3124973355341eb74329f))
+* **data-list:** wip add basics for data list ([24d4843](https://github.com/funda-frontend/ui/commit/24d48434632663c597ee311f7c2e8a99f8b324a5))
+
 ## [1.8.1](https://github.com/funda-frontend/ui/compare/v1.8.0...v1.8.1) (2020-11-17)
 
 
