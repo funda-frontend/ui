@@ -1,3 +1,15 @@
+# [1.10.0](https://github.com/funda-frontend/ui/compare/v1.9.0...v1.10.0) (2020-11-19)
+
+
+### Bug Fixes
+
+* **spinner:** remove custom border size ([2a414f8](https://github.com/funda-frontend/ui/commit/2a414f8658adfd24f48f3d128702e4f451d1efb7))
+
+
+### Features
+
+* **tabs:** add tabs component ([d9ff91f](https://github.com/funda-frontend/ui/commit/d9ff91fba51162bba71f6b2d5170caa13a8b9ba6))
+
 # [1.9.0](https://github.com/funda-frontend/ui/compare/v1.8.1...v1.9.0) (2020-11-18)
 
 
