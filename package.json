@@ -61,7 +61,8 @@
     },
     "dependencies": {
         "lodash": "^4.17.20",
-        "vue": "^2.6.12"
+        "vue": "^2.6.12",
+        "vue-popperjs": "^2.3.0"
     },
     "husky": {
         "hooks": {
