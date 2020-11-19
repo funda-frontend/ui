@@ -36,6 +36,7 @@ export default {
         },
         selected: {
             type: String,
+            default: '',
         },
     },
 };
