@@ -22,7 +22,7 @@
     </div>
 </template>
 <script>
-import UiLabel from '@/components/ui-label.vue';
+import UiLabel from './ui-label.vue';
 
 export default {
     components: {
