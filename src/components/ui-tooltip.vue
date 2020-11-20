@@ -1,15 +1,15 @@
 <template>
-    <popper :trigger="trigger" :options="{ placement: side }">
+    <popper :key="popperKey" :trigger="trigger" :options="{ placement: side }">
         <div
             role="tooltip"
             class="popper absolute w-full p-3 max-w-sm rounded-sm z-50 shadow"
             :class="backgroundClass"
         >
-            <slot />
+            <slot name="content" />
         </div>
 
         <button slot="reference">
-            Reference Element
+            <slot name="reference" />
         </button>
     </popper>
 </template>
@@ -44,6 +44,9 @@ export default {
         },
     },
     computed: {
+        popperKey() {
+            return `${this.side}-${this.trigger}`;
+        },
         backgroundClass() {
             const specificClasses = {
                 white: 'bg-white',

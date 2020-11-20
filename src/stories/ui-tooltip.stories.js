@@ -29,8 +29,13 @@ const Template = (args, { argTypes }) => ({
     props: Object.keys(argTypes),
     components: { UiTooltip },
     template: `<ui-tooltip :trigger="trigger" :side="side" :background="background">
-                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
-                   vestibulum turpis enim, eget tempor tellus placerat at.
+                    <template v-slot:content>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+                        vestibulum turpis enim, eget tempor tellus placerat at.
+                    </template>
+                    <template v-slot:reference>
+                        Reference Element
+                    </template>
               </ui-tooltip>`,
 });
 
@@ -38,7 +43,7 @@ export const Tooltip = Template.bind({});
 Tooltip.args = {
     background: 'light',
     trigger: 'hover',
-    side: 'right',
+    side: 'top',
 };
 Tooltip.decorators = [
     () => ({
