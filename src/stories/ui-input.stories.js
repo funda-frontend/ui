@@ -7,20 +7,18 @@ export default {
         type: {
             control: {
                 type: 'select',
-                options: ['text', 'number'],
+                options: [
+                    'text',
+                    'number',
+                    'email',
+                    'password',
+                    'search',
+                    'tel',
+                    'url',
+                ],
             },
         },
         isValid: {
-            control: {
-                options: [true, false],
-            },
-        },
-        hasPrefix: {
-            control: {
-                options: [true, false],
-            },
-        },
-        hasSufix: {
             control: {
                 options: [true, false],
             },
@@ -41,12 +39,9 @@ export default {
 const Template = (args, { argTypes }) => ({
     props: Object.keys(argTypes),
     components: { UiInput },
-    template: `<ui-input :hasPrefix="hasPrefix" :hasSufix="hasSufix" @change="onChange" :type="type" :isValid="isValid" :placeHolder="placeHolder" :value="value">
-                <template v-slot:prefix><div class="text-light-1 py-2 px-4 absolute top-0 left-0">PF</div></template>
-                <template v-slot:sufix><div class="text-light-1 py-2 px-4 absolute top-0 right-0">SF</div></template>
-               </ui-input>`,
+    template:
+        '<ui-input @change="onChange" :type="type" :isValid="isValid" :placeHolder="placeHolder" :value="value" />',
 });
-
 export const Input = Template.bind({});
 Input.args = {
     type: 'text',
@@ -56,13 +51,19 @@ Input.args = {
     onChange() {},
 };
 
-export const InputExtras = Template.bind({});
+const TemplatePrefixSufix = (args, { argTypes }) => ({
+    props: Object.keys(argTypes),
+    components: { UiInput },
+    template: `<ui-input @change="onChange" :type="type" :isValid="isValid" :placeHolder="placeHolder" :value="value">
+                <template v-slot:prefix><div class="text-light-1 py-2 px-4 absolute top-0 left-0">PF</div></template>
+                <template v-slot:sufix><div class="text-light-1 py-2 px-4 absolute top-0 right-0">SF</div></template>
+               </ui-input>`,
+});
+export const InputExtras = TemplatePrefixSufix.bind({});
 InputExtras.args = {
     type: 'text',
     isValid: true,
     value: 'lorem ipsum sitamet doloris.',
     placeHolder: 'PlaceHolder',
     onChange() {},
-    hasSufix: true,
-    hasPrefix: true,
 };

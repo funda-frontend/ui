@@ -1,34 +1,11 @@
-const extendConfig = require('@funda/tailwind-config').extendConfig;
+/*
+ ** TailwindCSS Configuration File
+ **
+ ** Docs: https://tailwindcss.com/docs/configuration
+ ** Default: https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js
+ ** Funda: https://github.com/funda-frontend/tailwind-config/blob/master/index.js (what you are extending from)
+ */
 
-module.exports = extendConfig({
-    theme: {
-        extend: {
-            height: {
-                11: '2.75rem',
-            },
-            keyframes: {
-                'fd-fade-right': {
-                    '0%': {
-                        opacity: 0,
-                        transform: 'translateX(100%)',
-                    },
-                    '50%': {
-                        opacity: 1,
-                    },
-                    '100%': {
-                        transform: 'translateX(0)',
-                    },
-                },
-            },
-            animation: {
-                'fade-right-enter-active': 'fd-fade-right 0.6s 1 ease-out',
-                'fade-right-leave-active':
-                    'fd-fade-right 0.6s 1 ease-out reverse',
-            },
-        },
-    },
-    variants: {
-        opacity: ['group-hover'],
-        outline: ['active, focus'],
-    },
-});
+module.exports = {
+    presets: [require('@funda/tailwind-config')],
+};

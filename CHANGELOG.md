@@ -1,3 +1,81 @@
+## [1.10.2](https://github.com/funda-frontend/ui/compare/v1.10.1...v1.10.2) (2020-11-20)
+
+
+### Bug Fixes
+
+* **spinner:** cleanup css ([21544e5](https://github.com/funda-frontend/ui/commit/21544e5b798b4f6bd9c897cb7ee378233d331242))
+* **tailwind:** use config ([25f5d92](https://github.com/funda-frontend/ui/commit/25f5d92e4086ef7c8888b4df068d0f56c17ed5dc))
+
+## [1.10.1](https://github.com/funda-frontend/ui/compare/v1.10.0...v1.10.1) (2020-11-20)
+
+
+### Bug Fixes
+
+* **checkbox:** import relative ([50a6a1b](https://github.com/funda-frontend/ui/commit/50a6a1b6622c61f218a0a3c14011d1743a06ff0e))
+
+# [1.10.0](https://github.com/funda-frontend/ui/compare/v1.9.0...v1.10.0) (2020-11-19)
+
+
+### Bug Fixes
+
+* **spinner:** remove custom border size ([2a414f8](https://github.com/funda-frontend/ui/commit/2a414f8658adfd24f48f3d128702e4f451d1efb7))
+
+
+### Features
+
+* **tabs:** add tabs component ([d9ff91f](https://github.com/funda-frontend/ui/commit/d9ff91fba51162bba71f6b2d5170caa13a8b9ba6))
+
+# [1.9.0](https://github.com/funda-frontend/ui/compare/v1.8.1...v1.9.0) (2020-11-18)
+
+
+### Bug Fixes
+
+* **data-list:** add prop validation ([8ef54e3](https://github.com/funda-frontend/ui/commit/8ef54e3714740c657a35dcd6d8e276284d3afbb5))
+* **data-list:** improve component naming ([2726ddf](https://github.com/funda-frontend/ui/commit/2726ddf453a5a9b0fba91ad786bd506b7247030a))
+* **data-list:** remove css ([4c42a02](https://github.com/funda-frontend/ui/commit/4c42a02befa8a4774b06f0c7b29f1b38ff310da8))
+
+
+### Features
+
+* **data-list:** add dd and dt components and adjust story ([c31d82f](https://github.com/funda-frontend/ui/commit/c31d82f668f082e2c472624dc74c583cae5a6bdb))
+* **data-list:** add tailwind styles ([db81495](https://github.com/funda-frontend/ui/commit/db81495a95c82fce83e3124973355341eb74329f))
+* **data-list:** wip add basics for data list ([24d4843](https://github.com/funda-frontend/ui/commit/24d48434632663c597ee311f7c2e8a99f8b324a5))
+
+## [1.8.1](https://github.com/funda-frontend/ui/compare/v1.8.0...v1.8.1) (2020-11-17)
+
+
+### Bug Fixes
+
+* **checkbox:** minor copy change ([becbabf](https://github.com/funda-frontend/ui/commit/becbabf3ea8c876ca21e5d310c30bdac37dbe332))
+
+# [1.8.0](https://github.com/funda-frontend/ui/compare/v1.7.0...v1.8.0) (2020-11-13)
+
+
+### Features
+
+* **icon:** add icon component ([ab1c1e9](https://github.com/funda-frontend/ui/commit/ab1c1e940cb0a1b07ed04832d8b03a7c6c8cd16e))
+
+# [1.7.0](https://github.com/funda-frontend/ui/compare/v1.6.0...v1.7.0) (2020-11-13)
+
+
+### Bug Fixes
+
+* **linter:** fix issues that caused the linter to break ([20f1294](https://github.com/funda-frontend/ui/commit/20f12940b8ef2e898a4422a9e1b1fad2e7cb8eba))
+
+
+### Features
+
+* **spinner:** add basics for spinner WIP ([4889ec6](https://github.com/funda-frontend/ui/commit/4889ec6df39a89106726b1f0e62d0a10c85b7715))
+* **spinner:** add size and tone options, also improve spinner class name ([ed74600](https://github.com/funda-frontend/ui/commit/ed74600f81a1c6c29c401dcd7985288eeec9a0f8))
+* **spinner:** added basic styling ([afbd531](https://github.com/funda-frontend/ui/commit/afbd5317de605dbfde28f7d7ec5619e3815f4bcf))
+
+# [1.6.0](https://github.com/funda-frontend/ui/compare/v1.5.0...v1.6.0) (2020-11-12)
+
+
+### Features
+
+* **textarea:** add textarea component ([73433db](https://github.com/funda-frontend/ui/commit/73433db5072f1f4da5e3f2c6ecc156300e0b7d84))
+
 # [1.5.0](https://github.com/funda-frontend/ui/compare/v1.4.0...v1.5.0) (2020-11-11)
 
 

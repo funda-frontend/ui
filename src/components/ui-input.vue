@@ -29,15 +29,17 @@ export default {
             default: 'text',
             validator: (value) => ['text', 'number'].includes(value),
         },
-        hasPrefix: {
-            type: Boolean,
-        },
-        hasSufix: {
-            type: Boolean,
-        },
         isValid: {
             type: Boolean,
             default: true,
+        },
+    },
+    computed: {
+        hasPrefix() {
+            return Boolean(this.$slots['prefix']);
+        },
+        hasSufix() {
+            return Boolean(this.$slots['sufix']);
         },
     },
 };
