@@ -1,3 +1,10 @@
+## [1.10.3](https://github.com/funda-frontend/ui/compare/v1.10.2...v1.10.3) (2020-11-20)
+
+
+### Bug Fixes
+
+* **input:** 44px height ([4e22d10](https://github.com/funda-frontend/ui/commit/4e22d105f78513550959b05258ecb379ea6aa702))
+
 ## [1.10.2](https://github.com/funda-frontend/ui/compare/v1.10.1...v1.10.2) (2020-11-20)
 
 
