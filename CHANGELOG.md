@@ -1,3 +1,10 @@
+## [1.10.1](https://github.com/funda-frontend/ui/compare/v1.10.0...v1.10.1) (2020-11-20)
+
+
+### Bug Fixes
+
+* **checkbox:** import relative ([50a6a1b](https://github.com/funda-frontend/ui/commit/50a6a1b6622c61f218a0a3c14011d1743a06ff0e))
+
 # [1.10.0](https://github.com/funda-frontend/ui/compare/v1.9.0...v1.10.0) (2020-11-19)
 
 
