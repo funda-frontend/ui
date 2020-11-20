@@ -48,7 +48,6 @@ export default {
 
 <style scoped>
 .ui-spinner {
-    content: '';
     border-right-color: transparent;
 }
 </style>
