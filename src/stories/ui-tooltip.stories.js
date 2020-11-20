@@ -16,13 +16,19 @@ export default {
                 options: ['hover', 'clickToOpen', 'clickToToggle', 'focus'],
             },
         },
+        side: {
+            control: {
+                type: 'select',
+                options: ['top', 'right', 'bottom', 'left'],
+            },
+        },
     },
 };
 
 const Template = (args, { argTypes }) => ({
     props: Object.keys(argTypes),
     components: { UiTooltip },
-    template: `<ui-tooltip :trigger="trigger" :background="background">
+    template: `<ui-tooltip :trigger="trigger" :side="side" :background="background">
                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
                    vestibulum turpis enim, eget tempor tellus placerat at.
               </ui-tooltip>`,
@@ -32,4 +38,5 @@ export const Tooltip = Template.bind({});
 Tooltip.args = {
     background: 'light',
     trigger: 'hover',
+    side: 'right',
 };
