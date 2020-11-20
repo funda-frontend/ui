@@ -1,10 +1,6 @@
 <template>
     <popper :key="popperKey" :trigger="trigger" :options="{ placement: side }">
-        <div
-            role="tooltip"
-            class="popper absolute w-full p-3 max-w-sm rounded-sm z-50 shadow"
-            :class="backgroundClass"
-        >
+        <div role="tooltip" class="popper" :class="backgroundClass">
             <slot name="content" />
         </div>
 
@@ -59,3 +55,13 @@ export default {
     },
 };
 </script>
+
+<style lang="postcss" scoped>
+.popper {
+    @apply shadow;
+    @apply p-3;
+    @apply max-w-sm;
+    @apply rounded-sm;
+    @apply z-50;
+}
+</style>
