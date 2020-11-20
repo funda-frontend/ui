@@ -1,3 +1,11 @@
+## [1.10.2](https://github.com/funda-frontend/ui/compare/v1.10.1...v1.10.2) (2020-11-20)
+
+
+### Bug Fixes
+
+* **spinner:** cleanup css ([21544e5](https://github.com/funda-frontend/ui/commit/21544e5b798b4f6bd9c897cb7ee378233d331242))
+* **tailwind:** use config ([25f5d92](https://github.com/funda-frontend/ui/commit/25f5d92e4086ef7c8888b4df068d0f56c17ed5dc))
+
 ## [1.10.1](https://github.com/funda-frontend/ui/compare/v1.10.0...v1.10.1) (2020-11-20)
 
 
