@@ -40,3 +40,9 @@ Tooltip.args = {
     trigger: 'hover',
     side: 'right',
 };
+Tooltip.decorators = [
+    () => ({
+        template:
+            '<div class="flex items-center justify-center h-40"><story/></div>',
+    }),
+];
