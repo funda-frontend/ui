@@ -30,8 +30,7 @@ const Template = (args, { argTypes }) => ({
     components: { UiTooltip },
     template: `<ui-tooltip :trigger="trigger" :side="side" :background="background">
                     <template v-slot:content>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
-                        vestibulum turpis enim, eget tempor tellus placerat at.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing.
                     </template>
                     <template v-slot:reference>
                         Reference Element
@@ -43,11 +42,11 @@ export const Tooltip = Template.bind({});
 Tooltip.args = {
     background: 'light',
     trigger: 'hover',
-    side: 'top',
+    side: 'bottom',
 };
 Tooltip.decorators = [
     () => ({
         template:
-            '<div class="flex items-center justify-center h-40"><story/></div>',
+            '<div class="flex items-center justify-center h-40 mt-10"><story/></div>',
     }),
 ];

@@ -1,18 +1,28 @@
 <template>
-    <popper :key="popperKey" :trigger="trigger" :options="{ placement: side }">
-        <div role="tooltip" class="popper" :class="backgroundClass">
-            <slot name="content" />
-        </div>
+    <div>
+        <popper
+            :key="popperKey"
+            :trigger="trigger"
+            :options="{ placement: side }"
+        >
+            <div
+                role="tooltip"
+                :class="backgroundClass"
+                class="popper shadow p-3 max-w-sm rounded-sm z-50 absolute w-auto inline-block"
+            >
+                <slot name="content" />
+            </div>
 
-        <button slot="reference">
-            <slot name="reference" />
-        </button>
-    </popper>
+            <button slot="reference">
+                <slot name="reference" />
+            </button>
+        </popper>
+    </div>
 </template>
 
 <script>
 import Popper from 'vue-popperjs';
-import 'vue-popperjs/dist/vue-popper.css';
+import '../styles/popper.css';
 
 export default {
     components: {
@@ -55,13 +65,3 @@ export default {
     },
 };
 </script>
-
-<style lang="postcss" scoped>
-.popper {
-    @apply shadow;
-    @apply p-3;
-    @apply max-w-sm;
-    @apply rounded-sm;
-    @apply z-50;
-}
-</style>

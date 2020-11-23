@@ -1,0 +1,53 @@
+/* Cusomised Popper styles, do not overwrite */
+
+.popper .popper__arrow {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    position: absolute;
+    margin: 8px;
+}
+.popper[x-placement^='top'] {
+    margin-bottom: 8px;
+}
+.popper[x-placement^='top'] .popper__arrow {
+    border-width: 8px 8px 0 8px;
+    border-color: #fafafa transparent transparent transparent;
+    bottom: -8px;
+    left: calc(50% - 8px);
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.popper[x-placement^='bottom'] {
+    margin-top: 8px;
+}
+.popper[x-placement^='bottom'] .popper__arrow {
+    border-width: 0 8px 8px 8px;
+    border-color: transparent transparent #fafafa transparent;
+    top: -8px;
+    left: calc(50% - 8px);
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.popper[x-placement^='right'] {
+    margin-left: 8px;
+}
+.popper[x-placement^='right'] .popper__arrow {
+    border-width: 8px 8px 8px 0;
+    border-color: transparent #fafafa transparent transparent;
+    left: -8px;
+    top: calc(50% - 8px);
+    margin-left: 0;
+    margin-right: 0;
+}
+.popper[x-placement^='left'] {
+    margin-right: 8px;
+}
+.popper[x-placement^='left'] .popper__arrow {
+    border-width: 8px 0 8px 8px;
+    border-color: transparent transparent transparent #fafafa;
+    right: -8px;
+    top: calc(50% - 8px);
+    margin-left: 0;
+    margin-right: 0;
+}

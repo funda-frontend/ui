@@ -5,16 +5,7 @@ module.exports = ({config}) => {
         test: /\.css$/,
         use: ['postcss-loader' ],
         include: path.resolve(__dirname, "../")
-    },
-    {
-        test: /\.postcss$/,
-        use: [
-            'vue-style-loader',
-            'css-loader',
-            'postcss-loader'
-          ]
-      });
-
+    });
     // setup URL Alias
     config.resolve.alias = {
         ...config.resolve.alias,
