@@ -8,7 +8,7 @@
             <div
                 role="tooltip"
                 :class="backgroundClass"
-                class="popper shadow p-3 max-w-sm rounded-sm z-50 absolute w-auto inline-block"
+                class="popper p-3 max-w-sm rounded-sm z-50 absolute w-auto inline-block"
             >
                 <slot name="content" />
             </div>
