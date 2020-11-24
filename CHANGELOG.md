@@ -1,3 +1,23 @@
+# [1.11.0](https://github.com/funda-frontend/ui/compare/v1.10.3...v1.11.0) (2020-11-24)
+
+
+### Bug Fixes
+
+* **conflix-fix:** upmerge confict fix ([e1099e1](https://github.com/funda-frontend/ui/commit/e1099e1854d7688d8183fe837f1853c4e38c4f33))
+* **tooltip:** custom styles ([37b67d9](https://github.com/funda-frontend/ui/commit/37b67d9ec03ef3a714513ff606d58a5eb2537cb3))
+* **tooltip:** ditch postcss setup ([4254737](https://github.com/funda-frontend/ui/commit/4254737751bbd016acc9864159915cff6716bdfb))
+* **tooltip:** progress on style improvement ([ef1b2a0](https://github.com/funda-frontend/ui/commit/ef1b2a0068efd27856998bf6f11aaadb35d0288d))
+* **tooltip:** set story in center for better demonstration ([526404d](https://github.com/funda-frontend/ui/commit/526404dd5a7d6e40251fd4aa4e2eef8fed1014b1))
+
+
+### Features
+
+* **tooltip:** add background color options ([7bb5c23](https://github.com/funda-frontend/ui/commit/7bb5c23b3a8f11191d8764ee7e3674f9a47bf6ea))
+* **tooltip:** add side property ([37898e5](https://github.com/funda-frontend/ui/commit/37898e529434f87bcac8be1e67c8aa37bbc3cb8e))
+* **tooltip:** added popper WIP ([7714670](https://github.com/funda-frontend/ui/commit/7714670b0d30eb361d72f56250a62098a232329a))
+* **tooltip:** added slots and key ([fc6f13e](https://github.com/funda-frontend/ui/commit/fc6f13e747744e0889c73d334d8f8dd04155aef6))
+* **tooltip:** minimal tooltip setup ([348dd27](https://github.com/funda-frontend/ui/commit/348dd2793d768889d072dbfd1120709632b82fc8))
+
 ## [1.10.3](https://github.com/funda-frontend/ui/compare/v1.10.2...v1.10.3) (2020-11-20)
 
 
