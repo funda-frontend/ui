@@ -61,7 +61,8 @@
         "@funda/tailwind-config": "^3.1.0",
         "@funda/icons": "^1.2.0",
         "tailwindcss": "^1.9.6",
-        "vue": "^2.6.12"
+        "vue": "^2.6.12",
+        "vue-popperjs": "^2.3.0"
     },
     "husky": {
         "hooks": {

@@ -1,0 +1,82 @@
+/* Cusomised Popper styles, do not overwrite */
+
+.popper {
+    box-shadow: 0 0 8px 0 rgba(0,0,0,0.2);
+}
+
+.popper .popper__arrow {
+    width: 1rem;
+    height: 1rem;
+    position: absolute;
+    overflow: hidden;
+}
+
+.popper .popper__arrow::after {
+    content: '';
+    position: absolute;
+    width: .75rem;
+    height: .75rem;
+    background-color: #f7f7f7;
+    transform: translate(-50%, -50%) rotate(45deg);
+    box-shadow: 0 0 6px 0 rgba(0,0,0,0.2);
+}
+
+.popper.bg-blue-5 .popper__arrow::after {
+    background-color: #e6f2f7;
+}
+
+.popper.bg-white .popper__arrow::after {
+    background-color: #fff;
+}
+
+.popper[x-placement^='top'] {
+    margin-bottom: 1rem;
+}
+
+.popper[x-placement^='top'] .popper__arrow {
+    bottom: -1rem;
+}
+
+.popper[x-placement^='top'] .popper__arrow::after {
+    top: 0;
+    left: 50%;
+}
+
+.popper[x-placement^='bottom'] {
+    margin-top: 1rem;
+}
+
+.popper[x-placement^='bottom'] .popper__arrow {
+    top: -1rem;
+}
+
+.popper[x-placement^='bottom'] .popper__arrow::after {
+    margin-top: 1rem;
+    left: 50%;
+}
+
+.popper[x-placement^='right'] {
+    margin-left: 1rem;
+}
+
+.popper[x-placement^='right'] .popper__arrow {
+    left: -1rem;
+}
+
+.popper[x-placement^='right'] .popper__arrow::after {
+    margin-left: 1rem;
+    top: 50%;
+}
+
+.popper[x-placement^='left'] {
+    margin-right: 1rem;
+}
+
+.popper[x-placement^='left'] .popper__arrow {
+    right: -1rem;
+}
+
+.popper[x-placement^='left'] .popper__arrow::after {
+    margin-right: 1rem;
+    top: 50%;
+}

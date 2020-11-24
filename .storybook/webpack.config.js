@@ -6,7 +6,6 @@ module.exports = ({config}) => {
         use: ['postcss-loader' ],
         include: path.resolve(__dirname, "../")
     });
-
     // setup URL Alias
     config.resolve.alias = {
         ...config.resolve.alias,
