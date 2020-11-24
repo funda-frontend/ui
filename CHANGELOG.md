@@ -1,3 +1,37 @@
+## [1.10.3](https://github.com/funda-frontend/ui/compare/v1.10.2...v1.10.3) (2020-11-20)
+
+
+### Bug Fixes
+
+* **input:** 44px height ([4e22d10](https://github.com/funda-frontend/ui/commit/4e22d105f78513550959b05258ecb379ea6aa702))
+
+## [1.10.2](https://github.com/funda-frontend/ui/compare/v1.10.1...v1.10.2) (2020-11-20)
+
+
+### Bug Fixes
+
+* **spinner:** cleanup css ([21544e5](https://github.com/funda-frontend/ui/commit/21544e5b798b4f6bd9c897cb7ee378233d331242))
+* **tailwind:** use config ([25f5d92](https://github.com/funda-frontend/ui/commit/25f5d92e4086ef7c8888b4df068d0f56c17ed5dc))
+
+## [1.10.1](https://github.com/funda-frontend/ui/compare/v1.10.0...v1.10.1) (2020-11-20)
+
+
+### Bug Fixes
+
+* **checkbox:** import relative ([50a6a1b](https://github.com/funda-frontend/ui/commit/50a6a1b6622c61f218a0a3c14011d1743a06ff0e))
+
+# [1.10.0](https://github.com/funda-frontend/ui/compare/v1.9.0...v1.10.0) (2020-11-19)
+
+
+### Bug Fixes
+
+* **spinner:** remove custom border size ([2a414f8](https://github.com/funda-frontend/ui/commit/2a414f8658adfd24f48f3d128702e4f451d1efb7))
+
+
+### Features
+
+* **tabs:** add tabs component ([d9ff91f](https://github.com/funda-frontend/ui/commit/d9ff91fba51162bba71f6b2d5170caa13a8b9ba6))
+
 # [1.9.0](https://github.com/funda-frontend/ui/compare/v1.8.1...v1.9.0) (2020-11-18)
 
 

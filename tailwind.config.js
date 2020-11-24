@@ -8,48 +8,4 @@
 
 module.exports = {
     presets: [require('@funda/tailwind-config')],
-    theme: {
-        extend: {
-            height: {
-                11: '2.75rem',
-            },
-            keyframes: {
-                'fd-fade-right': {
-                    '0%': {
-                        opacity: 0,
-                        transform: 'translateX(100%)',
-                    },
-                    '50%': {
-                        opacity: 1,
-                    },
-                    '100%': {
-                        transform: 'translateX(0)',
-                    },
-                },
-            },
-            animation: {
-                'fade-right-enter-active': 'fd-fade-right 0.6s 1 ease-out',
-                'fade-right-leave-active':
-                    'fd-fade-right 0.6s 1 ease-out reverse',
-            },
-            borderWidth: {
-                '3': '3px',
-            },
-            inset: {
-                '1/2': '50%',
-            },
-            maxWidth: {
-                '1/3': '33%',
-                '2/3': '66%',
-            },
-            flex: {
-                '1/3': '33%',
-                '2/3': '66%',
-            },
-        },
-    },
-    variants: {
-        opacity: ['group-hover'],
-        outline: ['active, focus'],
-    },
 };
