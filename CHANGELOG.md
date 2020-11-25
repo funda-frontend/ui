@@ -1,3 +1,11 @@
+## [1.11.2](https://github.com/funda-frontend/ui/compare/v1.11.1...v1.11.2) (2020-11-25)
+
+
+### Bug Fixes
+
+* **popper:** rename vendors folder to components for clarity ([1e4e8b3](https://github.com/funda-frontend/ui/commit/1e4e8b3941f9d4fe43a2361a2b75001c93e2067e))
+* **tooltip:** move popper styles to vendor and include on npm package ([7cc7083](https://github.com/funda-frontend/ui/commit/7cc7083bb99756660b0a1b6bcdf8acc19236d614))
+
 ## [1.11.1](https://github.com/funda-frontend/ui/compare/v1.11.0...v1.11.1) (2020-11-25)
 
 
