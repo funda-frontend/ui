@@ -1,3 +1,10 @@
+## [1.11.1](https://github.com/funda-frontend/ui/compare/v1.11.0...v1.11.1) (2020-11-25)
+
+
+### Bug Fixes
+
+* **default-export:** fix path ([8cdceba](https://github.com/funda-frontend/ui/commit/8cdceba593612369f59f57551b67cceaa65d1eda))
+
 # [1.11.0](https://github.com/funda-frontend/ui/compare/v1.10.3...v1.11.0) (2020-11-24)
 
 
