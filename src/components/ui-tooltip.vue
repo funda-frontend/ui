@@ -22,7 +22,7 @@
 
 <script>
 import Popper from 'vue-popperjs';
-import './../styles/vendors/popper.css';
+import './../styles/components/popper.css';
 
 export default {
     components: {

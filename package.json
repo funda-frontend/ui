@@ -5,7 +5,7 @@
     "license": "MIT",
     "files": [
         "src/components/",
-        "src/styles/vendors/",
+        "src/styles/components/",
         "src/index.js"
     ],
     "description": "funda's vue.js components library",
