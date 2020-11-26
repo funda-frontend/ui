@@ -12,9 +12,9 @@ const Template = () => ({
         UiButton,
     },
     template: `<ui-button-group>
-            <ui-button tone="primary">Example button</ui-button>
-            <ui-button tone="primary">Example button</ui-button>
-            <ui-button tone="primary">Example button</ui-button>
+            <ui-button tone="secondary">Left</ui-button>
+            <ui-button tone="secondary">Middle</ui-button>
+            <ui-button tone="secondary">Right</ui-button>
         </ui-button-group>`,
 });
 
