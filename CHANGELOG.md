@@ -1,3 +1,16 @@
+# [1.12.0](https://github.com/funda-frontend/ui/compare/v1.11.2...v1.12.0) (2020-11-30)
+
+
+### Bug Fixes
+
+* **button-group:** align css with funda ui ([88582a0](https://github.com/funda-frontend/ui/commit/88582a03bd84a44f0a1120190b2cdfdf52a30016))
+* **button-group:** improve css ([db96f0a](https://github.com/funda-frontend/ui/commit/db96f0a7f483a0073be455ab0644d9551c4face5))
+
+
+### Features
+
+* **button-group:** add basic setup WIP ([4af5282](https://github.com/funda-frontend/ui/commit/4af5282c763f11f64e6592253213169b38af3cc7))
+
 ## [1.11.2](https://github.com/funda-frontend/ui/compare/v1.11.1...v1.11.2) (2020-11-25)
 
 
