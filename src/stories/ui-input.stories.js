@@ -33,6 +33,11 @@ export default {
                 type: 'text',
             },
         },
+        disabled: {
+            control: {
+                options: [true, false],
+            },
+        },
     },
 };
 
@@ -40,7 +45,7 @@ const Template = (args, { argTypes }) => ({
     props: Object.keys(argTypes),
     components: { UiInput },
     template:
-        '<ui-input @change="onChange" :type="type" :isValid="isValid" :placeHolder="placeHolder" :value="value" />',
+        '<ui-input @change="onChange" :type="type" :isValid="isValid" :placeHolder="placeHolder" :value="value" :disabled="disabled"/>',
 });
 export const Input = Template.bind({});
 Input.args = {
@@ -48,6 +53,7 @@ Input.args = {
     isValid: true,
     value: 'lorem ipsum sitamet doloris.',
     placeHolder: 'PlaceHolder',
+    disabled: false,
     onChange() {},
 };
 
@@ -65,5 +71,6 @@ InputExtras.args = {
     isValid: true,
     value: 'lorem ipsum sitamet doloris.',
     placeHolder: 'PlaceHolder',
+    disabled: false,
     onChange() {},
 };
