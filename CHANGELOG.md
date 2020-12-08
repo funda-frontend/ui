@@ -1,3 +1,10 @@
+# [1.14.0](https://github.com/funda-frontend/ui/compare/v1.13.0...v1.14.0) (2020-12-08)
+
+
+### Features
+
+* **pre/suffix-example:** Update example ([e251abc](https://github.com/funda-frontend/ui/commit/e251abc4c05e21d7e9158c78ff9a7a4758e61b55))
+
 # [1.13.0](https://github.com/funda-frontend/ui/compare/v1.12.0...v1.13.0) (2020-12-08)
 
 
