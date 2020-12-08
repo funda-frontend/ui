@@ -1,3 +1,11 @@
+# [1.13.0](https://github.com/funda-frontend/ui/compare/v1.12.0...v1.13.0) (2020-12-08)
+
+
+### Features
+
+* **input-select:** style disabled and used tailwind variant ([d67960c](https://github.com/funda-frontend/ui/commit/d67960c150472df6a75a3224b8c02b8d68c842f7))
+* **tailwind-version:** Using latest tailwind-config version ([a70b000](https://github.com/funda-frontend/ui/commit/a70b0006c27ee0877cbe6e78219e0f979a2de265))
+
 # [1.12.0](https://github.com/funda-frontend/ui/compare/v1.11.2...v1.12.0) (2020-11-30)
 
 
