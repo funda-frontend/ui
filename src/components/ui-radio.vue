@@ -2,8 +2,8 @@
     <div>
         <div v-for="item in items" :key="item.value" class="py-2">
             <input
-                :id="item.value"
-                name="funda_radio_input"
+                :id="(item.label + '_' + id) | trimEmptySpace"
+                :name="name"
                 class="hidden"
                 type="radio"
                 v-bind="$attrs"
@@ -11,7 +11,7 @@
             />
             <ui-label
                 class="cursor-pointer flex py-1 hover:text-blue-1"
-                :for="item.value"
+                :for="(item.label + '_' + id) | trimEmptySpace"
             >
                 <div
                     class="bg-blue-5 mr-2 mt-1 w-4 h-4 border border-blue-2 rounded-3xl"
@@ -27,15 +27,34 @@ export default {
     components: {
         UiLabel,
     },
+    filters: {
+        trimEmptySpace(str) {
+            if (!str) return;
+            return str.replace(/\s/g, '');
+        },
+    },
     inheritAttrs: false,
     props: {
         items: {
             type: [Array, String],
             required: true,
         },
+        name: {
+            type: String,
+            default: 'funda_radio_input',
+        },
         selected: {
             type: String,
+            default: '',
         },
+    },
+    data() {
+        return {
+            id: null,
+        };
+    },
+    mounted() {
+        this.id = this._uid;
     },
 };
 </script>
