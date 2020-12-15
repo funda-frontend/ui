@@ -1,8 +1,8 @@
 <template>
     <div>
-        <div v-for="item in items" :key="item.value" class="py-2">
+        <div v-for="(item, index) in items" :key="item.value" class="py-2">
             <input
-                :id="(item.label + '_' + id) | trimEmptySpace"
+                :id="UUIDs[index]"
                 :name="name"
                 class="hidden"
                 type="radio"
@@ -11,7 +11,7 @@
             />
             <ui-label
                 class="cursor-pointer flex py-1 hover:text-blue-1"
-                :for="(item.label + '_' + id) | trimEmptySpace"
+                :for="UUIDs[index]"
             >
                 <div
                     class="bg-blue-5 mr-2 mt-1 w-4 h-4 border border-blue-2 rounded-3xl"
@@ -26,12 +26,6 @@ import UiLabel from './ui-label.vue';
 export default {
     components: {
         UiLabel,
-    },
-    filters: {
-        trimEmptySpace(str) {
-            if (!str) return;
-            return str.replace(/\s/g, '');
-        },
     },
     inheritAttrs: false,
     props: {
@@ -53,8 +47,32 @@ export default {
             id: null,
         };
     },
-    mounted() {
-        this.id = this._uid;
+    computed: {
+        UUIDs() {
+            const array = [];
+            this.items.forEach((item) => {
+                array.push(
+                    this.shuffle(item.label).join('').replace(/\s/g, '')
+                );
+            });
+            return array;
+        },
+    },
+    methods: {
+        shuffle(string) {
+            let array = Array.from(string);
+            let currentIndex = array.length,
+                temp,
+                randomIndex;
+            while (0 !== currentIndex) {
+                randomIndex = Math.floor(Math.random() * currentIndex);
+                currentIndex -= 1;
+                temp = array[currentIndex];
+                array[currentIndex] = array[randomIndex];
+                array[randomIndex] = temp;
+            }
+            return array;
+        },
     },
 };
 </script>
