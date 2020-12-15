@@ -42,11 +42,6 @@ export default {
             default: '',
         },
     },
-    data() {
-        return {
-            id: null,
-        };
-    },
     computed: {
         UUIDs() {
             const array = [];
