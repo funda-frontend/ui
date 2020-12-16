@@ -32,7 +32,7 @@ export default {
         cssClasses() {
             const specificClasses = {
                 primary:
-                    'px-6 border bg-orange-2 border-orange-2 text-white shadow hover:bg-orange-1 hover:border-orange-1',
+                    'px-6 border bg-orange-2 border-orange-2 text-white shadow hover:bg-orange-1 hover:border-orange-1 hover:text-white',
                 'primary-alt':
                     'px-6 border bg-blue-2 text-white border-blue-2 shadow hover:bg-blue-1 hover:border-blue-1',
                 secondary:
