@@ -1,3 +1,10 @@
+## [1.14.1](https://github.com/funda-frontend/ui/compare/v1.14.0...v1.14.1) (2020-12-16)
+
+
+### Bug Fixes
+
+* **button:** set hover color for primary ([56a831d](https://github.com/funda-frontend/ui/commit/56a831d88f7e0676b9601854feea17601f259112))
+
 # [1.14.0](https://github.com/funda-frontend/ui/compare/v1.13.0...v1.14.0) (2020-12-08)
 
 
