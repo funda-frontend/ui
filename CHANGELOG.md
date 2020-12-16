@@ -1,3 +1,12 @@
+# [1.15.0](https://github.com/funda-frontend/ui/compare/v1.14.1...v1.15.0) (2020-12-16)
+
+
+### Features
+
+* **id-prop:** simplified component by adding an id prop ([14fe8b0](https://github.com/funda-frontend/ui/commit/14fe8b0ad2abdb4a596bd301410bf254f3eb8752))
+* **input-id:** added support for radio groups using unique ids ([7fdac18](https://github.com/funda-frontend/ui/commit/7fdac184cc6f4d52f5e61f6f4f1b5160cca39dbe))
+* **uuids:** a more sophisticated id generation ([57388f7](https://github.com/funda-frontend/ui/commit/57388f7a5e3dc5b32e3bd4e3391479cdcd6d8c51))
+
 ## [1.14.1](https://github.com/funda-frontend/ui/compare/v1.14.0...v1.14.1) (2020-12-16)
 
 
