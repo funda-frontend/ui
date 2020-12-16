@@ -1,3 +1,10 @@
+## [1.15.1](https://github.com/funda-frontend/ui/compare/v1.15.0...v1.15.1) (2020-12-16)
+
+
+### Bug Fixes
+
+* **tailwind:** bump tailwind config ([fcdcbe6](https://github.com/funda-frontend/ui/commit/fcdcbe6896e983b16d936b819d9f8f84e6f4deab))
+
 # [1.15.0](https://github.com/funda-frontend/ui/compare/v1.14.1...v1.15.0) (2020-12-16)
 
 
