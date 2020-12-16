@@ -1,9 +1,9 @@
 <template>
     <div>
-        <div v-for="item in items" :key="item.value" class="py-2">
+        <div v-for="(item, index) in items" :key="item.label" class="py-2">
             <input
-                :id="item.value"
-                name="funda_radio_input"
+                :id="`${id}_${index}`"
+                :name="name"
                 class="hidden"
                 type="radio"
                 v-bind="$attrs"
@@ -11,7 +11,7 @@
             />
             <ui-label
                 class="cursor-pointer flex py-1 hover:text-blue-1"
-                :for="item.value"
+                :for="`${id}_${index}`"
             >
                 <div
                     class="bg-blue-5 mr-2 mt-1 w-4 h-4 border border-blue-2 rounded-3xl"
@@ -23,6 +23,7 @@
 </template>
 <script>
 import UiLabel from './ui-label.vue';
+
 export default {
     components: {
         UiLabel,
@@ -33,8 +34,17 @@ export default {
             type: [Array, String],
             required: true,
         },
+        id: {
+            type: String,
+            required: true,
+        },
+        name: {
+            type: String,
+            default: 'funda_radio_input',
+        },
         selected: {
             type: String,
+            default: '',
         },
     },
 };

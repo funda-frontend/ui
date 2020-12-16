@@ -16,7 +16,7 @@ const Template = (args, { argTypes }) => ({
     props: Object.keys(argTypes),
     components: { UiRadio },
     template:
-        '<ui-radio :selected="selected" :items="items" @change="onChange" :disabled="disabled" />',
+        '<ui-radio :selected="selected" :items="items" @change="onChange" :disabled="disabled" id="uniqueidname" />',
 });
 
 export const Input = Template.bind({});
