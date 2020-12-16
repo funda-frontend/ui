@@ -1,8 +1,8 @@
 <template>
     <div>
-        <div v-for="(item, index) in items" :key="item.value" class="py-2">
+        <div v-for="(item, index) in items" :key="item.label" class="py-2">
             <input
-                :id="UUIDs[index]"
+                :id="`${id}_${index}`"
                 :name="name"
                 class="hidden"
                 type="radio"
@@ -11,7 +11,7 @@
             />
             <ui-label
                 class="cursor-pointer flex py-1 hover:text-blue-1"
-                :for="UUIDs[index]"
+                :for="`${id}_${index}`"
             >
                 <div
                     class="bg-blue-5 mr-2 mt-1 w-4 h-4 border border-blue-2 rounded-3xl"
@@ -23,6 +23,7 @@
 </template>
 <script>
 import UiLabel from './ui-label.vue';
+
 export default {
     components: {
         UiLabel,
@@ -33,6 +34,10 @@ export default {
             type: [Array, String],
             required: true,
         },
+        id: {
+            type: String,
+            required: true,
+        },
         name: {
             type: String,
             default: 'funda_radio_input',
@@ -40,33 +45,6 @@ export default {
         selected: {
             type: String,
             default: '',
-        },
-    },
-    computed: {
-        UUIDs() {
-            const array = [];
-            this.items.forEach((item) => {
-                array.push(
-                    this.shuffle(item.label).join('').replace(/\s/g, '')
-                );
-            });
-            return array;
-        },
-    },
-    methods: {
-        shuffle(string) {
-            let array = Array.from(string);
-            let currentIndex = array.length,
-                temp,
-                randomIndex;
-            while (0 !== currentIndex) {
-                randomIndex = Math.floor(Math.random() * currentIndex);
-                currentIndex -= 1;
-                temp = array[currentIndex];
-                array[currentIndex] = array[randomIndex];
-                array[randomIndex] = temp;
-            }
-            return array;
         },
     },
 };
