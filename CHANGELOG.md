@@ -1,3 +1,10 @@
+## [1.15.2](https://github.com/funda-frontend/ui/compare/v1.15.1...v1.15.2) (2020-12-17)
+
+
+### Bug Fixes
+
+* **card-title:** fix vertical spacing ([a1e826d](https://github.com/funda-frontend/ui/commit/a1e826ddffc3dd4479771c14c025385fed1d7de3))
+
 ## [1.15.1](https://github.com/funda-frontend/ui/compare/v1.15.0...v1.15.1) (2020-12-16)
 
 
