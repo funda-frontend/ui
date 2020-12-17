@@ -27,7 +27,7 @@ const TemplateInside = () => ({
 });
 export const CardTitleInside = TemplateInside.bind({});
 
-const TemplateOutside = () => ({
+const TemplateSubtitleOutside = () => ({
     components: { UiCard, UiCardTitle },
     template: ` <div class="bg-light-2 p-4">
                     <ui-card-title>
@@ -36,6 +36,21 @@ const TemplateOutside = () => ({
                         </template>
                         <template v-slot:intro>
                             Subtitle
+                        </template>
+                    </ui-card-title>
+                    <ui-card>
+                        Card content
+                    </ui-card>
+                </div>`,
+});
+export const CardTitleSubtitleOutside = TemplateSubtitleOutside.bind({});
+
+const TemplateOutside = () => ({
+    components: { UiCard, UiCardTitle },
+    template: ` <div class="bg-light-2 p-4">
+                    <ui-card-title>
+                        <template v-slot:title>
+                            Title title outside
                         </template>
                     </ui-card-title>
                     <ui-card>

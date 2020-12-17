@@ -1,5 +1,5 @@
 <template>
-    <div class="py-4 px-4 md:px-6">
+    <div class="px-4 md:px-6">
         <h2
             v-if="hasTitle"
             class="text-base md:text-xl"
