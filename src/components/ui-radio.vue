@@ -1,8 +1,8 @@
 <template>
     <div>
-        <div v-for="(item, index) in items" :key="item.label" class="py-2">
+        <div class="py-2">
             <input
-                :id="`${id}_${index}`"
+                :id="id"
                 :name="name"
                 class="hidden"
                 type="radio"
@@ -11,12 +11,12 @@
             />
             <ui-label
                 class="cursor-pointer flex py-1 hover:text-blue-1"
-                :for="`${id}_${index}`"
+                :for="id"
             >
                 <div
                     class="bg-blue-5 mr-2 mt-1 w-4 h-4 border border-blue-2 rounded-3xl"
                 ></div>
-                {{ item.label }}
+                <slot />
             </ui-label>
         </div>
     </div>
@@ -30,10 +30,6 @@ export default {
     },
     inheritAttrs: false,
     props: {
-        items: {
-            type: [Array, String],
-            required: true,
-        },
         id: {
             type: String,
             required: true,
@@ -41,10 +37,6 @@ export default {
         name: {
             type: String,
             default: 'funda_radio_input',
-        },
-        selected: {
-            type: String,
-            default: '',
         },
     },
 };
