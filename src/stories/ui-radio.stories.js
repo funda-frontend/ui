@@ -16,26 +16,29 @@ const Template = (args, { argTypes }) => ({
     props: Object.keys(argTypes),
     components: { UiRadio },
     template:
-        '<ui-radio :selected="selected" :items="items" @change="onChange" :disabled="disabled" id="uniqueidname" />',
+        '<ui-radio @change="onChange" :disabled="disabled" id="input-id" :checked="true">Radio</ui-radio>',
 });
 
 export const Input = Template.bind({});
 Input.args = {
-    items: [
-        {
-            label: 'Option 1',
-            value: 'option1',
-        },
-        {
-            label: 'Option 2',
-            value: 'option2',
-        },
-        {
-            label: 'Option 3',
-            value: 'option3',
-        },
-    ],
-    selected: 'option1',
+    disabled: false,
+    onChange() {},
+};
+
+const TemplateSlotLabel = (args, { argTypes }) => ({
+    props: Object.keys(argTypes),
+    components: { UiRadio },
+    template: `
+        <ui-radio change="onChange" :disabled="disabled" id="input-slot-extras-id" :checked="true">
+            <div>
+                <h3 class="font-bold">Radio Title</h3>
+                <div class="text-dark-2">Description</div>
+            </div>
+        </ui-radio>`,
+});
+
+export const InputSlotLabel = TemplateSlotLabel.bind({});
+InputSlotLabel.args = {
     disabled: false,
     onChange() {},
 };
