@@ -2,7 +2,7 @@ import UiButton from '@/components/ui-button.vue';
 import UiButtonGroup from '@/components/ui-button-group.vue';
 
 export default {
-    title: 'Forms/Button group',
+    title: 'Forms/Button',
     component: UiButtonGroup,
 };
 
