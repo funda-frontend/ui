@@ -1,3 +1,15 @@
+# [2.0.0](https://github.com/funda-frontend/ui/compare/v1.15.2...v2.0.0) (2020-12-21)
+
+
+### Features
+
+* **radio-group:** add radio group component ([b20fbff](https://github.com/funda-frontend/ui/commit/b20fbff2c1cfe2fb541df68106958a9bf1cb46e1))
+
+
+### BREAKING CHANGES
+
+* **radio-group:** ui-radio component is just a radio, use ui-radio-group when using array items prop
+
 ## [1.15.2](https://github.com/funda-frontend/ui/compare/v1.15.1...v1.15.2) (2020-12-17)
 
 
