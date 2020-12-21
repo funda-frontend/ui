@@ -1,3 +1,15 @@
+# [2.1.0](https://github.com/funda-frontend/ui/compare/v2.0.0...v2.1.0) (2020-12-21)
+
+
+### Bug Fixes
+
+* **string-casting:** using custom $ to allow bools ([9aa3800](https://github.com/funda-frontend/ui/commit/9aa3800ea6b14c6f3054625de3fb34f1ea083973))
+
+
+### Features
+
+* **value-binding:** input value and bubbling it up ([1955509](https://github.com/funda-frontend/ui/commit/1955509ce7739913ad573493889dd1b55f4dd9c9))
+
 # [2.0.0](https://github.com/funda-frontend/ui/compare/v1.15.2...v2.0.0) (2020-12-21)
 
 
