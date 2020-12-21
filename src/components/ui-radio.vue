@@ -3,6 +3,8 @@
         <div v-for="(item, index) in items" :key="item.label" class="py-2">
             <input
                 :id="`${id}_${index}`"
+                v-model="inputValue"
+                :value="item.value"
                 :name="name"
                 class="hidden"
                 type="radio"
@@ -30,6 +32,10 @@ export default {
     },
     inheritAttrs: false,
     props: {
+        selected: {
+            type: [String, Number, Boolean],
+            required: true,
+        },
         items: {
             type: [Array, String],
             required: true,
@@ -42,9 +48,16 @@ export default {
             type: String,
             default: 'funda_radio_input',
         },
-        selected: {
-            type: String,
-            default: '',
+    },
+    emits: ['change:value'],
+    computed: {
+        inputValue: {
+            get() {
+                return this.selected;
+            },
+            set(value) {
+                this.$emit('change:value', value);
+            },
         },
     },
 };
