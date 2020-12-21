@@ -16,26 +16,34 @@ const Template = (args, { argTypes }) => ({
     props: Object.keys(argTypes),
     components: { UiRadioGroup },
     template:
-        '<ui-radio-group :selected="selected" :items="items" @change="onChange" :disabled="disabled" id="radio-group-id" />',
+        '<ui-radio-group :selected="selected" :items="items" :disabled="disabled" id="radio-group-id" @change="onChange" />',
 });
 
 export const RadioGroup = Template.bind({});
 RadioGroup.args = {
     items: [
         {
-            label: 'Option 1',
-            value: 'option1',
+            label: 'Item 1',
+            value: 'item1',
         },
         {
-            label: 'Option 2',
-            value: 'option2',
+            label: 'Item 2',
+            value: 'item2',
         },
         {
-            label: 'Option 3',
-            value: 'option3',
+            label: 'Item 3',
+            value: 2,
+        },
+        {
+            label: 'Item 4',
+            value: true,
+        },
+        {
+            label: 'Item 5',
+            value: false,
         },
     ],
-    selected: 'option1',
+    selected: 'item2',
     disabled: false,
     onChange() {},
 };

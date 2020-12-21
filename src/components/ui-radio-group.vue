@@ -4,9 +4,11 @@
             v-for="item in items"
             :id="`${id}_${item.value}`"
             :key="item.label"
+            :value="item.value"
             :name="name"
             :checked="item.value === selected"
             :disabled="disabled"
+            @change="$emit('change', $event.target.value)"
         >
             {{ item.label }}
         </ui-radio>
@@ -19,10 +21,9 @@ export default {
     components: {
         UiRadio,
     },
-    inheritAttrs: false,
     props: {
         items: {
-            type: [Array, String],
+            type: Array,
             required: true,
         },
         id: {
@@ -34,11 +35,12 @@ export default {
             default: 'funda_radio_input',
         },
         selected: {
-            type: String,
+            type: [String, Boolean, Number],
             default: '',
         },
         disabled: {
             type: Boolean,
+            default: false,
         },
     },
 };
