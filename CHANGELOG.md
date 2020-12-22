@@ -1,3 +1,15 @@
+# [2.2.0](https://github.com/funda-frontend/ui/compare/v2.1.2...v2.2.0) (2020-12-22)
+
+
+### Bug Fixes
+
+* **event:** event bubbling up and various improv ([2de160f](https://github.com/funda-frontend/ui/commit/2de160f033d058c05ad63c6293d241b9ffe03ed2))
+
+
+### Features
+
+* **checkbox:** seperated checkbox input from group ([2785c7d](https://github.com/funda-frontend/ui/commit/2785c7dcd8a67b39d4e8332fc04a99c1ab8c66fb))
+
 ## [2.1.2](https://github.com/funda-frontend/ui/compare/v2.1.1...v2.1.2) (2020-12-22)
 
 
