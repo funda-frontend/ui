@@ -2,7 +2,7 @@
     <a v-if="href" :href="href" :class="cssClasses">
         <slot />
     </a>
-    <button v-else :class="cssClasses">
+    <button v-else :class="cssClasses" v-on="$listeners">
         <slot />
     </button>
 </template>
