@@ -1,9 +1,9 @@
 <template>
     <div>
-        <div v-for="item in items" :key="item.value" class="py-2">
+        <div class="py-2">
             <input
-                :id="item.value"
-                name="funda_radio_input"
+                :id="id"
+                :name="name"
                 class="hidden"
                 type="checkbox"
                 v-bind="$attrs"
@@ -11,12 +11,12 @@
             />
             <ui-label
                 class="cursor-pointer flex py-1 hover:text-blue-1"
-                :for="item.value"
+                :for="id"
             >
                 <div
                     class="bg-blue-5 border rounded-sm mr-2 mt-1 w-4 h-4 border-blue-2"
                 ></div>
-                {{ item.label }}
+                <slot />
             </ui-label>
         </div>
     </div>
@@ -30,13 +30,13 @@ export default {
     },
     inheritAttrs: false,
     props: {
-        items: {
-            type: [Array, String],
+        id: {
+            type: String,
             required: true,
         },
-        selected: {
+        name: {
             type: String,
-            default: '',
+            default: 'funda_checkbox_input',
         },
     },
 };
