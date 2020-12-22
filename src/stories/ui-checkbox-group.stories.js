@@ -16,7 +16,7 @@ const Template = (args, { argTypes }) => ({
     props: Object.keys(argTypes),
     components: { UiCheckboxGroup },
     template:
-        '<ui-checkbox-group :selected="selected" :items="items" id="checkbox-group-id" @change="onChange" :disabled="disabled"/>',
+        '<ui-checkbox-group :items="items" id="checkbox-group-id" @change="onChange" :disabled="disabled"/>',
 });
 
 export const CheckboxGroup = Template.bind({});
@@ -44,7 +44,5 @@ CheckboxGroup.args = {
         },
     ],
     disabled: false,
-    onChange(e) {
-        console.log('e:', e);
-    },
+    onChange() {},
 };

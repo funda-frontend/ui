@@ -1,6 +1,6 @@
 <template>
     <div>
-        <UiCheckbox
+        <ui-checkbox
             v-for="item in items"
             :id="`${id}_${item.value}`"
             :key="item.label"
@@ -11,7 +11,7 @@
             @change="$emit('change', $event.target.value)"
         >
             {{ item.label }}
-        </UiCheckbox>
+        </ui-checkbox>
     </div>
 </template>
 <script>
@@ -21,7 +21,6 @@ export default {
     components: {
         UiCheckbox,
     },
-    inheritAttrs: false,
     props: {
         items: {
             type: Array,
@@ -34,10 +33,6 @@ export default {
         name: {
             type: String,
             default: 'funda_checkbox_input',
-        },
-        selected: {
-            type: [String, Boolean, Number],
-            default: '',
         },
         disabled: {
             type: Boolean,
