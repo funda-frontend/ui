@@ -2,9 +2,13 @@
     <div>
         <UiCheckbox
             v-for="item in items"
-            :id="item.value"
+            :id="`${id}_${item.value}`"
             :key="item.label"
+            :value="item.value"
+            :name="name"
+            :checked="item.selected"
             :disabled="disabled"
+            @change="$emit('change', $event.target.value)"
         >
             {{ item.label }}
         </UiCheckbox>
@@ -23,8 +27,16 @@ export default {
             type: Array,
             required: true,
         },
-        selected: {
+        id: {
             type: String,
+            required: true,
+        },
+        name: {
+            type: String,
+            default: 'funda_checkbox_input',
+        },
+        selected: {
+            type: [String, Boolean, Number],
             default: '',
         },
         disabled: {
