@@ -1,42 +1,35 @@
 <template>
     <div>
-        <div class="py-2">
-            <input
-                :id="id"
-                :name="name"
-                class="hidden"
-                type="checkbox"
-                v-bind="$attrs"
-                v-on="$listeners"
-            />
-            <ui-label
-                class="cursor-pointer flex py-1 hover:text-blue-1"
-                :for="id"
-            >
-                <div
-                    class="bg-blue-5 border rounded-sm mr-2 mt-1 w-4 h-4 border-blue-2"
-                ></div>
-                <slot />
-            </ui-label>
-        </div>
+        <UiCheckbox
+            v-for="item in items"
+            :id="item.value"
+            :key="item.label"
+            :disabled="disabled"
+        >
+            {{ item.label }}
+        </UiCheckbox>
     </div>
 </template>
 <script>
-import UiLabel from './ui-label.vue';
+import UiCheckbox from './ui-checkbox.vue';
 
 export default {
     components: {
-        UiLabel,
+        UiCheckbox,
     },
     inheritAttrs: false,
     props: {
-        id: {
-            type: String,
+        items: {
+            type: Array,
             required: true,
         },
-        name: {
+        selected: {
             type: String,
-            default: 'funda_checkbox_input',
+            default: '',
+        },
+        disabled: {
+            type: Boolean,
+            default: false,
         },
     },
 };
