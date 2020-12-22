@@ -1,3 +1,10 @@
+## [2.1.2](https://github.com/funda-frontend/ui/compare/v2.1.1...v2.1.2) (2020-12-22)
+
+
+### Bug Fixes
+
+* **button:** add listeners ([22316e6](https://github.com/funda-frontend/ui/commit/22316e6168281779232cf0a02b2aedb122876988))
+
 ## [2.1.1](https://github.com/funda-frontend/ui/compare/v2.1.0...v2.1.1) (2020-12-22)
 
 
