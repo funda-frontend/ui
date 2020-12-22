@@ -1,3 +1,11 @@
+## [2.1.1](https://github.com/funda-frontend/ui/compare/v2.1.0...v2.1.1) (2020-12-22)
+
+
+### Bug Fixes
+
+* **classnames:** change prefix classnames to avoid clashing ([56b75ac](https://github.com/funda-frontend/ui/commit/56b75ac674e7a18cc006057d077dfa6d4f0e4b23))
+* **classnames:** remove unused ([c7ed778](https://github.com/funda-frontend/ui/commit/c7ed778dd9711528e2a01f649e45c96b24440078))
+
 # [2.1.0](https://github.com/funda-frontend/ui/compare/v2.0.0...v2.1.0) (2020-12-21)
 
 
