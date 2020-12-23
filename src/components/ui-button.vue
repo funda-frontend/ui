@@ -25,6 +25,7 @@ export default {
                     'secondary-alt',
                     'tertiary',
                     'transparent',
+                    'danger',
                 ].includes(value),
         },
     },
@@ -42,6 +43,8 @@ export default {
                 tertiary: 'text-blue-2 border-0 hover:text-blue-1',
                 transparent:
                     'px-6 border text-white bg-transparent hover:bg-white hover:bg-opacity-25',
+                danger:
+                    'px-6 border bg-red-1 border-red-1 text-white hover:bg-red-3 hover:border-red-3 hover:text-white',
             }[this.tone];
             return this.defaultClasses + specificClasses;
         },

@@ -14,6 +14,7 @@ export default {
                     'secondary-alt',
                     'tertiary',
                     'transparent',
+                    'danger',
                 ],
             },
         },

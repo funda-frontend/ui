@@ -60,7 +60,7 @@
     },
     "dependencies": {
         "@funda/icons": "^1.2.0",
-        "@funda/tailwind-config": "^3.2.1",
+        "@funda/tailwind-config": "^3.3.0",
         "tailwindcss": "^1.9.6",
         "vue": "^2.6.12",
         "vue-popperjs": "^2.3.0"
