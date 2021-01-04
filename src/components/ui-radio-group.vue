@@ -43,13 +43,5 @@ export default {
             default: false,
         },
     },
-    created() {
-        console.log('Created');
-    },
-    methods: {
-        onChange(e) {
-            console.log('on change', e.target.value);
-        },
-    },
 };
 </script>
