@@ -8,7 +8,7 @@
             :name="name"
             :checked="item.value === selected"
             :disabled="disabled"
-            @change="$emit('change', $event.target.value)"
+            @change="$emit('change', $event)"
         >
             {{ item.label }}
         </ui-radio>
@@ -41,6 +41,14 @@ export default {
         disabled: {
             type: Boolean,
             default: false,
+        },
+    },
+    created() {
+        console.log('Created');
+    },
+    methods: {
+        onChange(e) {
+            console.log('on change', e.target.value);
         },
     },
 };
