@@ -8,7 +8,7 @@
             :name="name"
             :checked="item.value === selected"
             :disabled="disabled"
-            @change="$emit('change', $event.target.value)"
+            @change="$emit('change', $event)"
         >
             {{ item.label }}
         </ui-radio>
