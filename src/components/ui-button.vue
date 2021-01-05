@@ -1,8 +1,8 @@
 <template>
-    <a v-if="href" :href="href" :class="cssClasses">
+    <a v-if="href" :href="href" :class="cssClasses" :disabled="disabled">
         <slot />
     </a>
-    <button v-else :class="cssClasses" v-on="$listeners">
+    <button v-else :class="cssClasses" :disabled="disabled" v-on="$listeners">
         <slot />
     </button>
 </template>
@@ -28,6 +28,10 @@ export default {
                     'danger',
                 ].includes(value),
         },
+        disabled: {
+            type: Boolean,
+            default: false,
+        },
     },
     computed: {
         cssClasses() {
@@ -46,12 +50,17 @@ export default {
                 danger:
                     'px-6 border bg-red-1 border-red-1 text-white hover:bg-red-3 hover:border-red-3 hover:text-white',
             }[this.tone];
-            return this.defaultClasses + specificClasses;
+            return (
+                this.defaultClasses +
+                (this.disabled ? this.disabledClasses : specificClasses)
+            );
         },
     },
     created() {
         this.defaultClasses =
             'leading-6 inline-flex h-11 whitespace-no-wrap border-solid rounded-sm align-middle cursor-pointer text-center items-center justify-center ';
+        this.disabledClasses =
+            'px-6 border bg-light-1 border-light-1 text-light-2 shadow hover:bg-light-1 hover:border-light-1 hover:text-light-2 cursor-not-allowed ';
     },
 };
 </script>
