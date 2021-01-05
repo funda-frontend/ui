@@ -1,3 +1,10 @@
+## [2.3.1](https://github.com/funda-frontend/ui/compare/v2.3.0...v2.3.1) (2021-01-05)
+
+
+### Bug Fixes
+
+* **event:** bubble up the whole event object ([02f073d](https://github.com/funda-frontend/ui/commit/02f073d019f82d3ad8a7d671ff9a3e8f75607870))
+
 # [2.3.0](https://github.com/funda-frontend/ui/compare/v2.2.0...v2.3.0) (2020-12-23)
 
 
