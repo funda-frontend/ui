@@ -1,3 +1,10 @@
+## [2.3.2](https://github.com/funda-frontend/ui/compare/v2.3.1...v2.3.2) (2021-01-05)
+
+
+### Bug Fixes
+
+* **button:** add disabled styles ([6494e57](https://github.com/funda-frontend/ui/commit/6494e57086e3d40762aa6c5f117bdb3dc5892fff))
+
 ## [2.3.1](https://github.com/funda-frontend/ui/compare/v2.3.0...v2.3.1) (2021-01-05)
 
 
