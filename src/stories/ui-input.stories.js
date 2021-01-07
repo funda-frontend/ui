@@ -28,7 +28,7 @@ export default {
                 type: 'text',
             },
         },
-        placeHolder: {
+        placeholder: {
             control: {
                 type: 'text',
             },
@@ -45,14 +45,14 @@ const Template = (args, { argTypes }) => ({
     props: Object.keys(argTypes),
     components: { UiInput },
     template:
-        '<ui-input @change="onChange" :type="type" :isValid="isValid" :placeHolder="placeHolder" :value="value" :disabled="disabled"/>',
+        '<ui-input @change="onChange" :type="type" :isValid="isValid" :placeholder="placeholder" :value="value" :disabled="disabled"/>',
 });
 export const Input = Template.bind({});
 Input.args = {
     type: 'text',
     isValid: true,
     value: 'lorem ipsum sitamet doloris.',
-    placeHolder: 'PlaceHolder',
+    placeholder: 'placeholder',
     disabled: false,
     onChange() {},
 };
@@ -60,7 +60,7 @@ Input.args = {
 const TemplatePrefixSufix = (args, { argTypes }) => ({
     props: Object.keys(argTypes),
     components: { UiInput },
-    template: `<ui-input @change="onChange" :type="type" :isValid="isValid" :placeHolder="placeHolder" :value="value" :disabled="disabled">
+    template: `<ui-input @change="onChange" :type="type" :isValid="isValid" :placeholder="placeholder" :value="value" :disabled="disabled">
                 <template v-slot:prefix><div class="text-light-1 py-2 px-4 absolute top-0 left-0">PF</div></template>
                 <template v-slot:sufix><div class="text-light-1 py-2 px-4 absolute top-0 right-0">SF</div></template>
                </ui-input>`,
@@ -70,7 +70,7 @@ InputExtras.args = {
     type: 'text',
     isValid: true,
     value: 'lorem ipsum sitamet doloris.',
-    placeHolder: 'PlaceHolder',
+    placeholder: 'placeholder',
     disabled: false,
     onChange() {},
 };

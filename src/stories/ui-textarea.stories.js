@@ -14,7 +14,7 @@ export default {
                 type: 'text',
             },
         },
-        placeHolder: {
+        placeholder: {
             control: {
                 type: 'text',
             },
@@ -31,7 +31,7 @@ const Template = (args, { argTypes }) => ({
     props: Object.keys(argTypes),
     components: { UiTextarea },
     template:
-        '<ui-textarea :value="value" :isValid="isValid" @change="onChange" :disabled="disabled" :placeHolder="placeHolder"/>',
+        '<ui-textarea :value="value" :isValid="isValid" @change="onChange" :disabled="disabled" :placeholder="placeholder"/>',
 });
 
 export const Textarea = Template.bind({});
@@ -41,6 +41,6 @@ Textarea.args = {
     type: 'text',
     isValid: true,
     value: 'lorem ipsum sitamet doloris.',
-    placeHolder: 'PlaceHolder text',
+    placeholder: 'placeholder text',
     disabled: false,
 };
