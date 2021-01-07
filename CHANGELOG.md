@@ -1,3 +1,15 @@
+# [2.4.0](https://github.com/funda-frontend/ui/compare/v2.3.2...v2.4.0) (2021-01-07)
+
+
+### Bug Fixes
+
+* **txtarea:** removed the default value logic to make it reactive with v-model ([5abc074](https://github.com/funda-frontend/ui/commit/5abc07408b58560b913c66020cbf0bf12ac771c1))
+
+
+### Features
+
+* **textarea:** manual attr inheritance, disabled, control options ([0bf4d72](https://github.com/funda-frontend/ui/commit/0bf4d727d9f551a9d28b86a7e5d71c8a313c7e72))
+
 ## [2.3.2](https://github.com/funda-frontend/ui/compare/v2.3.1...v2.3.2) (2021-01-05)
 
 
