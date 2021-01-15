@@ -15,7 +15,7 @@ export default {
     },
     computed: {
         thisIcon() {
-            return icons[this.icon].svg || '';
+            return icons[this.icon] ? icons[this.icon].svg : '';
         },
     },
 };
