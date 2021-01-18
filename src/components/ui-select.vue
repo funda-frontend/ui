@@ -15,6 +15,7 @@
                 v-for="option in options"
                 :key="option.value"
                 :value="option.value"
+                :selected="option.value === selected"
             >
                 {{ option.text }}
             </option>
@@ -41,7 +42,7 @@ export default {
             required: true,
         },
         selected: {
-            type: Number,
+            type: [Number, String],
             required: true,
         },
         isValid: {
