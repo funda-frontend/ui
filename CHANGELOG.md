@@ -1,3 +1,10 @@
+## [2.4.1](https://github.com/funda-frontend/ui/compare/v2.4.0...v2.4.1) (2021-01-19)
+
+
+### Bug Fixes
+
+* **select:** set selected, accept string value ([e383f00](https://github.com/funda-frontend/ui/commit/e383f0006ecf36c3dd22c6e8d6f39d374575ce39))
+
 # [2.4.0](https://github.com/funda-frontend/ui/compare/v2.3.2...v2.4.0) (2021-01-07)
 
 
