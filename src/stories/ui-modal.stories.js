@@ -27,7 +27,7 @@ export default {
 const Template = (args, { argTypes }) => ({
     props: Object.keys(argTypes),
     data: () => ({
-        open2: false,
+        open: false,
     }),
     components: { UiButton, UiModal },
     template: `<div>
