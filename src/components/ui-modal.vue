@@ -25,7 +25,9 @@
                 aria-describedby="modalDescription"
             >
                 <header class="flex m-5">
-                    <slot name="header"></slot>
+                    <h2 class="m-0 font-semibold text-2xl">
+                        <slot name="header"></slot>
+                    </h2>
                     <button
                         v-if="showCloseIcon"
                         class="focus:outline-none absolute top-1 right-1"

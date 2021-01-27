@@ -68,7 +68,7 @@ const Template = (args, { argTypes }) => ({
     template: `<div>
     <ui-button tone="primary" @click="showModal">Open modal</ui-button>
     <ui-modal v-show="isModalVisible" @close="closeModal" :showCloseIcon="showCloseIcon" :showBackdrop="showBackdrop">
-          <template v-slot:header></template>
+          <template v-slot:header>Modal header</template>
         </ui-modal></div>`,
 });
 
@@ -93,9 +93,7 @@ const TemplateModalWithContent = (args, { argTypes }) => ({
     template: `<div>
     <ui-button tone="primary" @click="showModal">Open modal</ui-button>
     <ui-modal v-show="isModalVisible" @close="closeModal" :showCloseIcon="showCloseIcon" :showBackdrop="showBackdrop" :wideMode="wideMode">
-          <template v-slot:header>
-            <h2 class="m-0 font-semibold text-2xl">Modal header</h2>
-          </template>
+          <template v-slot:header>Modal header</template>
           <template v-slot:body>
           <ui-notification type="success" :rounded="false">
             <template v-slot:notificationBody>
