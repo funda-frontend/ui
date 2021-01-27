@@ -1,3 +1,15 @@
+# [2.5.0](https://github.com/funda-frontend/ui/compare/v2.4.1...v2.5.0) (2021-01-27)
+
+
+### Bug Fixes
+
+* **icon:** prevent unexisting icon from throwing error ([fb52245](https://github.com/funda-frontend/ui/commit/fb52245dee0a22483d617d0eaffa8027f6481f09))
+
+
+### Features
+
+* **nuxt:** export component dir to nuxt components list ([a04cb7c](https://github.com/funda-frontend/ui/commit/a04cb7c21b516fa17930caefa4da7d4bae3bc580))
+
 ## [2.4.1](https://github.com/funda-frontend/ui/compare/v2.4.0...v2.4.1) (2021-01-19)
 
 
