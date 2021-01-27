@@ -26,13 +26,23 @@ export default {
 
 const Template = (args, { argTypes }) => ({
     props: Object.keys(argTypes),
-    data: () => ({
-        open: false,
-    }),
     components: { UiButton, UiModal },
+    data() {
+        return {
+            isModalVisible: false,
+        };
+    },
+    methods: {
+        showModal() {
+            this.isModalVisible = true;
+        },
+        closeModal() {
+            this.isModalVisible = false;
+        },
+    },
     template: `<div>
-    <ui-button tone="primary" @click="open = true">Open modal</ui-button>
-    <ui-modal :open="open" @close="open = false" :closeIcon="closeIcon" :customModalClass="customModalClass">
+    <ui-button tone="primary" @click="showModal">Open modal</ui-button>
+    <ui-modal v-show="isModalVisible" @close="closeModal" :closeIcon="closeIcon" :customModalClass="customModalClass">
           <template v-slot:header></template>
         </ui-modal></div>`,
 });

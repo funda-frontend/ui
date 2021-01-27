@@ -1,18 +1,7 @@
 <template>
-    <div
-        v-if="showModal"
-        class="fixed inset-0 flex items-center justify-center z-50"
-    >
-        <transition
-            enter-active-class="transition-all transition-fast ease-out-quad"
-            leave-active-class="transition-all transition-medium ease-in-quad"
-            enter-class="opacity-0"
-            enter-to-class="opacity-100"
-            leave-class="opacity-100"
-            leave-to-class="opacity-0"
-            appear
-            @before-leave="backdropLeaving = true"
-            @after-leave="backdropLeaving = false"
+    <transition name="modal">
+        <div
+            class="fixed inset-0 flex items-center justify-center z-50 modal-container transition duration-500 ease-in-out"
         >
             <div v-if="showBackdrop">
                 <div
@@ -20,58 +9,57 @@
                     @click="close"
                 ></div>
             </div>
-        </transition>
-
-        <transition
-            enter-active-class="transition-all transition-fast ease-out-quad"
-            leave-active-class="transition-all transition-medium ease-in-quad"
-            enter-class="opacity-0 scale-70"
-            enter-to-class="opacity-100 scale-100"
-            leave-class="opacity-100 scale-100"
-            leave-to-class="opacity-0 scale-70"
-            appear
-            @before-leave="cardLeaving = true"
-            @after-leave="cardLeaving = false"
-        >
             <div
                 :class="[
                     customModalClass,
                     'w-2/5 m-auto p-5 bg-white rounded-lg shadow-md transition duration-300 ease-in-out relative',
                 ]"
+                role="dialog"
+                aria-labelledby="modalTitle"
+                aria-describedby="modalDescription"
             >
                 <header class="flex">
-                    <slot v-if="$slots.header" name="header"
-                        >Default header</slot
-                    >
-                    <button
-                        v-if="closeIcon"
-                        class="focus:outline-none absolute top-1 right-1"
-                        @click="close"
-                    >
-                        <ui-icon icon="close" />
-                    </button>
+                    <slot name="header">
+                        This is the default tile!
+
+                        <button
+                            v-if="closeIcon"
+                            class="focus:outline-none absolute top-1 right-1"
+                            @click="close"
+                        >
+                            <ui-icon icon="close" />
+                        </button>
+                    </slot>
                 </header>
-
-                <section v-if="$slots.body" class="my-5">
-                    <slot name="body" />
+                <section class="my-5">
+                    <slot name="body">
+                        I'm the default body!
+                    </slot>
                 </section>
+                <footer>
+                    <slot name="footer">
+                        I'm the default footer!
 
-                <footer v-if="$slots.footer">
-                    <slot name="footer" />
+                        <button
+                            type="button"
+                            aria-label="Close modal"
+                            @click="close"
+                        >
+                            Close me!
+                        </button>
+                    </slot>
                 </footer>
             </div>
-        </transition>
-    </div>
+        </div>
+    </transition>
 </template>
 
 <script>
 import UiIcon from './ui-icon.vue';
 export default {
+    name: 'Modal',
     components: { UiIcon },
     props: {
-        open: {
-            type: Boolean,
-        },
         closeIcon: {
             type: Boolean,
         },
@@ -82,38 +70,12 @@ export default {
     },
     data() {
         return {
-            showModal: false,
-            showBackdrop: false,
-            backdropLeaving: false,
-            cardLeaving: false,
+            showBackdrop: true,
         };
-    },
-    computed: {
-        leaving() {
-            return this.backdropLeaving || this.cardLeaving;
-        },
-    },
-    watch: {
-        open: {
-            handler(newValue) {
-                if (newValue) {
-                    this.show();
-                } else {
-                    this.close();
-                }
-            },
-            immediate: true,
-        },
-        leaving(newValue) {
-            if (newValue === false) {
-                this.showModal = false;
-                this.$emit('close');
-            }
-        },
     },
     beforeMount() {
         const onEscape = (e) => {
-            if (this.open && e.keyCode === 27) {
+            if (e.keyCode === 27) {
                 this.close();
             }
         };
@@ -123,22 +85,25 @@ export default {
         });
     },
     methods: {
-        show() {
-            this.showModal = true;
-            this.showBackdrop = true;
-        },
         close() {
-            this.showModal = false;
-            this.showBackdrop = false;
+            this.$emit('close');
         },
     },
 };
 </script>
 
-<style scoped>
-/* below styles can be done using a class in Tailwind 2.0 or by adding it to our own Tailwind config for now */
-button {
-    top: 0.375rem;
-    right: 0.375rem;
+<style>
+.modal-enter {
+    opacity: 0;
+}
+
+.modal-leave-active {
+    opacity: 0;
+}
+
+.modal-enter .modal-container,
+.modal-leave-active .modal-container {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
 }
 </style>
