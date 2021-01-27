@@ -85,25 +85,23 @@ const TemplateModalWithContent = (args, { argTypes }) => ({
     template: `<div>
     <ui-button tone="primary" @click="showModal">Open modal</ui-button>
     <ui-modal v-show="isModalVisible" @close="closeModal" :showCloseIcon="showCloseIcon" :customModalContainerClasses="customModalContainerClasses" :customModalClasses="customModalClasses" :wideMode="wideMode">
-          <template v-slot:header>Modal header</template>
-          <template v-slot:body>
-          <ui-notification type="success" :rounded="false">
-            <template v-slot:notificationBody>
-                <p class="m-0 flex-auto">    
-                    Notification on modal
-                </p>
-            </template>
+        <template v-slot:header>Modal header</template>
+        <template v-slot:body>
+            <ui-notification type="success" :rounded="false">
+                <template v-slot:notificationBody>
+                    <p class="m-0 flex-auto">    
+                        Notification on modal
+                    </p>
+                </template>
             </ui-notification>
-          <section class="m-5">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          </section>
-          </template>
-          <template v-slot:footer>
-            <footer class="m-5">
-                <ui-button tone="primary" @click="closeModal" class="mr-4">Button</ui-button>
-                <ui-button tone="tertiary" @click="closeModal">Button</ui-button>
-            </footer>
-          </template>
+            <div class="m-5">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+        </template>
+        <template v-slot:footer>
+            <ui-button tone="primary" @click="closeModal" class="mr-4">Button</ui-button>
+            <ui-button tone="tertiary" @click="closeModal">Button</ui-button>
+        </template>
         </ui-modal></div>`,
 });
 

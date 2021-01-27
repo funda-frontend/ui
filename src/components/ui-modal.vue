@@ -36,8 +36,12 @@
                         <ui-icon icon="close" class="text-blue-2" />
                     </button>
                 </header>
-                <slot name="body"></slot>
-                <slot name="footer"></slot>
+                <section v-if="$slots.body" class="overflow-y-auto">
+                    <slot name="body"></slot>
+                </section>
+                <footer v-if="$slots.footer" class="m-5">
+                    <slot name="footer"></slot>
+                </footer>
             </div>
         </div>
     </transition>
@@ -85,9 +89,14 @@ export default {
 </script>
 
 <style scoped>
-/* below styles can be done using a class in Tailwind 2.0 or by adding it to our own Tailwind config for now */
+/* top/right available in Tailwind v2 not in v1.9.0*/
 button {
     top: 0.375rem;
     right: 0.375rem;
+}
+
+/* max-height available in Tailwind v2 not in v1.9.0*/
+section {
+    max-height: 30rem;
 }
 </style>
