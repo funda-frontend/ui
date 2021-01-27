@@ -94,16 +94,6 @@ const TemplateModalWithContent = (args, { argTypes }) => ({
                 <p class="m-0 flex-auto">    
                     Lorem ipsum dolor, sit amet. Nunc nec ante vel mi henderdit.
                 </p>
-
-                <button
-                    type="button"
-                    class="leading-6 rounded-sm inline-flex text-center items-center justify-center align-middle cursor-pointer whitespace-no-wrap ml-3 bg-transparent border-none p-0 h-auto border-0 text-dark-2"
-                    aria-label="Close"
-                >
-                    <span aria-hidden="true">
-                        <ui-icon icon="close"></ui-icon>
-                    </span>
-                </button>
             </template>
             </ui-notification>
           <section class="m-5">
