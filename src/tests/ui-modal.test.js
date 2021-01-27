@@ -45,16 +45,18 @@ describe('UiModal', () => {
         );
     });
 
-    it('classes are updated when custom modal class is set', () => {
-        expect(wrapper.find(ATTR_MODAL).attributes().class).toContain(
-            CLASSNAMES_MODAL_CUSTOM
-        );
-    });
+    describe('classes are updated in DOM when set', () => {
+        it('prop customModalContainerClasses', () => {
+            expect(
+                wrapper.find(ATTR_MODAL_CONTAINER).attributes().class
+            ).toContain(CLASSNAMES_MODAL_CONTAINER_CUSTOM);
+        });
 
-    it('classes are updated when custom modal container class is set', () => {
-        expect(wrapper.find(ATTR_MODAL_CONTAINER).attributes().class).toContain(
-            CLASSNAMES_MODAL_CONTAINER_CUSTOM
-        );
+        it('prop customModalClasses', () => {
+            expect(wrapper.find(ATTR_MODAL).attributes().class).toContain(
+                CLASSNAMES_MODAL_CUSTOM
+            );
+        });
     });
 
     it('emits close when close method is triggered by click event', () => {
@@ -63,15 +65,23 @@ describe('UiModal', () => {
         expect(vm.$emit).toHaveBeenCalledWith(EVENT_CLOSE);
     });
 
-    it('if header slot scope is set the DOM is updated', () => {
-        expect(wrapper.find('header').text()).toContain(SLOT_TEMPLATE_HEADER);
-    });
+    describe('DOM is updated when slot scopes are set', () => {
+        it('header slot-scope', () => {
+            expect(wrapper.find('header').text()).toContain(
+                SLOT_TEMPLATE_HEADER
+            );
+        });
 
-    it('if body slot scope is set the DOM is updated', () => {
-        expect(wrapper.find('section').text()).toContain(SLOT_TEMPLATE_BODY);
-    });
+        it('body slot-scope', () => {
+            expect(wrapper.find('section').text()).toContain(
+                SLOT_TEMPLATE_BODY
+            );
+        });
 
-    it('if footer slot scope is set the DOM is updated', () => {
-        expect(wrapper.find('footer').text()).toContain(SLOT_TEMPLATE_FOOTER);
+        it('footer slot-scope', () => {
+            expect(wrapper.find('footer').text()).toContain(
+                SLOT_TEMPLATE_FOOTER
+            );
+        });
     });
 });
