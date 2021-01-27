@@ -33,12 +33,8 @@
                         <ui-icon icon="close" />
                     </button>
                 </header>
-                <section v-if="$slots.body" class="my-5">
-                    <slot name="body"></slot>
-                </section>
-                <footer v-if="$slots.footer">
-                    <slot name="footer"></slot>
-                </footer>
+                <slot name="body"></slot>
+                <slot name="footer"></slot>
             </div>
         </div>
     </transition>
