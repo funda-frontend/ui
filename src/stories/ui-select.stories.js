@@ -1,6 +1,6 @@
 import UiSelect from '@/components/ui-select.vue';
 
-const selected = 1;
+const selected = 'test';
 const options = [
     {
         text: 'Select',
@@ -8,7 +8,7 @@ const options = [
     },
     {
         text: 'Option A',
-        value: 1,
+        value: 'test',
     },
     {
         text: 'Option B',
@@ -16,7 +16,7 @@ const options = [
     },
     {
         text: 'Option C',
-        value: 3,
+        value: 'test2',
     },
 ];
 
@@ -32,6 +32,11 @@ export default {
         disabled: {
             control: {
                 options: [true, false],
+            },
+        },
+        selected: {
+            control: {
+                type: 'text',
             },
         },
     },
