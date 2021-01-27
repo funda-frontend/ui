@@ -20,35 +20,20 @@
                 aria-describedby="modalDescription"
             >
                 <header class="flex">
-                    <slot name="header">
-                        This is the default tile!
-
-                        <button
-                            v-if="closeIcon"
-                            class="focus:outline-none absolute top-1 right-1"
-                            @click="close"
-                        >
-                            <ui-icon icon="close" />
-                        </button>
-                    </slot>
+                    <slot name="header"></slot>
+                    <button
+                        v-if="closeIcon"
+                        class="focus:outline-none absolute top-1 right-1"
+                        @click="close"
+                    >
+                        <ui-icon icon="close" />
+                    </button>
                 </header>
-                <section class="my-5">
-                    <slot name="body">
-                        I'm the default body!
-                    </slot>
+                <section v-if="$slots.body" class="my-5">
+                    <slot name="body"></slot>
                 </section>
-                <footer>
-                    <slot name="footer">
-                        I'm the default footer!
-
-                        <button
-                            type="button"
-                            aria-label="Close modal"
-                            @click="close"
-                        >
-                            Close me!
-                        </button>
-                    </slot>
+                <footer v-if="$slots.footer">
+                    <slot name="footer"></slot>
                 </footer>
             </div>
         </div>
