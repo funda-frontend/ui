@@ -41,14 +41,14 @@ describe('UiModal', () => {
         });
     });
 
-    describe('when wide mode is true the modal contains fullscreen mode classes', () => {
+    describe('modal is fullscreen when wideMode prop equals true', () => {
         it('prop wideMode', () => {
             expect(wrapper.find(ATTR_MODAL).attributes().class).toContain(
                 CLASSNAMES_MODAL
             );
         });
     });
-    describe('classes are updated in DOM when set', () => {
+    describe('modal style is updated when custom classes are set', () => {
         it('prop customModalContainerClasses', () => {
             expect(
                 wrapper.find(ATTR_MODAL_CONTAINER).attributes().class
@@ -62,7 +62,7 @@ describe('UiModal', () => {
         });
     });
 
-    describe('emits close when close method is triggered by click event', () => {
+    describe('close event is triggered when button is clicked so that parent close modal', () => {
         it('event close', () => {
             vm.$emit = jest.fn();
             vm.close();
@@ -70,7 +70,7 @@ describe('UiModal', () => {
         });
     });
 
-    describe('DOM is updated when slot scopes are set', () => {
+    describe('markup has changed when scope slots are set', () => {
         it('slot header', () => {
             expect(wrapper.find('header').text()).toContain(
                 SLOT_TEMPLATE_HEADER
