@@ -1,5 +1,6 @@
 import UiModal from '@/components/ui-modal.vue';
 import UiButton from '@/components/ui-button.vue';
+import UiNotification from '@/components/ui-notification.vue';
 
 export default {
     title: 'Informational/Modal',
@@ -67,7 +68,7 @@ export const ModalDefault = Template.bind({});
 
 const TemplateModalWithContent = (args, { argTypes }) => ({
     props: Object.keys(argTypes),
-    components: { UiButton, UiModal },
+    components: { UiButton, UiModal, UiNotification },
     data() {
         return {
             isModalVisible: false,
@@ -88,6 +89,23 @@ const TemplateModalWithContent = (args, { argTypes }) => ({
             <h2 class="m-0 font-semibold text-2xl">Title</h2>
           </template>
           <template v-slot:body>
+          <ui-notification type="success" :rounded="false">
+            <template v-slot:notificationBody>
+                <p class="m-0 flex-auto">    
+                    Lorem ipsum dolor, sit amet. Nunc nec ante vel mi henderdit.
+                </p>
+
+                <button
+                    type="button"
+                    class="leading-6 rounded-sm inline-flex text-center items-center justify-center align-middle cursor-pointer whitespace-no-wrap ml-3 bg-transparent border-none p-0 h-auto border-0 text-dark-2"
+                    aria-label="Close"
+                >
+                    <span aria-hidden="true">
+                        <ui-icon icon="close"></ui-icon>
+                    </span>
+                </button>
+            </template>
+            </ui-notification>
           <section class="my-5">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           </section>
