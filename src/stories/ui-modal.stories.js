@@ -5,7 +5,7 @@ export default {
     title: 'Informational/Modal',
     component: UiModal,
     argTypes: {
-        closeIcon: {
+        showCloseIcon: {
             defaultValue: true,
             description:
                 'Boolean indicating whether the close icon in the modal should render',
@@ -13,8 +13,24 @@ export default {
                 options: [true, false],
             },
         },
+        showBackdrop: {
+            defaultValue: true,
+            description:
+                'Boolean indicating whether the close icon in the modal should render',
+            control: {
+                options: [true, false],
+            },
+        },
+        customModalContainerClass: {
+            defaultValue: '',
+            description:
+                'Property to overwrite the default classes of the modal container',
+            control: {
+                type: 'text',
+            },
+        },
         customModalClass: {
-            defaultValue: 'p-20',
+            defaultValue: '',
             description:
                 'Property to overwrite default classes allowing you to customize the modal',
             control: {
@@ -42,7 +58,7 @@ const Template = (args, { argTypes }) => ({
     },
     template: `<div>
     <ui-button tone="primary" @click="showModal">Open modal</ui-button>
-    <ui-modal v-show="isModalVisible" @close="closeModal" :showCloseIcon="true" :showBackdrop="false">
+    <ui-modal v-show="isModalVisible" @close="closeModal" :showCloseIcon="showCloseIcon" :showBackdrop="showBackdrop">
           <template v-slot:header></template>
         </ui-modal></div>`,
 });

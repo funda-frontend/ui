@@ -1,7 +1,11 @@
 <template>
     <transition enter-class="opacity-0" leave-active-class="opacity-0">
         <div
-            class="fixed inset-0 flex items-center justify-center z-50 modal-container transition duration-500 ease-in-out"
+            :class="
+                customModalContainerClass
+                    ? customModalContainerClass
+                    : 'fixed inset-0 flex items-center justify-center z-50 modal-container transition duration-500 ease-in-out'
+            "
         >
             <div v-if="showBackdrop">
                 <div
@@ -51,6 +55,10 @@ export default {
         },
         showBackdrop: {
             type: Boolean,
+        },
+        customModalContainerClass: {
+            type: String,
+            default: '',
         },
         customModalClass: {
             type: String,
