@@ -84,20 +84,18 @@ const TemplateModalWithContent = (args, { argTypes }) => ({
     template: `<div>
     <ui-button tone="primary" @click="showModal">Open modal</ui-button>
     <ui-modal v-show="isModalVisible" @close="closeModal" :showCloseIcon="showCloseIcon" :showBackdrop="showBackdrop">
-          <template v-slot:header><h2>Omschrijving wijzigen</h2></template>
+          <template v-slot:header>
+            <h2 class="m-0 font-semibold text-2xl">Title</h2>
+          </template>
           <template v-slot:body>
           <section class="my-5">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-            Risus in hendrerit gravida rutrum. Aliquam sem et tortor consequat. 
-            Ut venenatis tellus in metus vulputate. Ac felis donec et odio pellentesque diam. 
-            Ac tincidunt vitae semper quis lectus nulla. Lobortis elementum nibh tellus molestie nunc non blandit. 
-            Pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat. Donec ac odio tempor orci dapibus. 
-            Lectus magna fringilla urna porttitor rhoncus dolor purus non enim. Porttitor massa id neque aliquam vestibulum morbi blandit cursus.
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           </section>
           </template>
           <template v-slot:footer>
             <footer>
-                <ui-button tone="primary" @click="closeModal">Opslaan</ui-button>
+                <ui-button tone="primary" @click="closeModal" class="mr-4">Button</ui-button>
+                <ui-button tone="tertiary" @click="closeModal">Button</ui-button>
             </footer>
           </template>
         </ui-modal></div>`,
