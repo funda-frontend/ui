@@ -30,7 +30,7 @@
                         class="focus:outline-none absolute top-1 right-1"
                         @click="close"
                     >
-                        <ui-icon icon="close" />
+                        <ui-icon icon="close" class="text-blue-2" />
                     </button>
                 </header>
                 <slot name="body"></slot>
