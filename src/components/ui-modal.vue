@@ -1,5 +1,5 @@
 <template>
-    <transition name="modal">
+    <transition enter-class="opacity-0" leave-active-class="opacity-0">
         <div
             class="fixed inset-0 flex items-center justify-center z-50 modal-container transition duration-500 ease-in-out"
         >
@@ -98,20 +98,5 @@ export default {
 button {
     top: 0.375rem;
     right: 0.375rem;
-}
-
-/* Transition classes */
-.modal-enter {
-    opacity: 0;
-}
-
-.modal-leave-active {
-    opacity: 0;
-}
-
-.modal-enter .modal-container,
-.modal-leave-active .modal-container {
-    -webkit-transform: scale(1.5);
-    transform: scale(1.5);
 }
 </style>
