@@ -10,6 +10,16 @@
             <slot name="notifications" />
         </div>
         <div class="py-4 px-4 md:px-6">
+            <div
+                v-if="hasMedia"
+                class="card__image mb-4 overflow-hidden relative h-0 pt-40"
+            >
+                <div
+                    class="absolute block w-full top-0 left-0 h-full object-cover"
+                >
+                    <slot name="media" />
+                </div>
+            </div>
             <slot />
         </div>
     </div>
@@ -23,6 +33,9 @@ export default {
         },
         hasNotifications() {
             return Boolean(this.$slots['notifications']);
+        },
+        hasMedia() {
+            return Boolean(this.$slots['media']);
         },
     },
 };
