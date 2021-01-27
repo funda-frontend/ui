@@ -10,6 +10,10 @@ const CLASSNAMES_MODAL = 'w-full h-full';
 const CLASSNAMES_MODAL_CUSTOM =
     'w-full h-full m-auto bg-blue-2 md:rounded shadow-xl transition duration-300 ease-in-out relative';
 const EVENT_CLOSE = 'close';
+const SLOT_TEMPLATE_HEADER = 'Modal header';
+const SLOT_TEMPLATE_BODY =
+    'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua';
+const SLOT_TEMPLATE_FOOTER = 'footer';
 
 describe('UiModal', () => {
     let vm;
@@ -21,6 +25,11 @@ describe('UiModal', () => {
                 wideMode: true,
                 customModalContainerClasses: CLASSNAMES_MODAL_CONTAINER_CUSTOM,
                 customModalClasses: CLASSNAMES_MODAL_CUSTOM,
+            },
+            slots: {
+                header: SLOT_TEMPLATE_HEADER,
+                body: SLOT_TEMPLATE_BODY,
+                footer: SLOT_TEMPLATE_FOOTER,
             },
         });
         vm = wrapper.vm;
@@ -52,5 +61,17 @@ describe('UiModal', () => {
         vm.$emit = jest.fn();
         vm.close();
         expect(vm.$emit).toHaveBeenCalledWith(EVENT_CLOSE);
+    });
+
+    it('if header slot scope is set the DOM is updated', () => {
+        expect(wrapper.find('header').text()).toContain(SLOT_TEMPLATE_HEADER);
+    });
+
+    it('if body slot scope is set the DOM is updated', () => {
+        expect(wrapper.find('section').text()).toContain(SLOT_TEMPLATE_BODY);
+    });
+
+    it('if footer slot scope is set the DOM is updated', () => {
+        expect(wrapper.find('footer').text()).toContain(SLOT_TEMPLATE_FOOTER);
     });
 });
