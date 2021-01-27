@@ -17,7 +17,7 @@
                 :class="
                     customModalClass
                         ? customModalClass
-                        : 'w-2/5 m-auto bg-white rounded shadow-md transition duration-300 ease-in-out relative'
+                        : 'w-full h-full md:h-auto m-auto md:max-w-2xl bg-white md:rounded shadow-md transition duration-300 ease-in-out relative'
                 "
                 role="dialog"
                 aria-labelledby="modalTitle"

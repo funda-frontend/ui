@@ -86,13 +86,13 @@ const TemplateModalWithContent = (args, { argTypes }) => ({
     <ui-button tone="primary" @click="showModal">Open modal</ui-button>
     <ui-modal v-show="isModalVisible" @close="closeModal" :showCloseIcon="showCloseIcon" :showBackdrop="showBackdrop">
           <template v-slot:header>
-            <h2 class="m-0 font-semibold text-2xl">Title</h2>
+            <h2 class="m-0 font-semibold text-2xl">Modal header</h2>
           </template>
           <template v-slot:body>
           <ui-notification type="success" :rounded="false">
             <template v-slot:notificationBody>
                 <p class="m-0 flex-auto">    
-                    Lorem ipsum dolor, sit amet. Nunc nec ante vel mi henderdit.
+                    Notification on modal
                 </p>
             </template>
             </ui-notification>
