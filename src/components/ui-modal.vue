@@ -2,8 +2,8 @@
     <transition enter-class="opacity-0" leave-active-class="opacity-0">
         <div
             :class="
-                customModalContainerClass
-                    ? customModalContainerClass
+                customModalContainerClasses
+                    ? customModalContainerClasses
                     : 'fixed inset-0 flex items-center justify-center z-50 modal-container transition duration-500 ease-in-out'
             "
         >
@@ -14,11 +14,12 @@
                 ></div>
             </div>
             <div
-                :class="
-                    customModalClass
-                        ? customModalClass
-                        : 'w-full h-full md:h-auto m-auto md:max-w-2xl bg-white md:rounded shadow-md transition duration-300 ease-in-out relative'
-                "
+                :class="[
+                    customModalClasses
+                        ? customModalClasses
+                        : 'w-full h-full m-auto bg-white md:rounded shadow-md transition duration-300 ease-in-out relative',
+                    wideMode ? '' : 'md:h-auto md:max-w-2xl',
+                ]"
                 role="dialog"
                 aria-labelledby="modalTitle"
                 aria-describedby="modalDescription"
@@ -52,11 +53,15 @@ export default {
         showBackdrop: {
             type: Boolean,
         },
-        customModalContainerClass: {
+        customModalContainerClasses: {
             type: String,
             default: '',
         },
-        customModalClass: {
+        wideMode: {
+            type: Boolean,
+            default: false,
+        },
+        customModalClasses: {
             type: String,
             default: '',
         },

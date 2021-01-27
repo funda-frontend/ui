@@ -22,7 +22,7 @@ export default {
                 options: [true, false],
             },
         },
-        customModalContainerClass: {
+        customModalContainerClasses: {
             defaultValue: '',
             description:
                 'Property to overwrite the default classes of the modal container',
@@ -30,12 +30,20 @@ export default {
                 type: 'text',
             },
         },
-        customModalClass: {
+        customModalClasses: {
             defaultValue: '',
             description:
                 'Property to overwrite default classes allowing you to customize the modal',
             control: {
                 type: 'text',
+            },
+        },
+        wideMode: {
+            defaultValue: false,
+            description:
+                'Boolean indicating whether the close icon in the modal should render',
+            control: {
+                options: [true, false],
             },
         },
     },
@@ -84,7 +92,7 @@ const TemplateModalWithContent = (args, { argTypes }) => ({
     },
     template: `<div>
     <ui-button tone="primary" @click="showModal">Open modal</ui-button>
-    <ui-modal v-show="isModalVisible" @close="closeModal" :showCloseIcon="showCloseIcon" :showBackdrop="showBackdrop">
+    <ui-modal v-show="isModalVisible" @close="closeModal" :showCloseIcon="showCloseIcon" :showBackdrop="showBackdrop" :wideMode="wideMode">
           <template v-slot:header>
             <h2 class="m-0 font-semibold text-2xl">Modal header</h2>
           </template>
