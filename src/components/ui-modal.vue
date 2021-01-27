@@ -7,7 +7,7 @@
                     : 'fixed inset-0 flex items-center justify-center z-50 modal-container transition duration-500 ease-in-out'
             "
         >
-            <div v-if="showBackdrop">
+            <div>
                 <div
                     class="absolute inset-0 bg-black opacity-25"
                     @click="close"
@@ -50,9 +50,6 @@ export default {
     components: { UiIcon },
     props: {
         showCloseIcon: {
-            type: Boolean,
-        },
-        showBackdrop: {
             type: Boolean,
         },
         customModalContainerClasses: {

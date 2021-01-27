@@ -14,14 +14,6 @@ export default {
                 options: [true, false],
             },
         },
-        showBackdrop: {
-            defaultValue: true,
-            description:
-                'Boolean indicating whether the close icon in the modal should render',
-            control: {
-                options: [true, false],
-            },
-        },
         customModalContainerClasses: {
             defaultValue: '',
             description:
@@ -67,7 +59,7 @@ const Template = (args, { argTypes }) => ({
     },
     template: `<div>
     <ui-button tone="primary" @click="showModal">Open modal</ui-button>
-    <ui-modal v-show="isModalVisible" @close="closeModal" :showCloseIcon="showCloseIcon" :showBackdrop="showBackdrop">
+    <ui-modal v-show="isModalVisible" @close="closeModal" :showCloseIcon="showCloseIcon" :customModalContainerClasses="customModalContainerClasses" :customModalClasses="customModalClasses" :wideMode="wideMode">
           <template v-slot:header>Modal header</template>
         </ui-modal></div>`,
 });
@@ -92,7 +84,7 @@ const TemplateModalWithContent = (args, { argTypes }) => ({
     },
     template: `<div>
     <ui-button tone="primary" @click="showModal">Open modal</ui-button>
-    <ui-modal v-show="isModalVisible" @close="closeModal" :showCloseIcon="showCloseIcon" :showBackdrop="showBackdrop" :wideMode="wideMode">
+    <ui-modal v-show="isModalVisible" @close="closeModal" :showCloseIcon="showCloseIcon" :customModalContainerClasses="customModalContainerClasses" :customModalClasses="customModalClasses" :wideMode="wideMode">
           <template v-slot:header>Modal header</template>
           <template v-slot:body>
           <ui-notification type="success" :rounded="false">
