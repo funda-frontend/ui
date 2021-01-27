@@ -35,16 +35,19 @@ describe('UiModal', () => {
         vm = wrapper.vm;
     });
 
-    it('close icon is hidden when showCloseIcon equals false', () => {
-        expect(wrapper.find(BUTTON_SELECTOR).exists()).toBe(false);
+    describe('close icon is hidden when showCloseIcon equals false', () => {
+        it('prop showCloseIcon', () => {
+            expect(wrapper.find(BUTTON_SELECTOR).exists()).toBe(false);
+        });
     });
 
-    it('when wide mode is true the modal contains fullscreen mode classes', () => {
-        expect(wrapper.find(ATTR_MODAL).attributes().class).toContain(
-            CLASSNAMES_MODAL
-        );
+    describe('when wide mode is true the modal contains fullscreen mode classes', () => {
+        it('prop wideMode', () => {
+            expect(wrapper.find(ATTR_MODAL).attributes().class).toContain(
+                CLASSNAMES_MODAL
+            );
+        });
     });
-
     describe('classes are updated in DOM when set', () => {
         it('prop customModalContainerClasses', () => {
             expect(
@@ -59,26 +62,28 @@ describe('UiModal', () => {
         });
     });
 
-    it('emits close when close method is triggered by click event', () => {
-        vm.$emit = jest.fn();
-        vm.close();
-        expect(vm.$emit).toHaveBeenCalledWith(EVENT_CLOSE);
+    describe('emits close when close method is triggered by click event', () => {
+        it('event close', () => {
+            vm.$emit = jest.fn();
+            vm.close();
+            expect(vm.$emit).toHaveBeenCalledWith(EVENT_CLOSE);
+        });
     });
 
     describe('DOM is updated when slot scopes are set', () => {
-        it('header slot-scope', () => {
+        it('slot header', () => {
             expect(wrapper.find('header').text()).toContain(
                 SLOT_TEMPLATE_HEADER
             );
         });
 
-        it('body slot-scope', () => {
+        it('slot body', () => {
             expect(wrapper.find('section').text()).toContain(
                 SLOT_TEMPLATE_BODY
             );
         });
 
-        it('footer slot-scope', () => {
+        it('slot footer', () => {
             expect(wrapper.find('footer').text()).toContain(
                 SLOT_TEMPLATE_FOOTER
             );
