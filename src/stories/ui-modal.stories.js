@@ -42,7 +42,7 @@ const Template = (args, { argTypes }) => ({
     },
     template: `<div>
     <ui-button tone="primary" @click="showModal">Open modal</ui-button>
-    <ui-modal v-show="isModalVisible" @close="closeModal" :closeIcon="closeIcon">
+    <ui-modal v-show="isModalVisible" @close="closeModal" :showCloseIcon="true" :showBackdrop="false">
           <template v-slot:header></template>
         </ui-modal></div>`,
 });

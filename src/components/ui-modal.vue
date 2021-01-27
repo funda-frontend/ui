@@ -22,7 +22,7 @@
                 <header class="flex">
                     <slot name="header"></slot>
                     <button
-                        v-if="closeIcon"
+                        v-if="showCloseIcon"
                         class="focus:outline-none absolute top-1 right-1"
                         @click="close"
                     >
@@ -46,18 +46,16 @@ export default {
     name: 'Modal',
     components: { UiIcon },
     props: {
-        closeIcon: {
+        showCloseIcon: {
+            type: Boolean,
+        },
+        showBackdrop: {
             type: Boolean,
         },
         customModalClass: {
             type: String,
             default: '',
         },
-    },
-    data() {
-        return {
-            showBackdrop: true,
-        };
     },
     beforeMount() {
         const onEscape = (e) => {
