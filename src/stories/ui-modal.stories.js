@@ -106,12 +106,12 @@ const TemplateModalWithContent = (args, { argTypes }) => ({
                 </button>
             </template>
             </ui-notification>
-          <section class="my-5">
+          <section class="m-5">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           </section>
           </template>
           <template v-slot:footer>
-            <footer>
+            <footer class="m-5">
                 <ui-button tone="primary" @click="closeModal" class="mr-4">Button</ui-button>
                 <ui-button tone="tertiary" @click="closeModal">Button</ui-button>
             </footer>

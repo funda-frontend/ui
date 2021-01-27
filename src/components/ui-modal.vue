@@ -17,13 +17,13 @@
                 :class="
                     customModalClass
                         ? customModalClass
-                        : 'w-2/5 m-auto p-5 bg-white rounded shadow-md transition duration-300 ease-in-out relative'
+                        : 'w-2/5 m-auto bg-white rounded shadow-md transition duration-300 ease-in-out relative'
                 "
                 role="dialog"
                 aria-labelledby="modalTitle"
                 aria-describedby="modalDescription"
             >
-                <header class="flex">
+                <header class="flex m-5">
                     <slot name="header"></slot>
                     <button
                         v-if="showCloseIcon"
