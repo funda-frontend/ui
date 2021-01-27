@@ -17,7 +17,7 @@
                 :class="[
                     customModalClasses
                         ? customModalClasses
-                        : 'modal w-full h-full m-auto bg-white md:rounded transition duration-300 ease-in-out relative',
+                        : 'w-full h-full m-auto bg-white md:rounded shadow-xl transition duration-300 ease-in-out relative',
                     wideMode ? '' : 'md:h-auto md:max-w-2xl',
                 ]"
                 role="dialog"
@@ -103,10 +103,5 @@ section {
 /* TODO: extend tailwind config with specific background opacity */
 .modal-backdrop {
     background: rgba(0, 0, 0, 0.6);
-}
-
-/* TODO: extend tailwind config to have specific box shadow for our designs */
-.modal {
-    box-shadow: 0 0 40px 0 rgb(0 0 0 / 70%);
 }
 </style>
