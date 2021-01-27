@@ -10,10 +10,11 @@
                 ></div>
             </div>
             <div
-                :class="[
-                    customModalClass,
-                    'w-2/5 m-auto p-5 bg-white rounded-lg shadow-md transition duration-300 ease-in-out relative',
-                ]"
+                :class="
+                    customModalClass
+                        ? customModalClass
+                        : 'w-2/5 m-auto p-5 bg-white rounded-lg shadow-md transition duration-300 ease-in-out relative'
+                "
                 role="dialog"
                 aria-labelledby="modalTitle"
                 aria-describedby="modalDescription"
@@ -92,7 +93,14 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+/* below styles can be done using a class in Tailwind 2.0 or by adding it to our own Tailwind config for now */
+button {
+    top: 0.375rem;
+    right: 0.375rem;
+}
+
+/* Transition classes */
 .modal-enter {
     opacity: 0;
 }
