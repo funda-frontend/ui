@@ -21,7 +21,7 @@
         "release": "npx semantic-release",
         "prepublishOnly": "npm run generateExports",
         "generateExports": "node ./src/generateExports.js",
-        "test": "jest --passWithNoTests",
+        "test": "jest",
         "test-watch": "jest --watch"
     },
     "devDependencies": {

@@ -6,6 +6,7 @@
                     ? customModalContainerClasses
                     : 'fixed inset-0 flex items-center justify-center z-50 modal-container transition duration-500 ease-in-out'
             "
+            data-test-modal-container
         >
             <div>
                 <div
@@ -23,6 +24,7 @@
                 role="dialog"
                 aria-labelledby="modalTitle"
                 aria-describedby="modalDescription"
+                data-test-modal
             >
                 <header class="flex m-5">
                     <h2 class="m-0 font-semibold text-2xl">
