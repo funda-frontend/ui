@@ -9,7 +9,7 @@
         >
             <div>
                 <div
-                    class="absolute inset-0 bg-black opacity-25"
+                    class="modal-backdrop absolute inset-0 bg-opacity-60"
                     @click="close"
                 ></div>
             </div>
@@ -17,7 +17,7 @@
                 :class="[
                     customModalClasses
                         ? customModalClasses
-                        : 'w-full h-full m-auto bg-white md:rounded shadow-md transition duration-300 ease-in-out relative',
+                        : 'modal w-full h-full m-auto bg-white md:rounded transition duration-300 ease-in-out relative',
                     wideMode ? '' : 'md:h-auto md:max-w-2xl',
                 ]"
                 role="dialog"
@@ -98,5 +98,15 @@ button {
 /* max-height available in Tailwind v2 not in v1.9.0*/
 section {
     max-height: 30rem;
+}
+
+/* TODO: extend tailwind config with specific background opacity */
+.modal-backdrop {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+/* TODO: extend tailwind config to have specific box shadow for our designs */
+.modal {
+    box-shadow: 0 0 40px 0 rgb(0 0 0 / 70%);
 }
 </style>
