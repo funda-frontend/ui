@@ -38,7 +38,7 @@ export default {
 </script>
 
 <style scoped>
-.card__image img {
+.card__image * {
     position: absolute;
     display: block;
     width: 100%;
