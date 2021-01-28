@@ -5,7 +5,7 @@ const BUTTON_SELECTOR = 'button';
 const ATTR_MODAL_CONTAINER = '[data-test-modal-container]';
 const ATTR_MODAL = '[data-test-modal]';
 const CLASSNAMES_MODAL_CONTAINER_CUSTOM =
-    'fixed inset-0 flex items-center justify-center z-60 modal-container transition duration-600 ease-in-out';
+    'fixed inset-0 flex items-center justify-center z-60 transition duration-600 ease-in-out';
 const CLASSNAMES_MODAL = 'w-full h-full';
 const CLASSNAMES_MODAL_CUSTOM =
     'w-full h-full m-auto bg-blue-2 md:rounded shadow-xl transition duration-300 ease-in-out relative';
