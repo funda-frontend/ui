@@ -1,10 +1,12 @@
 import UiSelect from '@/components/ui-select.vue';
 
-const selected = 'test';
+const selected = '';
 const options = [
     {
-        text: 'Select',
-        value: 0,
+        text: 'Select a value',
+        value: '',
+        disabled: true,
+        hidden: true,
     },
     {
         text: 'Option A',
