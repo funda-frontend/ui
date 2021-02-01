@@ -16,6 +16,8 @@
                 :key="option.value"
                 :value="option.value"
                 :selected="option.value === selected"
+                :disabled="option.disabled"
+                :hidden="option.hidden"
             >
                 {{ option.text }}
             </option>
