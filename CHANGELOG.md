@@ -1,3 +1,10 @@
+# [2.6.0](https://github.com/funda-frontend/ui/compare/v2.5.0...v2.6.0) (2021-02-01)
+
+
+### Features
+
+* **select:** Bind disabled and hidden for options ([df12f90](https://github.com/funda-frontend/ui/commit/df12f90dcbc7fbb608a5cff4d3e293d1f5073d3b))
+
 # [2.5.0](https://github.com/funda-frontend/ui/compare/v2.4.1...v2.5.0) (2021-01-27)
 
 
