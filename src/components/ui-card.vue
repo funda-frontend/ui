@@ -9,13 +9,13 @@
         <div v-if="hasNotifications" class="border-b border-light-2">
             <slot name="notifications" />
         </div>
+        <div
+            v-if="hasMedia"
+            class="card__image mb-4 overflow-hidden relative h-0 pt-40 md:rounded-t-sm"
+        >
+            <slot name="media" />
+        </div>
         <div class="py-4 px-4 md:px-6">
-            <div
-                v-if="hasMedia"
-                class="card__image mb-4 overflow-hidden relative h-0 pt-40"
-            >
-                <slot name="media" />
-            </div>
             <slot />
         </div>
     </div>
