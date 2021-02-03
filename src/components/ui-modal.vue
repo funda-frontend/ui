@@ -4,7 +4,7 @@
             :class="
                 customModalContainerClasses
                     ? customModalContainerClasses
-                    : 'fixed inset-0 flex items-center justify-center z-50 transition duration-500 ease-in-out'
+                    : 'fixed inset-0 flex items-center justify-center z-50 transition duration-500 ease-in-out md:py-4'
             "
             data-test-modal-container
         >
@@ -18,8 +18,8 @@
                 :class="[
                     customModalClasses
                         ? customModalClasses
-                        : 'w-full h-full m-auto bg-white md:rounded shadow-xl transition duration-300 ease-in-out relative',
-                    wideMode ? '' : 'md:h-auto md:max-w-2xl',
+                        : 'w-full h-full m-auto bg-white md:rounded shadow-xl transition duration-300 ease-in-out relative overflow-hidden flex flex-col',
+                    wideMode ? '' : 'md:max-w-2xl',
                 ]"
                 role="dialog"
                 aria-labelledby="modalTitle"
@@ -41,7 +41,10 @@
                 <section v-if="$slots.body" class="overflow-y-auto">
                     <slot name="body"></slot>
                 </section>
-                <footer v-if="$slots.footer" class="m-5">
+                <footer
+                    v-if="$slots.footer"
+                    class="p-5 sticky bg-white bottom-0 w-full z-10 md:rounded-b"
+                >
                     <slot name="footer"></slot>
                 </footer>
             </div>
