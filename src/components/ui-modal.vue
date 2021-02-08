@@ -4,7 +4,7 @@
             :class="
                 customModalContainerClasses
                     ? customModalContainerClasses
-                    : 'fixed inset-0 flex items-center justify-center z-50 transition duration-500 ease-in-out md:py-4'
+                    : 'fixed inset-0 flex items-center justify-center z-50 transition duration-500 ease-in-out md:p-4'
             "
             data-test-modal-container
         >
