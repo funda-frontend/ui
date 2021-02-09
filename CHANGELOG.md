@@ -1,3 +1,14 @@
+# [2.7.0](https://github.com/funda-frontend/ui/compare/v2.6.0...v2.7.0) (2021-02-09)
+
+
+### Features
+
+* **modal:** add default and extended examples ([74ab9c3](https://github.com/funda-frontend/ui/commit/74ab9c3743ed2c6bde84904ee2c943e9559576c1))
+* **modal:** add wideMode prop ([9ba86d6](https://github.com/funda-frontend/ui/commit/9ba86d6d5e308f0a3d4cf3efb822cd1f70ef2b98))
+* **modal:** improve modal component ([d63751d](https://github.com/funda-frontend/ui/commit/d63751dac57c77ee00871565aa3bb41bc76cdd9e))
+* **modal:** initialise modal component ([68001f7](https://github.com/funda-frontend/ui/commit/68001f778eeb21dad43524b94f26a18cafe95c97))
+* **ui-modal:** accomodate for long content ([4906222](https://github.com/funda-frontend/ui/commit/4906222cb6dacf660b8c1787c205bc974b600a4c))
+
 # [2.6.0](https://github.com/funda-frontend/ui/compare/v2.5.0...v2.6.0) (2021-02-01)
 
 
