@@ -38,6 +38,14 @@ export default {
                 options: [true, false],
             },
         },
+        disableScroll: {
+            defaultValue: false,
+            description:
+                'Boolean indicating whether the scroll in the modal should be shown',
+            control: {
+                options: [true, false],
+            },
+        },
     },
 };
 
@@ -59,7 +67,7 @@ const Template = (args, { argTypes }) => ({
     },
     template: `<div>
     <ui-button tone="primary" @click="showModal">Open modal</ui-button>
-    <ui-modal v-show="isModalVisible" @close="closeModal" :showCloseIcon="showCloseIcon" :customModalContainerClasses="customModalContainerClasses" :customModalClasses="customModalClasses" :wideMode="wideMode">
+    <ui-modal v-show="isModalVisible" @close="closeModal" :showCloseIcon="showCloseIcon" :customModalContainerClasses="customModalContainerClasses" :customModalClasses="customModalClasses" :wideMode="wideMode" :disableScroll="disableScroll">
           <template v-slot:header>Modal header</template>
         </ui-modal></div>`,
 });
@@ -84,7 +92,7 @@ const TemplateModalWithContent = (args, { argTypes }) => ({
     },
     template: `<div>
     <ui-button tone="primary" @click="showModal">Open modal</ui-button>
-    <ui-modal v-show="isModalVisible" @close="closeModal" :showCloseIcon="showCloseIcon" :customModalContainerClasses="customModalContainerClasses" :customModalClasses="customModalClasses" :wideMode="wideMode">
+    <ui-modal v-show="isModalVisible" @close="closeModal" :showCloseIcon="showCloseIcon" :customModalContainerClasses="customModalContainerClasses" :customModalClasses="customModalClasses" :wideMode="wideMode" :disableScroll="disableScroll">
         <template v-slot:header>Modal header</template>
         <template v-slot:body>
             <ui-notification type="success" :rounded="false">

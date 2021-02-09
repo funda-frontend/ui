@@ -1,13 +1,6 @@
 <template>
     <transition enter-class="opacity-0" leave-active-class="opacity-0">
-        <div
-            :class="
-                customModalContainerClasses
-                    ? customModalContainerClasses
-                    : 'fixed inset-0 flex items-center justify-center z-50 transition duration-500 ease-in-out md:p-4'
-            "
-            data-test-modal-container
-        >
+        <div :class="customModalContainerClasses" data-test-modal-container>
             <div>
                 <div
                     class="modal-backdrop absolute inset-0 bg-opacity-60"
@@ -63,9 +56,14 @@ export default {
         },
         customModalContainerClasses: {
             type: String,
-            default: '',
+            default:
+                'fixed inset-0 flex items-center justify-center z-50 transition duration-500 ease-in-out md:p-4',
         },
         wideMode: {
+            type: Boolean,
+            default: false,
+        },
+        disableScroll: {
             type: Boolean,
             default: false,
         },
