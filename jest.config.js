@@ -6,13 +6,13 @@ module.exports = {
     moduleFileExtensions: ['js', 'vue', 'json'],
     transform: {
         '^.+\\.js$': 'babel-jest',
-        '.*\\.(vue)$': 'vue-jest'
+        '.*\\.(vue)$': 'vue-jest',
     },
-    transformIgnorePatterns: ["/node_modules/(?!@babel/runtime)"],
+    transformIgnorePatterns: ['/node_modules/(?!@babel/runtime|@funda/icons)'],
     setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],
     snapshotSerializers: ['jest-serializer-vue'],
     watchPlugins: [
         'jest-watch-typeahead/filename',
         'jest-watch-typeahead/testname',
     ],
-}
+};

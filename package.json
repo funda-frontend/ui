@@ -21,7 +21,7 @@
         "release": "npx semantic-release",
         "prepublishOnly": "npm run generateExports",
         "generateExports": "node ./src/generateExports.js",
-        "test": "jest --passWithNoTests",
+        "test": "jest",
         "test-watch": "jest --watch"
     },
     "devDependencies": {
@@ -60,7 +60,7 @@
     },
     "dependencies": {
         "@funda/icons": "^1.2.0",
-        "@funda/tailwind-config": "^4.0.0",
+        "@funda/tailwind-config": "^4.4.0",
         "tailwindcss": "^1.9.6",
         "vue": "^2.6.12",
         "vue-popperjs": "^2.3.0"
