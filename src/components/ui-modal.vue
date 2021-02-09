@@ -20,7 +20,7 @@
                     </h2>
                     <button
                         v-if="showCloseIcon"
-                        class="focus:outline-none absolute"
+                        class="focus:outline-none absolute w-11 h-11"
                         @click="close"
                     >
                         <ui-icon icon="close" class="text-blue-2" />
@@ -92,6 +92,7 @@ export default {
 button {
     top: 0.375rem;
     right: 0.375rem;
+    padding: 0.6rem;
 }
 
 /* TODO: extend tailwind config with specific background opacity */
