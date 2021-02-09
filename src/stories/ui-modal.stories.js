@@ -15,7 +15,8 @@ export default {
             },
         },
         customModalContainerClasses: {
-            defaultValue: '',
+            defaultValue:
+                'fixed inset-0 flex items-center justify-center z-50 transition duration-500 ease-in-out md:p-4',
             description:
                 'Property to overwrite the default classes of the modal container',
             control: {
@@ -23,7 +24,8 @@ export default {
             },
         },
         customModalClasses: {
-            defaultValue: '',
+            defaultValue:
+                'w-full h-full m-auto bg-white md:rounded shadow-xl transition duration-300 ease-in-out relative overflow-hidden flex flex-col',
             description:
                 'Property to overwrite default classes allowing you to customize the modal',
             control: {

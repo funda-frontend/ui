@@ -8,12 +8,7 @@
                 ></div>
             </div>
             <div
-                :class="[
-                    customModalClasses
-                        ? customModalClasses
-                        : 'w-full h-full m-auto bg-white md:rounded shadow-xl transition duration-300 ease-in-out relative overflow-hidden flex flex-col',
-                    wideMode ? '' : 'md:max-w-2xl',
-                ]"
+                :class="[customModalClasses, wideMode ? '' : 'md:max-w-2xl']"
                 role="dialog"
                 aria-labelledby="modalTitle"
                 aria-describedby="modalDescription"
@@ -69,7 +64,8 @@ export default {
         },
         customModalClasses: {
             type: String,
-            default: '',
+            default:
+                'w-full h-full m-auto bg-white md:rounded shadow-xl transition duration-300 ease-in-out relative overflow-hidden flex flex-col',
         },
     },
     beforeMount() {
