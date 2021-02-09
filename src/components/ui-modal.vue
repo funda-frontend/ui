@@ -20,7 +20,7 @@
                     </h2>
                     <button
                         v-if="showCloseIcon"
-                        class="focus:outline-none absolute top-1 right-1"
+                        class="focus:outline-none absolute"
                         @click="close"
                     >
                         <ui-icon icon="close" class="text-blue-2" />
