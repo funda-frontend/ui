@@ -14,7 +14,7 @@
                 aria-describedby="modalDescription"
                 data-test-modal
             >
-                <header class="flex m-5">
+                <header class="flex mb-5 mx-12 mt-9">
                     <h2 class="m-0 font-semibold text-2xl">
                         <slot name="header"></slot>
                     </h2>
@@ -31,7 +31,7 @@
                 </section>
                 <footer
                     v-if="$slots.footer"
-                    class="p-5 sticky bg-white bottom-0 w-full z-10 md:rounded-b"
+                    class="pt-5 px-12 pb-5 sticky bg-white bottom-0 w-full z-10 md:rounded-b"
                 >
                     <slot name="footer"></slot>
                 </footer>
