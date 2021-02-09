@@ -52,7 +52,7 @@ export default {
         customModalContainerClasses: {
             type: String,
             default:
-                'fixed inset-0 flex items-center justify-center z-50 transition duration-500 ease-in-out md:p-4',
+                'fixed inset-0 flex items-center justify-center z-50 transition duration-500 ease-in-out md:p-9',
         },
         wideMode: {
             type: Boolean,

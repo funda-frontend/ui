@@ -16,7 +16,7 @@ export default {
         },
         customModalContainerClasses: {
             defaultValue:
-                'fixed inset-0 flex items-center justify-center z-50 transition duration-500 ease-in-out md:p-4',
+                'fixed inset-0 flex items-center justify-center z-50 transition duration-500 ease-in-out md:p-9',
             description:
                 'Property to overwrite the default classes of the modal container',
             control: {
