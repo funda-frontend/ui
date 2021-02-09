@@ -38,7 +38,7 @@
                         <ui-icon icon="close" class="text-blue-2" />
                     </button>
                 </header>
-                <section v-if="$slots.body" class="overflow-y-auto">
+                <section v-if="$slots.body" class="overflow-y-auto max-h-120">
                     <slot name="body"></slot>
                 </section>
                 <footer
@@ -98,11 +98,6 @@ export default {
 button {
     top: 0.375rem;
     right: 0.375rem;
-}
-
-/* max-height available in Tailwind v2 not in v1.9.0*/
-section {
-    max-height: 30rem;
 }
 
 /* TODO: extend tailwind config with specific background opacity */
