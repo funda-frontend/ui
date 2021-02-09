@@ -14,7 +14,7 @@
                 aria-describedby="modalDescription"
                 data-test-modal
             >
-                <header class="flex mb-5 mx-12 mt-9">
+                <header class="flex mb-5 mx-12 mt-10">
                     <h2 class="m-0 font-semibold text-2xl">
                         <slot name="header"></slot>
                     </h2>
@@ -55,10 +55,6 @@ export default {
                 'fixed inset-0 flex items-center justify-center z-50 transition duration-500 ease-in-out md:p-9',
         },
         wideMode: {
-            type: Boolean,
-            default: false,
-        },
-        disableScroll: {
             type: Boolean,
             default: false,
         },
