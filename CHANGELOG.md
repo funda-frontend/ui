@@ -1,3 +1,10 @@
+# [2.8.0](https://github.com/funda-frontend/ui/compare/v2.7.0...v2.8.0) (2021-02-10)
+
+
+### Features
+
+* **icons:** update to the latest funda icons ([5d4f960](https://github.com/funda-frontend/ui/commit/5d4f9604a24d59f44c5f8aab413df5dd0371ed85))
+
 # [2.7.0](https://github.com/funda-frontend/ui/compare/v2.6.0...v2.7.0) (2021-02-09)
 
 
