@@ -11,7 +11,7 @@
         </div>
         <div
             v-if="hasMedia"
-            class="mb-4 overflow-hidden relative h-0 pt-40 md:rounded-t-sm"
+            class="overflow-hidden relative h-0 pt-40 md:rounded-t-sm"
         >
             <slot name="media" />
         </div>
