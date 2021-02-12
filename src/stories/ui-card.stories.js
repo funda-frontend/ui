@@ -1,4 +1,5 @@
 import UiCard from '@/components/ui-card.vue';
+import UiCardImage from '@/components/ui-card-image.vue';
 import UiCardTitle from '@/components/ui-card-title.vue';
 import UiNotification from '@/components/ui-notification.vue';
 
@@ -94,10 +95,10 @@ const TemplateTitleNotification = () => ({
 export const CardTitleNotification = TemplateTitleNotification.bind({});
 
 const TemplateMedia = () => ({
-    components: { UiCard },
+    components: { UiCard, UiCardImage },
     template: ` <ui-card>
                     <template v-slot:media>
-                        <img src="https://placekitten.com/200/300" alt="A kitty cat" />
+                        <ui-card-image src="https://placekitten.com/200/300" alt="A kitty cat" />    
                      </template>
                     Card content
                 </ui-card>`,
