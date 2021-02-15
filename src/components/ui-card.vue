@@ -9,12 +9,7 @@
         <div v-if="hasNotifications" class="border-b border-light-2">
             <slot name="notifications" />
         </div>
-        <div
-            v-if="hasMedia"
-            class="overflow-hidden relative h-0 pt-40 md:rounded-t-sm"
-        >
-            <slot name="media" />
-        </div>
+        <slot name="image" />
         <div class="py-4 px-4 md:px-6">
             <slot />
         </div>
@@ -30,21 +25,6 @@ export default {
         hasNotifications() {
             return Boolean(this.$slots['notifications']);
         },
-        hasMedia() {
-            return Boolean(this.$slots['media']);
-        },
     },
 };
 </script>
-
-<style scoped>
-.card__image * {
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    object-fit: cover;
-}
-</style>

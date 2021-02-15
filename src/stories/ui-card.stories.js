@@ -94,13 +94,10 @@ const TemplateTitleNotification = () => ({
 });
 export const CardTitleNotification = TemplateTitleNotification.bind({});
 
-const TemplateMedia = () => ({
-    components: { UiCard, UiCardImage },
-    template: ` <ui-card>
-                    <template v-slot:media>
-                        <ui-card-image src="https://placekitten.com/200/300" alt="A kitty cat" />    
-                     </template>
+const TemplateImage = () => ({
+    components: { UiCardImage },
+    template: ` <ui-card-image src="https://placekitten.com/200/300" alt="A kitty cat">
                     Card content
-                </ui-card>`,
+                </ui-card-image>`,
 });
-export const CardMedia = TemplateMedia.bind({});
+export const CardImage = TemplateImage.bind({});
