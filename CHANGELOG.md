@@ -1,3 +1,19 @@
+# [2.9.0](https://github.com/funda-frontend/ui/compare/v2.8.0...v2.9.0) (2021-02-16)
+
+
+### Bug Fixes
+
+* **ui-card:** allow for other media content than img ([71f3a24](https://github.com/funda-frontend/ui/commit/71f3a242a1eafab2be9f02e53fba059e2d95365d))
+* **ui-card:** remove media padding ([de7f664](https://github.com/funda-frontend/ui/commit/de7f6640a0562823458bf23c0497b24af32f0ba4))
+* **ui-card:** removed tailwind classes as slots wont accept classes ([da6f55b](https://github.com/funda-frontend/ui/commit/da6f55bce9c812e32a15247388b5b5d07abf6941))
+
+
+### Features
+
+* **card:** add card-image component ([89e13e6](https://github.com/funda-frontend/ui/commit/89e13e645d099435f90e0006478daa350157bf03))
+* **ui-card:** add dedicated ui-card image component ([da073c7](https://github.com/funda-frontend/ui/commit/da073c729247ef702923ddfa817ca61ffdf9d794))
+* **ui-card:** added basics, needs more work ([dcd26ee](https://github.com/funda-frontend/ui/commit/dcd26ee889e2523de664b2aa1619dfa93dc54b78))
+
 # [2.8.0](https://github.com/funda-frontend/ui/compare/v2.7.0...v2.8.0) (2021-02-10)
 
 
