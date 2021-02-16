@@ -9,6 +9,7 @@
         <div v-if="hasNotifications" class="border-b border-light-2">
             <slot name="notifications" />
         </div>
+        <slot name="image" />
         <div class="py-4 px-4 md:px-6">
             <slot />
         </div>

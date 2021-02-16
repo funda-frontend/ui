@@ -1,4 +1,5 @@
 import UiCard from '@/components/ui-card.vue';
+import UiCardImage from '@/components/ui-card-image.vue';
 import UiCardTitle from '@/components/ui-card-title.vue';
 import UiNotification from '@/components/ui-notification.vue';
 
@@ -92,3 +93,11 @@ const TemplateTitleNotification = () => ({
                 </ui-card>`,
 });
 export const CardTitleNotification = TemplateTitleNotification.bind({});
+
+const TemplateImage = () => ({
+    components: { UiCardImage },
+    template: ` <ui-card-image src="https://placekitten.com/200/300" alt="A kitty cat">
+                    Card content
+                </ui-card-image>`,
+});
+export const CardImage = TemplateImage.bind({});
