@@ -6,6 +6,7 @@
                     class="absolute block w-full h-full top-0 left-0 object-cover"
                     :src="src"
                     :alt="alt"
+                    loading="lazy"
                 />
             </div>
         </template>
