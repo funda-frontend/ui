@@ -1,3 +1,10 @@
+# [2.10.0](https://github.com/funda-frontend/ui/compare/v2.9.0...v2.10.0) (2021-02-17)
+
+
+### Features
+
+* **ui-card-image:** add lazy loading to the card image component ([d4b1131](https://github.com/funda-frontend/ui/commit/d4b1131a9d658df642a5d93c336615d44808efa6))
+
 # [2.9.0](https://github.com/funda-frontend/ui/compare/v2.8.0...v2.9.0) (2021-02-16)
 
 
