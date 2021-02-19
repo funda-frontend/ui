@@ -11,6 +11,7 @@
                 'pl-12': hasPrefix,
                 'pr-12': hasSufix,
             }"
+            :type="type"
             v-bind="$attrs"
             v-on="$listeners"
         />
@@ -27,7 +28,7 @@ export default {
         type: {
             type: String,
             default: 'text',
-            validator: (value) => ['text', 'number'].includes(value),
+            validator: (value) => ['text', 'number', 'date'].includes(value),
         },
         isValid: {
             type: Boolean,
