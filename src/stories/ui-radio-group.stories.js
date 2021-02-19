@@ -1,7 +1,7 @@
 import UiRadioGroup from '@/components/ui-radio-group.vue';
 
 export default {
-    title: 'Forms/Radio',
+    title: 'Forms/Radio/Radio group',
     component: UiRadioGroup,
     argTypes: {
         disabled: {

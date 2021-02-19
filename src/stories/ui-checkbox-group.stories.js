@@ -1,7 +1,7 @@
 import UiCheckboxGroup from '@/components/ui-checkbox-group.vue';
 
 export default {
-    title: 'Forms/Checkbox',
+    title: 'Forms/Checkbox/Checkbox group',
     component: UiCheckboxGroup,
     argTypes: {
         disabled: {

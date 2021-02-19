@@ -5,9 +5,12 @@ export default {
     component: UiBadge,
 };
 
-const Template = () => ({
+const Template = args => ({
     components: { UiBadge },
-    template: '<ui-badge>Badge</ui-badge>',
+    template: `
+        <ui-badge>
+            Badge
+        </ui-badge>`,
 });
 
 export const Badge = Template.bind({});

@@ -5,9 +5,12 @@ export default {
     component: UiLabel,
 };
 
-const Template = () => ({
+const Template = args => ({
     components: { UiLabel },
-    template: '<ui-label>Label</ui-label>',
+    template: `
+        <ui-label>
+            Label
+        </ui-label>`,
 });
 
 export const Label = Template.bind({});
