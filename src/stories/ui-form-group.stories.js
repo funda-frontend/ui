@@ -10,7 +10,7 @@ export default {
     component: UiFormGroup,
 };
 
-const Template = () => ({
+const Template = args => ({
     components: { UiFormGroup, UiLabel, UiInput, UiSelect, UiTextarea },
     template: ` <div>
                     <ui-form-group>
@@ -29,7 +29,7 @@ const Template = () => ({
 });
 export const FormGroup = Template.bind({});
 
-const TemplateInvalid = () => ({
+const TemplateInvalid = args => ({
     components: {
         UiFormGroup,
         UiLabel,

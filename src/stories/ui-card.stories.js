@@ -9,7 +9,7 @@ export default {
     argTypes: {},
 };
 
-const Template = () => ({
+const Template = args => ({
     components: { UiCard },
     template: ` <ui-card>
                     Card content
@@ -17,7 +17,7 @@ const Template = () => ({
 });
 export const Card = Template.bind({});
 
-const TemplateInside = () => ({
+const TemplateInside = args => ({
     components: { UiCard, UiNotification },
     template: ` <ui-card>
                     <template v-slot:title>
@@ -28,7 +28,7 @@ const TemplateInside = () => ({
 });
 export const CardTitleInside = TemplateInside.bind({});
 
-const TemplateSubtitleOutside = () => ({
+const TemplateSubtitleOutside = args => ({
     components: { UiCard, UiCardTitle },
     template: ` <div class="bg-light-2 p-4">
                     <ui-card-title>
@@ -46,7 +46,7 @@ const TemplateSubtitleOutside = () => ({
 });
 export const CardTitleSubtitleOutside = TemplateSubtitleOutside.bind({});
 
-const TemplateOutside = () => ({
+const TemplateOutside = args => ({
     components: { UiCard, UiCardTitle },
     template: ` <div class="bg-light-2 p-4">
                     <ui-card-title>
@@ -61,7 +61,7 @@ const TemplateOutside = () => ({
 });
 export const CardTitleOutside = TemplateOutside.bind({});
 
-const TemplateNotification = () => ({
+const TemplateNotification = args => ({
     components: { UiCard, UiNotification },
     template: ` <ui-card>
                     <template v-slot:notifications>
@@ -76,7 +76,7 @@ const TemplateNotification = () => ({
 });
 export const CardWithNotification = TemplateNotification.bind({});
 
-const TemplateTitleNotification = () => ({
+const TemplateTitleNotification = args => ({
     components: { UiCard, UiNotification },
     template: ` <ui-card>
                     <template v-slot:title>
@@ -94,7 +94,7 @@ const TemplateTitleNotification = () => ({
 });
 export const CardTitleNotification = TemplateTitleNotification.bind({});
 
-const TemplateImage = () => ({
+const TemplateImage = args => ({
     components: { UiCardImage },
     template: ` <ui-card-image src="https://placekitten.com/200/300" alt="A kitty cat">
                     Card content
