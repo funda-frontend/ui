@@ -1,3 +1,10 @@
+## [2.10.1](https://github.com/funda-frontend/ui/compare/v2.10.0...v2.10.1) (2021-02-19)
+
+
+### Bug Fixes
+
+* **docs:** fix code examples and duplicate story title warnings ([b6fe953](https://github.com/funda-frontend/ui/commit/b6fe9533177a029302a382f25261225efe4e9d20))
+
 # [2.10.0](https://github.com/funda-frontend/ui/compare/v2.9.0...v2.10.0) (2021-02-17)
 
 
