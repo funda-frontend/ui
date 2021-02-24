@@ -1,3 +1,10 @@
+# [2.11.0](https://github.com/funda-frontend/ui/compare/v2.10.1...v2.11.0) (2021-02-24)
+
+
+### Features
+
+* **ui-card-img:** add support for all attributes so srcset can be used too ([a014fee](https://github.com/funda-frontend/ui/commit/a014fee94f6a1d03dd177548fc74495eea5ef6ed))
+
 ## [2.10.1](https://github.com/funda-frontend/ui/compare/v2.10.0...v2.10.1) (2021-02-19)
 
 
