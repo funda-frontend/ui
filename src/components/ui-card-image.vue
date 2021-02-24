@@ -4,8 +4,7 @@
             <div class="overflow-hidden relative h-0 pt-40 md:rounded-t-sm">
                 <img
                     class="absolute block w-full h-full top-0 left-0 object-cover"
-                    :src="src"
-                    :alt="alt"
+                    v-bind="$attrs"
                     loading="lazy"
                 />
             </div>
@@ -21,15 +20,6 @@ export default {
     components: {
         UiCard,
     },
-    props: {
-        src: {
-            required: true,
-            type: String,
-        },
-        alt: {
-            required: true,
-            type: String,
-        },
-    },
+    inheritAttrs: false,
 };
 </script>
