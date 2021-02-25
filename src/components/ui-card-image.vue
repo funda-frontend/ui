@@ -9,7 +9,7 @@
                 />
             </div>
         </template>
-        Card content
+        <slot />
     </ui-card>
 </template>
 
