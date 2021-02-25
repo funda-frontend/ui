@@ -1,3 +1,10 @@
+## [2.11.1](https://github.com/funda-frontend/ui/compare/v2.11.0...v2.11.1) (2021-02-25)
+
+
+### Bug Fixes
+
+* **ui-card-image:** add missing slot ([8692050](https://github.com/funda-frontend/ui/commit/8692050cd1880ff4ddd3c7d18e838779bd8de56c))
+
 # [2.11.0](https://github.com/funda-frontend/ui/compare/v2.10.1...v2.11.0) (2021-02-24)
 
 
