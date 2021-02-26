@@ -10,7 +10,7 @@
                 v-on="$listeners"
             />
             <ui-label
-                class="cursor-pointer flex py-1 hover:text-blue-1"
+                class="cursor-pointer flex py-1 hover:text-blue-1 items-center"
                 :for="id"
             >
                 <div
