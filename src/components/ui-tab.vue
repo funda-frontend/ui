@@ -1,7 +1,7 @@
 <template>
     <button
         role="tab"
-        class="float-left cursor-pointer outline-none focus:outline-none leading-7 border-b-2 py-2 px-6 hover:bg-blue-5"
+        class="float-left cursor-pointer outline-none focus:outline-none leading-7 font-proxima text-base border-0 border-solid border-b-2 py-2 px-6 hover:bg-blue-5"
         :aria-selected="selected"
         :class="{
             'text-blue-2 border-blue-2 bg-blue-5': selected,

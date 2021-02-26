@@ -14,7 +14,7 @@
                 :for="id"
             >
                 <div
-                    class="bg-blue-5 border rounded-sm mr-2 mt-1 w-4 h-4 border-blue-2"
+                    class="bg-blue-5 border border-solid rounded-sm mr-2 w-4 h-4 border-blue-2"
                 ></div>
                 <slot />
             </ui-label>

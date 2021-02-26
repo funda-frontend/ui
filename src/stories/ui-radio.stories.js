@@ -31,7 +31,7 @@ const TemplateSlotLabel = (args, { argTypes }) => ({
     template: `
         <ui-radio change="onChange" :disabled="disabled" id="input-slot-extras-id" :checked="true">
             <div>
-                <h3 class="font-bold">Radio Title</h3>
+                <h3 class="font-bold m-0">Radio Title</h3>
                 <div class="text-dark-2">Description</div>
             </div>
         </ui-radio>`,

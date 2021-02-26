@@ -61,8 +61,8 @@ const TemplatePrefixSufix = (args, { argTypes }) => ({
     props: Object.keys(argTypes),
     components: { UiInput },
     template: `<ui-input @change="onChange" :type="type" :isValid="isValid" :placeholder="placeholder" :value="value" :disabled="disabled">
-                <template v-slot:prefix><div class="text-light-1 py-2 px-4 absolute top-0 left-0">PF</div></template>
-                <template v-slot:sufix><div class="text-light-1 py-2 px-4 absolute top-0 right-0">SF</div></template>
+                <template v-slot:prefix><div class="text-light-1 py-3 px-4 absolute top-0 left-0">PF</div></template>
+                <template v-slot:sufix><div class="text-light-1 py-3 px-4 absolute top-0 right-0">SF</div></template>
                </ui-input>`,
 });
 export const InputExtras = TemplatePrefixSufix.bind({});
