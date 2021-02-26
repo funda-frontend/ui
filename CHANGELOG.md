@@ -1,3 +1,10 @@
+## [2.11.2](https://github.com/funda-frontend/ui/compare/v2.11.1...v2.11.2) (2021-02-26)
+
+
+### Bug Fixes
+
+* **ui-tab:** align ui-tab hover state with Design System ([096d79e](https://github.com/funda-frontend/ui/commit/096d79e8bc1d67657115a216a0bf46cdcae43412))
+
 ## [2.11.1](https://github.com/funda-frontend/ui/compare/v2.11.0...v2.11.1) (2021-02-25)
 
 
