@@ -8,4 +8,5 @@
 
 module.exports = {
     presets: [require('@funda/tailwind-config')],
+    purge: ['./**/*.vue', './**/*.stories.js'],
 };
