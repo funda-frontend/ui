@@ -12,10 +12,12 @@
     src: url('/fonts/proximanova-semibold.woff2') format('woff2');
 }
 
-body {
-    font-family: "Proxima Nova", sans-serif;
-}
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply text-dark-1 font-proxima;
+  }
+}
