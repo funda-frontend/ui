@@ -1,7 +1,7 @@
 import UiBadge from '@/components/ui-badge.vue';
 
 export default {
-    title: 'Informational/Badge',
+    title: 'Visual/Badge',
     component: UiBadge,
 };
 

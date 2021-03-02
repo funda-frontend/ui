@@ -1,7 +1,7 @@
 import UiTooltip from '@/components/ui-tooltip.vue';
 
 export default {
-    title: 'Informational/Tooltip',
+    title: 'Visual/Tooltip',
     component: UiTooltip,
     argTypes: {
         background: {

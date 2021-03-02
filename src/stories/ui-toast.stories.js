@@ -1,7 +1,7 @@
 import UiToast from '@/components/ui-toast.vue';
 
 export default {
-    title: 'Informational/Toast',
+    title: 'Visual/Toast',
     component: UiToast,
     argTypes: {
         type: {

@@ -160,7 +160,7 @@ const iconsList = [
 ];
 
 export default {
-    title: 'Informational/Icon',
+    title: 'Visual/Icon',
     component: UiIcon,
     argTypes: {
         icon: {
