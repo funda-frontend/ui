@@ -2,7 +2,7 @@ import UiNotification from '@/components/ui-notification.vue';
 import UiIcon from '@/components/ui-icon.vue';
 
 export default {
-    title: 'Informational/Notification',
+    title: 'Visual/Notification',
     component: UiNotification,
     argTypes: {
         type: {

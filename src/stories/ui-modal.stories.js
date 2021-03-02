@@ -3,7 +3,7 @@ import UiButton from '@/components/ui-button.vue';
 import UiNotification from '@/components/ui-notification.vue';
 
 export default {
-    title: 'Informational/Modal',
+    title: 'Layout/Modal',
     component: UiModal,
     argTypes: {
         showCloseIcon: {
