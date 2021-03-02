@@ -58,7 +58,7 @@ export default {
     },
     created() {
         this.defaultClasses =
-            'leading-6 inline-flex h-11 whitespace-no-wrap border-solid rounded-sm align-middle cursor-pointer text-center items-center justify-center ';
+            'leading-6 inline-flex h-11 whitespace-no-wrap border-solid rounded-sm align-middle cursor-pointer text-center items-center justify-center focus:outline-none ';
         this.disabledClasses =
             'px-6 border bg-light-1 border-light-1 text-light-2 shadow hover:bg-light-1 hover:border-light-1 hover:text-light-2 cursor-not-allowed ';
     },
