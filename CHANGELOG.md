@@ -1,3 +1,20 @@
+# [3.0.0](https://github.com/funda-frontend/ui/compare/v2.11.2...v3.0.0) (2021-03-04)
+
+
+### Bug Fixes
+
+* **button:** remove outline on focus ([c08c523](https://github.com/funda-frontend/ui/commit/c08c5231d2b1077b63a4c4e874bde98fda7f57ae))
+
+
+### Features
+
+* **tailwind2:** use tailwind2 ([c484fb0](https://github.com/funda-frontend/ui/commit/c484fb038cfa098deaeb081e5b1f09198418e48e))
+
+
+### BREAKING CHANGES
+
+* **tailwind2:** requires tailwindcss>=2.0.0
+
 ## [2.11.2](https://github.com/funda-frontend/ui/compare/v2.11.1...v2.11.2) (2021-02-26)
 
 
