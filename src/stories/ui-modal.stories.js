@@ -25,7 +25,7 @@ export default {
         },
         customModalClasses: {
             defaultValue:
-                'w-full h-full m-auto bg-white md:rounded shadow-xl transition duration-300 ease-in-out relative overflow-hidden flex flex-col',
+                'w-full m-auto bg-white md:rounded shadow-xl transition duration-300 ease-in-out relative overflow-hidden flex flex-col',
             description:
                 'Property to overwrite default classes allowing you to customize the modal',
             control: {
@@ -36,6 +36,14 @@ export default {
             defaultValue: false,
             description:
                 'Boolean indicating whether the close icon in the modal should render',
+            control: {
+                options: [true, false],
+            },
+        },
+        noScroll: {
+            defaultValue: false,
+            description:
+                'Boolean indicating if the modal body content should scroll',
             control: {
                 options: [true, false],
             },
@@ -59,11 +67,16 @@ const Template = (args, { argTypes }) => ({
             this.isModalVisible = false;
         },
     },
-    template: `<div>
-    <ui-button tone="primary" @click="showModal">Open modal</ui-button>
-    <ui-modal v-show="isModalVisible" @close="closeModal" :showCloseIcon="showCloseIcon" :customModalContainerClasses="customModalContainerClasses" :customModalClasses="customModalClasses" :wideMode="wideMode">
+    template: `
+    <div>
+        <ui-button tone="primary" @click="showModal">Open modal</ui-button>
+        <ui-modal v-show="isModalVisible" @close="closeModal" :showCloseIcon="showCloseIcon" :customModalContainerClasses="customModalContainerClasses" :customModalClasses="customModalClasses" :wideMode="wideMode" :noScroll="noScroll">
           <template v-slot:header>Modal header</template>
-        </ui-modal></div>`,
+          <template v-slot:body>
+              <div class="mb-10 mx-12">Modal body</div>
+          </template>
+        </ui-modal>
+    </div>`,
 });
 
 export const ModalDefault = Template.bind({});
@@ -86,7 +99,7 @@ const TemplateModalWithContent = (args, { argTypes }) => ({
     },
     template: `<div>
     <ui-button tone="primary" @click="showModal">Open modal</ui-button>
-    <ui-modal v-show="isModalVisible" @close="closeModal" :showCloseIcon="showCloseIcon" :customModalContainerClasses="customModalContainerClasses" :customModalClasses="customModalClasses" :wideMode="wideMode">
+    <ui-modal v-show="isModalVisible" @close="closeModal" :showCloseIcon="showCloseIcon" :customModalContainerClasses="customModalContainerClasses" :customModalClasses="customModalClasses" :wideMode="wideMode" :noScroll="noScroll">
         <template v-slot:header>Modal header</template>
         <template v-slot:body>
             <ui-notification type="success" :rounded="false">
