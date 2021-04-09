@@ -1,3 +1,16 @@
+# [3.1.0](https://github.com/funda-frontend/ui/compare/v3.0.1...v3.1.0) (2021-04-09)
+
+
+### Bug Fixes
+
+* **details:** add default value to missing props ([913cac7](https://github.com/funda-frontend/ui/commit/913cac7d7b4b5a912a585ba3b41478ea313db332))
+
+
+### Features
+
+* **accordion:** add accordion component ([c2733b4](https://github.com/funda-frontend/ui/commit/c2733b45afaa829b8af1d790f6722d42fc78e7b6))
+* **details:** add details and accordion ([66dfd28](https://github.com/funda-frontend/ui/commit/66dfd28a1c98b99a12d167d815cab4c2a26cab97))
+
 ## [3.0.1](https://github.com/funda-frontend/ui/compare/v3.0.0...v3.0.1) (2021-04-09)
 
 
