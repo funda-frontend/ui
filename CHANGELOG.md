@@ -1,3 +1,11 @@
+## [3.0.1](https://github.com/funda-frontend/ui/compare/v3.0.0...v3.0.1) (2021-04-09)
+
+
+### Bug Fixes
+
+* **modal:** add extraModalClasses ([8cefdbf](https://github.com/funda-frontend/ui/commit/8cefdbf070154cf30d26b441801af070b19317c2))
+* **modal:** only set full height when using wideMode ([7d67a49](https://github.com/funda-frontend/ui/commit/7d67a49d2faaec5fb6563cb47cb7c4ddfe48b27c))
+
 # [3.0.0](https://github.com/funda-frontend/ui/compare/v2.11.2...v3.0.0) (2021-03-04)
 
 
