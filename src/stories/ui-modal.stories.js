@@ -32,6 +32,14 @@ export default {
                 type: 'text',
             },
         },
+        extraModalClasses: {
+            defaultValue: '',
+            description:
+                'Property to add extra classes allowing you to customize the modal',
+            control: {
+                type: 'text',
+            },
+        },
         wideMode: {
             defaultValue: false,
             description:
@@ -70,7 +78,7 @@ const Template = (args, { argTypes }) => ({
     template: `
     <div>
         <ui-button tone="primary" @click="showModal">Open modal</ui-button>
-        <ui-modal v-show="isModalVisible" @close="closeModal" :showCloseIcon="showCloseIcon" :customModalContainerClasses="customModalContainerClasses" :customModalClasses="customModalClasses" :wideMode="wideMode" :noScroll="noScroll">
+        <ui-modal v-show="isModalVisible" @close="closeModal" :showCloseIcon="showCloseIcon" :customModalContainerClasses="customModalContainerClasses" :customModalContainerClasses="customModalContainerClasses" :extraModalClasses="extraModalClasses" :wideMode="wideMode" :noScroll="noScroll">
           <template v-slot:header>Modal header</template>
           <template v-slot:body>
               <div class="mb-10 mx-12">Modal body</div>
@@ -99,7 +107,7 @@ const TemplateModalWithContent = (args, { argTypes }) => ({
     },
     template: `<div>
     <ui-button tone="primary" @click="showModal">Open modal</ui-button>
-    <ui-modal v-show="isModalVisible" @close="closeModal" :showCloseIcon="showCloseIcon" :customModalContainerClasses="customModalContainerClasses" :customModalClasses="customModalClasses" :wideMode="wideMode" :noScroll="noScroll">
+    <ui-modal v-show="isModalVisible" @close="closeModal" :showCloseIcon="showCloseIcon" :customModalContainerClasses="customModalContainerClasses" :customModalContainerClasses="customModalContainerClasses" :extraModalClasses="extraModalClasses" :wideMode="wideMode" :noScroll="noScroll">
         <template v-slot:header>Modal header</template>
         <template v-slot:body>
             <ui-notification type="success" :rounded="false">

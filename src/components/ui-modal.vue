@@ -10,6 +10,7 @@
             <div
                 :class="[
                     customModalClasses,
+                    extraModalClasses,
                     wideMode ? 'h-full' : 'md:max-w-2xl max-h-full',
                 ]"
                 role="dialog"
@@ -76,6 +77,10 @@ export default {
             type: String,
             default:
                 'w-full m-auto bg-white md:rounded shadow-xl transition duration-300 ease-in-out relative overflow-hidden flex flex-col',
+        },
+        extraModalClasses: {
+            type: String,
+            default: '',
         },
     },
     beforeMount() {
