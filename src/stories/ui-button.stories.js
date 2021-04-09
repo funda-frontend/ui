@@ -29,9 +29,10 @@ export default {
 const Template = (args, { argTypes }) => ({
     props: Object.keys(argTypes),
     components: { UiButton },
-    template: `<div>
-            <ui-button :tone="tone" @click="onClick" :disabled="disabled">Example button</ui-button>
-            <ui-button href="#" :tone="tone" :disabled="disabled">Example link</ui-button>
+    template: `<div class="bg-blue-5 p-4">
+            <ui-button :tone="tone" @click="onClick" :disabled="disabled" class="mr-8">Button</ui-button>
+            <ui-button href="#" :tone="tone" :disabled="disabled" class="mr-8">Link</ui-button>
+            <ui-button href="#" :tone="tone" disabled>Disabled</ui-button>
         </div>`,
 });
 
