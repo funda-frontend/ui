@@ -1,3 +1,23 @@
+# [4.0.0](https://github.com/funda-frontend/ui/compare/v3.1.1...v4.0.0) (2021-04-12)
+
+
+### Bug Fixes
+
+* **toast:** remove unused prop ([e4f7690](https://github.com/funda-frontend/ui/commit/e4f7690cd6e0dd90b48b3cd9f282719ed98a1ef8))
+* **toaster:** correct z-index ([1955aec](https://github.com/funda-frontend/ui/commit/1955aec4a699c6ce92d1146558766f9119e79d3b))
+* **toaster:** make code example pretty ([7cf8aa5](https://github.com/funda-frontend/ui/commit/7cf8aa5dca1821120d035b6c76cb3cd61381ff91))
+* **toaster:** only show title if existing ([c45d7b5](https://github.com/funda-frontend/ui/commit/c45d7b5d0ff6808e26466c06ccb821cd6afb7432))
+
+
+### Features
+
+* **toaster:** add toaster component ([686572a](https://github.com/funda-frontend/ui/commit/686572a5810718ebed62ea08dde3394433c7184f))
+
+
+### BREAKING CHANGES
+
+* **toaster:** toast component refactored to have no animation and is always visible
+
 ## [3.1.1](https://github.com/funda-frontend/ui/compare/v3.1.0...v3.1.1) (2021-04-12)
 
 
