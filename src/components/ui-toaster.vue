@@ -1,6 +1,10 @@
 <template>
     <div class="fixed top-0 right-0 overflow-x-hidden z-50 max-w-sm">
-        <transition-group tag="div" name="animate-fade-right">
+        <transition-group
+            tag="div"
+            enter-active-class="animate-fade-right-enter-active"
+            leave-active-class="animate-fade-right-leave-active"
+        >
             <ui-toast
                 v-for="message in messages"
                 :key="message.text"
