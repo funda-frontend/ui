@@ -4,14 +4,22 @@ import UiButton from '@/components/ui-button.vue';
 export default {
     title: 'Visual/Toasts/Toaster',
     component: UiToaster,
+    argTypes: {
+        type: {
+            control: {
+                type: 'select',
+                options: ['information', 'error', 'success', 'warning'],
+            },
+        },
+    },
 };
 
-const Template = args => ({
+const Template = (args) => ({
     components: { UiToaster, UiButton },
     methods: {
         newToast() {
             this.$refs.toaster.showToast({
-                type: 'success',
+                type: args.type,
                 title: 'New Toast 👋',
                 text: `Hello, I'm a new toast ${Math.random()}`,
             });
@@ -25,3 +33,6 @@ const Template = args => ({
 });
 
 export const Toaster = Template.bind({});
+Toaster.args = {
+    type: 'information',
+};
