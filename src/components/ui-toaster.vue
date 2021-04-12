@@ -1,5 +1,5 @@
 <template>
-    <div class="fixed top-0 right-0 overflow-x-hidden z-175 max-w-sm">
+    <div class="fixed top-0 right-0 overflow-x-hidden z-50 max-w-sm">
         <transition-group tag="div" name="animate-fade-right">
             <ui-toast
                 v-for="message in messages"
