@@ -6,7 +6,7 @@ export default {
     component: UiToaster,
 };
 
-const Template = () => ({
+const Template = args => ({
     components: { UiToaster, UiButton },
     methods: {
         newToast() {
