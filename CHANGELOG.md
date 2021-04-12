@@ -1,3 +1,10 @@
+## [3.1.1](https://github.com/funda-frontend/ui/compare/v3.1.0...v3.1.1) (2021-04-12)
+
+
+### Bug Fixes
+
+* **button:** custom disabled classes per tone ([c5473f5](https://github.com/funda-frontend/ui/commit/c5473f5a5d02e42d948850d04313e18933ba800b))
+
 # [3.1.0](https://github.com/funda-frontend/ui/compare/v3.0.1...v3.1.0) (2021-04-09)
 
 
