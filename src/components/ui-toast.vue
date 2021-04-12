@@ -61,10 +61,6 @@ export default {
             validator: (value) =>
                 ['information', 'error', 'success', 'warning'].includes(value),
         },
-        show: {
-            type: Boolean,
-            default: false,
-        },
     },
     computed: {
         borderColorClass() {
