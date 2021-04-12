@@ -1,3 +1,10 @@
+## [4.0.1](https://github.com/funda-frontend/ui/compare/v4.0.0...v4.0.1) (2021-04-12)
+
+
+### Bug Fixes
+
+* **toaster:** avoid purge animation classes ([c4b47f7](https://github.com/funda-frontend/ui/commit/c4b47f75e3e20ea9d443a578a9b27bfdcc09f1d6))
+
 # [4.0.0](https://github.com/funda-frontend/ui/compare/v3.1.1...v4.0.0) (2021-04-12)
 
 
