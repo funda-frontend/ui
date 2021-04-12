@@ -7,7 +7,9 @@
                 :type="message.type"
                 @close="removeToast(message)"
             >
-                <h4 class="font-semibold">{{ message.title }}</h4>
+                <h4 v-if="message.title" class="font-semibold">
+                    {{ message.title }}
+                </h4>
                 <p>{{ message.text }}</p>
             </ui-toast>
         </transition-group>
