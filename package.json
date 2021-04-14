@@ -59,7 +59,7 @@
         "vue-template-compiler": "^2.6.12"
     },
     "dependencies": {
-        "@funda/icons": "^1.6.0",
+        "@funda/icons": "^1.8.0",
         "@funda/tailwind-config": "^6.0.0",
         "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.3",
         "vue": "^2.6.12",
