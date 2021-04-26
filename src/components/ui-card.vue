@@ -10,7 +10,7 @@
             <slot name="notifications" />
         </div>
         <slot name="image" />
-        <div class="py-4 px-4 md:px-6">
+        <div :class="customCardClass">
             <slot />
         </div>
     </div>
@@ -18,6 +18,12 @@
 
 <script>
 export default {
+    props: {
+        customCardClass: {
+            type: String,
+            default: 'py-4 px-4 md:px-6',
+        },
+    },
     computed: {
         hasTitle() {
             return Boolean(this.$slots['title']);
