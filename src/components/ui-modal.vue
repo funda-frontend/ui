@@ -19,7 +19,7 @@
                 data-test-modal
             >
                 <header class="flex mb-5 mx-12 mt-10">
-                    <h2 class="m-0 font-semibold text-2xl">
+                    <h2 v-if="$slots.header" class="m-0 font-semibold text-2xl">
                         <slot name="header"></slot>
                     </h2>
                     <button
