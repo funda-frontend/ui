@@ -42,7 +42,7 @@
                 </section>
                 <footer
                     v-if="$slots.footer"
-                    class="pt-5 px-12 pb-5 sticky bg-white bottom-0 w-full z-10 md:rounded-b"
+                    class="mt-auto pt-5 px-12 pb-5 bg-white w-full z-10 md:rounded-b"
                 >
                     <slot name="footer"></slot>
                 </footer>
