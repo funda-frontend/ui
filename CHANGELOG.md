@@ -1,3 +1,10 @@
+## [4.1.1](https://github.com/funda-frontend/ui/compare/v4.1.0...v4.1.1) (2021-04-28)
+
+
+### Bug Fixes
+
+* **modal:** push footers to bottom ([3ea56ee](https://github.com/funda-frontend/ui/commit/3ea56ee154d8dcb9bb0182c76e9cb61c028aedd2))
+
 # [4.1.0](https://github.com/funda-frontend/ui/compare/v4.0.1...v4.1.0) (2021-04-15)
 
 
