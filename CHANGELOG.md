@@ -1,3 +1,10 @@
+# [4.2.0](https://github.com/funda-frontend/ui/compare/v4.1.1...v4.2.0) (2021-04-28)
+
+
+### Features
+
+* **modal:** avoid rendering of h2 element when no title is given ([673f470](https://github.com/funda-frontend/ui/commit/673f470f6e0b5f184ae80a791aa842a6ea03366c))
+
 ## [4.1.1](https://github.com/funda-frontend/ui/compare/v4.1.0...v4.1.1) (2021-04-28)
 
 
