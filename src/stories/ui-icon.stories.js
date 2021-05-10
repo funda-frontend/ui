@@ -192,13 +192,20 @@ export default {
                 options: iconsList,
             },
         },
+        size: {
+            defaultValue: 'h-6 w-6',
+            description: 'Change the size of the icon using tailwind classes',
+            control: {
+                type: 'text',
+            },
+        },
     },
 };
 
 const Template = (args, { argTypes }) => ({
     props: Object.keys(argTypes),
     components: { UiIcon },
-    template: '<ui-icon :icon="icon"></ui-icon>',
+    template: '<ui-icon :icon="icon" :size="size"></ui-icon>',
 });
 
 export const Icon = Template.bind({});

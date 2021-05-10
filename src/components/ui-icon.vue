@@ -1,6 +1,6 @@
 <template>
-    <!-- eslint-disable-next-line vue/no-v-html -->
-    <div class="fill-current h-6 w-6 align-middle" v-html="thisIcon"></div>
+    <!-- eslint-disable vue/no-v-html -->
+    <div :class="['fill-current, align-middle', size]" v-html="thisIcon"></div>
 </template>
 
 <script>
@@ -11,6 +11,10 @@ export default {
         icon: {
             type: String,
             required: true,
+        },
+        size: {
+            type: String,
+            default: 'h-6 w-6',
         },
     },
     computed: {
