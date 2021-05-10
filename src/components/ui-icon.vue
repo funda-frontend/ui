@@ -1,6 +1,6 @@
 <template>
     <!-- eslint-disable vue/no-v-html -->
-    <div :class="['fill-current, align-middle', size]" v-html="thisIcon"></div>
+    <div :class="['fill-current align-middle', size]" v-html="thisIcon"></div>
 </template>
 
 <script>
