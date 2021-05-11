@@ -1,3 +1,10 @@
+# [4.4.0](https://github.com/funda-frontend/ui/compare/v4.3.0...v4.4.0) (2021-05-11)
+
+
+### Features
+
+* **button:** make it possible to change height ([a23dec5](https://github.com/funda-frontend/ui/commit/a23dec5f44d435fe1f0a35f4d1d035ae87956f7c))
+
 # [4.3.0](https://github.com/funda-frontend/ui/compare/v4.2.0...v4.3.0) (2021-05-10)
 
 
