@@ -35,4 +35,13 @@ describe('UiButton', () => {
         await wrapper.vm.$nextTick();
         expect(button.classes()).toContain('cursor-not-allowed');
     });
+
+    it('Should change width of button when property small is set', async () => {
+        const button = wrapper.find(ATTR_BTN);
+        wrapper.setProps({
+            small: true,
+        });
+        await wrapper.vm.$nextTick();
+        expect(button.classes()).toContain('px-2');
+    });
 });
