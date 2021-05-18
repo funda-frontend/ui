@@ -1,7 +1,7 @@
 <template>
     <div
         v-if="show"
-        class="ui-spinner animate-spin absolute box-border border-2 rounded-full inset-1/2"
+        class="animate-spin border-2 rounded-full border-r-transparent"
         :class="[sizeClasses, toneClasses]"
     ></div>
 </template>
@@ -28,9 +28,9 @@ export default {
     computed: {
         sizeClasses() {
             const classes = {
-                small: 'w-4 h-4 -mt-2 -ml-2',
-                medium: 'w-8 h-8 -mt-4 -ml-4',
-                large: 'w-16 h-16 -mt-8 -ml-8',
+                small: 'w-4 h-4',
+                medium: 'w-8 h-8',
+                large: 'w-16 h-16',
             }[this.size];
             return classes;
         },
@@ -45,9 +45,3 @@ export default {
     },
 };
 </script>
-
-<style scoped>
-.ui-spinner {
-    border-right-color: transparent;
-}
-</style>
