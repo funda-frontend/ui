@@ -12,7 +12,7 @@ describe('UiButton', () => {
         });
     });
 
-    it('Should render anchor element when href is set', async () => {
+    it('Should render anchor instead of button element when href is set', async () => {
         wrapper.setProps({
             href: '#',
         });
