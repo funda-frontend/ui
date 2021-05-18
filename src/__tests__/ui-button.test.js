@@ -48,7 +48,7 @@ describe('UiButton', () => {
         expect(button.classes()).toContain('px-2');
     });
 
-    it('Should call click event', async () => {
+    it('Should call click event when method is attached to @click', async () => {
         await wrapper.trigger('click');
         expect(spy).toBeCalled();
     });
