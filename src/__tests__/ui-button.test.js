@@ -1,8 +1,6 @@
 import UiButton from '@/components/ui-button.vue';
 import { shallowMount } from '@vue/test-utils';
 
-const ATTR_BTN = '[data-test-button]';
-
 let spy = jest.fn();
 describe('UiButton', () => {
     let wrapper;
@@ -21,7 +19,7 @@ describe('UiButton', () => {
     });
 
     it('Should have tone classes when tone is set', async () => {
-        const button = wrapper.find(ATTR_BTN);
+        const button = wrapper.findComponent(UiButton).find('button');
         wrapper.setProps({
             tone: 'primary',
         });
@@ -30,7 +28,7 @@ describe('UiButton', () => {
     });
 
     it('Should disable button when disable property is set', async () => {
-        const button = wrapper.find(ATTR_BTN);
+        const button = wrapper.findComponent(UiButton).find('button');
         wrapper.setProps({
             tone: 'secondary',
             disabled: true,
@@ -40,7 +38,7 @@ describe('UiButton', () => {
     });
 
     it('Should change width of button when property small is set', async () => {
-        const button = wrapper.find(ATTR_BTN);
+        const button = wrapper.findComponent(UiButton).find('button');
         wrapper.setProps({
             small: true,
         });

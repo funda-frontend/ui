@@ -4,7 +4,6 @@
         :href="href"
         :class="cssClasses"
         :disabled="disabled"
-        data-test-button
     >
         <slot />
     </a>
@@ -12,7 +11,6 @@
         v-else
         :class="cssClasses"
         :disabled="disabled"
-        data-test-button
         v-on="$listeners"
     >
         <slot />
