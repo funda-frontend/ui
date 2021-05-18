@@ -3,13 +3,12 @@ import { shallowMount } from '@vue/test-utils';
 
 const ATTR_BTN = '[data-test-button]';
 
+let spy = jest.fn();
 describe('UiButton', () => {
     let wrapper;
     beforeEach(() => {
         wrapper = shallowMount(UiButton, {
-            props: {
-                onClick: jest.fn(),
-            },
+            listeners: { click: spy },
         });
     });
 
@@ -49,8 +48,8 @@ describe('UiButton', () => {
         expect(button.classes()).toContain('px-2');
     });
 
-    it('Should call click event', () => {
-        const button = wrapper.find(ATTR_BTN);
-        button.trigger('click');
+    it('Should call click event', async () => {
+        await wrapper.trigger('click');
+        expect(spy).toBeCalled();
     });
 });
