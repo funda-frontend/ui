@@ -1,3 +1,20 @@
+# [4.5.0](https://github.com/funda-frontend/ui/compare/v4.4.0...v4.5.0) (2021-05-18)
+
+
+### Bug Fixes
+
+* **uibutton:** add unit test ([fd89d07](https://github.com/funda-frontend/ui/commit/fd89d078f11043b6beee8ec46f8be89eb9bbd49e))
+
+
+### Features
+
+* **uibutton:** add button test ([2c0ad2c](https://github.com/funda-frontend/ui/commit/2c0ad2c5f0a59efc46a82e54bf297074edde8965))
+
+
+### Performance Improvements
+
+* **button:** replace test attribute with button selector ([26c3125](https://github.com/funda-frontend/ui/commit/26c31255f5881ce6f872d841956a99df72ef1915))
+
 # [4.4.0](https://github.com/funda-frontend/ui/compare/v4.3.0...v4.4.0) (2021-05-11)
 
 
