@@ -6,7 +6,11 @@ const ATTR_BTN = '[data-test-button]';
 describe('UiButton', () => {
     let wrapper;
     beforeEach(() => {
-        wrapper = shallowMount(UiButton);
+        wrapper = shallowMount(UiButton, {
+            props: {
+                onClick: jest.fn(),
+            },
+        });
     });
 
     it('Should render anchor element when href is set', async () => {
@@ -43,5 +47,10 @@ describe('UiButton', () => {
         });
         await wrapper.vm.$nextTick();
         expect(button.classes()).toContain('px-2');
+    });
+
+    it('Should call click event', () => {
+        const button = wrapper.find(ATTR_BTN);
+        button.trigger('click');
     });
 });
