@@ -10,12 +10,11 @@ describe('UiButton', () => {
     });
 
     it('Should render anchor element when href is set', async () => {
-        const anchor = wrapper.find('a');
         wrapper.setProps({
             href: '#',
         });
         await wrapper.vm.$nextTick();
-        expect(anchor.exists()).toBe(true);
+        expect(wrapper.element.tagName).toBe('A');
     });
 
     it('Should have tone classes when tone is set', async () => {
