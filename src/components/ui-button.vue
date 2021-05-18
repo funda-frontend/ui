@@ -32,10 +32,14 @@ export default {
             type: Boolean,
             default: false,
         },
+        small: {
+            type: Boolean,
+            default: false,
+        },
     },
     computed: {
         cssClasses() {
-            const withPadding = 'px-6 border';
+            const withPadding = `${this.small ? 'px-2' : 'px-6'} border`;
             const whiteText = 'text-white hover:text-white';
             const blueText = 'text-blue-2 hover:text-blue-1';
             const blueTextInverted = 'text-blue-1 hover:text-blue-2';
