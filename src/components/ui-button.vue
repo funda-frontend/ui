@@ -32,10 +32,6 @@ export default {
             type: Boolean,
             default: false,
         },
-        height: {
-            type: String,
-            default: 'h-11',
-        },
     },
     computed: {
         cssClasses() {
@@ -73,7 +69,8 @@ export default {
         },
     },
     created() {
-        this.defaultClasses = `leading-6 inline-flex ${this.height} whitespace-no-wrap border-solid rounded-sm align-middle cursor-pointer text-center items-center justify-center focus:outline-none `;
+        this.defaultClasses =
+            'leading-6 inline-flex h-11 whitespace-no-wrap border-solid rounded-sm align-middle cursor-pointer text-center items-center justify-center focus:outline-none ';
     },
 };
 </script>
