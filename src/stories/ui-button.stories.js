@@ -23,11 +23,9 @@ export default {
                 options: [true, false],
             },
         },
-        height: {
-            defaultValue: 'h-11',
-            description: 'Set default height value of button',
+        small: {
             control: {
-                type: 'text',
+                options: [true, false],
             },
         },
     },
@@ -37,9 +35,9 @@ const Template = (args, { argTypes }) => ({
     props: Object.keys(argTypes),
     components: { UiButton },
     template: `<div class="bg-blue-5 p-4">
-            <ui-button :tone="tone" @click="onClick" :disabled="disabled" :height="height" class="mr-8">Button</ui-button>
-            <ui-button href="#" :tone="tone" :disabled="disabled" :height="height" class="mr-8">Link</ui-button>
-            <ui-button href="#" :tone="tone" disabled :height="height">Disabled</ui-button>
+            <ui-button :tone="tone" @click="onClick" :disabled="disabled" :small="small" class="mr-8">Button</ui-button>
+            <ui-button href="#" :tone="tone" :disabled="disabled" :small="small" class="mr-8">Link</ui-button>
+            <ui-button href="#" :tone="tone" disabled small>Disabled</ui-button>
         </div>`,
 });
 

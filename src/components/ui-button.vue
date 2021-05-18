@@ -1,8 +1,18 @@
 <template>
-    <a v-if="href" :href="href" :class="cssClasses" :disabled="disabled">
+    <a
+        v-if="href"
+        :href="href"
+        :class="cssClasses"
+        :disabled="disabled"
+    >
         <slot />
     </a>
-    <button v-else :class="cssClasses" :disabled="disabled" v-on="$listeners">
+    <button
+        v-else
+        :class="cssClasses"
+        :disabled="disabled"
+        v-on="$listeners"
+    >
         <slot />
     </button>
 </template>
@@ -32,14 +42,14 @@ export default {
             type: Boolean,
             default: false,
         },
-        height: {
-            type: String,
-            default: 'h-11',
+        small: {
+            type: Boolean,
+            default: false,
         },
     },
     computed: {
         cssClasses() {
-            const withPadding = 'px-6 border';
+            const withPadding = `${this.small ? 'px-2' : 'px-6'} border`;
             const whiteText = 'text-white hover:text-white';
             const blueText = 'text-blue-2 hover:text-blue-1';
             const blueTextInverted = 'text-blue-1 hover:text-blue-2';
@@ -73,7 +83,8 @@ export default {
         },
     },
     created() {
-        this.defaultClasses = `leading-6 inline-flex ${this.height} whitespace-no-wrap border-solid rounded-sm align-middle cursor-pointer text-center items-center justify-center focus:outline-none `;
+        this.defaultClasses =
+            'leading-6 inline-flex h-11 whitespace-no-wrap border-solid rounded-sm align-middle cursor-pointer text-center items-center justify-center focus:outline-none ';
     },
 };
 </script>
