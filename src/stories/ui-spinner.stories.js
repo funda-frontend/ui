@@ -27,12 +27,13 @@ export default {
 const Template = (args, { argTypes }) => ({
     props: Object.keys(argTypes),
     components: { UiSpinner },
-    template:
-        '<ui-spinner :size="size" :show="show" :tone="tone"></ui-spinner>',
+    template: `
+        <div class="bg-blue-5 flex h-40 items-center justify-center">
+            <ui-spinner :size="size" :show="show" :tone="tone"></ui-spinner>
+        </div>`,
 });
 
 export const Spinner = Template.bind({});
-
 Spinner.args = {
     show: true,
     size: 'small',
