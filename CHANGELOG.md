@@ -1,3 +1,15 @@
+# [5.0.0](https://github.com/funda-frontend/ui/compare/v4.5.0...v5.0.0) (2021-05-19)
+
+
+### Bug Fixes
+
+* **spinner:** remove position absolute, scoped styles ([a8d0c03](https://github.com/funda-frontend/ui/commit/a8d0c03d28e3007156d6ed421c6296039356f7e5))
+
+
+### BREAKING CHANGES
+
+* **spinner:** the spinner component is less "opinionated", removed position absolute and negative margins
+
 # [4.5.0](https://github.com/funda-frontend/ui/compare/v4.4.0...v4.5.0) (2021-05-18)
 
 
