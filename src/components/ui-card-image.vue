@@ -1,5 +1,5 @@
 <template>
-    <ui-card>
+    <ui-card :variant="variant">
         <template #image>
             <div class="overflow-hidden relative h-0 pt-40 md:rounded-t-sm">
                 <img
@@ -21,5 +21,11 @@ export default {
         UiCard,
     },
     inheritAttrs: false,
+    props: {
+        variant: {
+            type: String,
+            default: 'default',
+        },
+    },
 };
 </script>

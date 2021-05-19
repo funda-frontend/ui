@@ -6,20 +6,29 @@ import UiNotification from '@/components/ui-notification.vue';
 export default {
     title: 'Layout/Card',
     component: UiCard,
-    argTypes: {},
+    argTypes: {
+        variant: {
+            control: {
+                type: 'select',
+                options: ['default', 'elevated'],
+            },
+        },
+    },
 };
 
-const Template = args => ({
+const Template = (args, { argTypes }) => ({
+    props: Object.keys(argTypes),
     components: { UiCard },
-    template: ` <ui-card>
+    template: ` <ui-card :variant="variant">
                     Card content
                 </ui-card>`,
 });
 export const Card = Template.bind({});
 
-const TemplateInside = args => ({
+const TemplateInside = (args, { argTypes }) => ({
+    props: Object.keys(argTypes),
     components: { UiCard, UiNotification },
-    template: ` <ui-card>
+    template: ` <ui-card :variant="variant">
                     <template v-slot:title>
                         Card title inside
                     </template>
@@ -28,7 +37,8 @@ const TemplateInside = args => ({
 });
 export const CardTitleInside = TemplateInside.bind({});
 
-const TemplateSubtitleOutside = args => ({
+const TemplateSubtitleOutside = (args, { argTypes }) => ({
+    props: Object.keys(argTypes),
     components: { UiCard, UiCardTitle },
     template: ` <div class="bg-light-2 p-4">
                     <ui-card-title>
@@ -39,14 +49,15 @@ const TemplateSubtitleOutside = args => ({
                             Subtitle
                         </template>
                     </ui-card-title>
-                    <ui-card>
+                    <ui-card :variant="variant">
                         Card content
                     </ui-card>
                 </div>`,
 });
 export const CardTitleSubtitleOutside = TemplateSubtitleOutside.bind({});
 
-const TemplateOutside = args => ({
+const TemplateOutside = (args, { argTypes }) => ({
+    props: Object.keys(argTypes),
     components: { UiCard, UiCardTitle },
     template: ` <div class="bg-light-2 p-4">
                     <ui-card-title>
@@ -54,16 +65,17 @@ const TemplateOutside = args => ({
                             Title title outside
                         </template>
                     </ui-card-title>
-                    <ui-card>
+                    <ui-card :variant="variant">
                         Card content
                     </ui-card>
                 </div>`,
 });
 export const CardTitleOutside = TemplateOutside.bind({});
 
-const TemplateNotification = args => ({
+const TemplateNotification = (args, { argTypes }) => ({
+    props: Object.keys(argTypes),
     components: { UiCard, UiNotification },
-    template: ` <ui-card>
+    template: ` <ui-card :variant="variant">
                     <template v-slot:notifications>
                         <ui-notification type="success" :rounded="false" class=" px-4 md:px-6">
                             <template v-slot:notificationBody>
@@ -76,9 +88,10 @@ const TemplateNotification = args => ({
 });
 export const CardWithNotification = TemplateNotification.bind({});
 
-const TemplateTitleNotification = args => ({
+const TemplateTitleNotification = (args, { argTypes }) => ({
+    props: Object.keys(argTypes),
     components: { UiCard, UiNotification },
-    template: ` <ui-card>
+    template: ` <ui-card :variant="variant">
                     <template v-slot:title>
                         Card title inside
                     </template>
@@ -94,9 +107,10 @@ const TemplateTitleNotification = args => ({
 });
 export const CardTitleNotification = TemplateTitleNotification.bind({});
 
-const TemplateImage = args => ({
+const TemplateImage = (args, { argTypes }) => ({
+    props: Object.keys(argTypes),
     components: { UiCardImage },
-    template: ` <ui-card-image src="https://placekitten.com/200/300" alt="A kitty cat">
+    template: ` <ui-card-image :variant="variant" src="https://placekitten.com/200/300" alt="A kitty cat">
                     Card content
                 </ui-card-image>`,
 });
