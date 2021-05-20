@@ -53,7 +53,6 @@ describe('UiSelect', () => {
 
     it('Should disable select', async () => {
         await wrapper.setProps({ disabled: true });
-        await wrapper.vm.$nextTick();
         expect(select.element.disabled).toBe(true);
         expect(select.classes()).toContain('bg-light-3');
     });
