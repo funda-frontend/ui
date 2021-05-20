@@ -1,7 +1,7 @@
 <template>
     <div class="relative">
         <select
-            class="appearance-none cursor-pointer w-full rounded-sm border bg-white shadow-sm py-2 px-4 outline-none text-base font-normal h-11 disabled:bg-light-3"
+            class="appearance-none cursor-pointer w-full rounded-sm border bg-white shadow-inner py-2 px-4 outline-none text-base font-normal h-11 disabled:bg-light-3"
             :disabled="disabled"
             :class="{
                 'border-light-1 focus:border-dark-3': isValid,
