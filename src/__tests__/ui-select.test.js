@@ -25,9 +25,7 @@ const optionsMock = [
 ];
 
 describe('UiSelect', () => {
-    let wrapper;
-    let select;
-    let options;
+    let wrapper, select, options;
     beforeEach(() => {
         wrapper = mount(UiSelect, {
             propsData: {
