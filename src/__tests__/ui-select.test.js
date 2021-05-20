@@ -3,6 +3,8 @@ import UiSelect from '@/components/ui-select.vue';
 
 describe('UiSelect', () => {
     let wrapper;
+    let select;
+    let options;
     beforeEach(() => {
         wrapper = mount(UiSelect, {
             propsData: {
@@ -30,17 +32,16 @@ describe('UiSelect', () => {
                 ],
             },
         });
+        select = wrapper.find('select');
+        options = select.findAll('option');
     });
 
     it('Should set selected option', async () => {
-        const select = wrapper.find('select');
-        const options = select.findAll('option');
         await options.at(2).setSelected();
         expect(wrapper.find('option:checked').element.value).toBe('test2');
     });
 
     it('Should render status classes when isValid prop is set', async () => {
-        const select = wrapper.find('select');
         await wrapper.setProps({ isValid: false });
         expect(select.classes()).toContain('border-red-1');
 
@@ -49,7 +50,6 @@ describe('UiSelect', () => {
     });
 
     it('Should disable select', async () => {
-        const select = wrapper.find('select');
         await wrapper.setProps({ disabled: true });
         await wrapper.vm.$nextTick();
         expect(select.element.disabled).toBe(true);
@@ -57,22 +57,16 @@ describe('UiSelect', () => {
     });
 
     it('Should disable option when key is set', async () => {
-        const select = wrapper.find('select');
-        const options = select.findAll('option');
         expect(options.at(2).element.disabled).toBe(true);
         expect(options.at(3).element.disabled).toBe(false);
     });
 
     it('Should determine visibility of option depending on hidden key', async () => {
-        const select = wrapper.find('select');
-        const options = select.findAll('option');
         expect(options.at(2).isVisible()).toBe(true);
         expect(options.at(3).isVisible()).toBe(false);
     });
 
     it('Should set values for option', async () => {
-        const select = wrapper.find('select');
-        const options = select.findAll('option');
         expect(options.at(2).text()).toBe('Option B');
     });
 });
