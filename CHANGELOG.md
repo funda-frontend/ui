@@ -1,3 +1,10 @@
+# [5.1.0](https://github.com/funda-frontend/ui/compare/v5.0.0...v5.1.0) (2021-05-20)
+
+
+### Features
+
+* **card:** add elevated variant ([72ea361](https://github.com/funda-frontend/ui/commit/72ea361a13e7e7956ea2fd4b478a7cb584f51971))
+
 # [5.0.0](https://github.com/funda-frontend/ui/compare/v4.5.0...v5.0.0) (2021-05-19)
 
 
