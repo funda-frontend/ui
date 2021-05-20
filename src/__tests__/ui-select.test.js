@@ -1,6 +1,29 @@
 import { mount } from '@vue/test-utils';
 import UiSelect from '@/components/ui-select.vue';
 
+const optionsProps = [
+    {
+        text: 'Select a value',
+        value: '',
+        disabled: true,
+        hidden: true,
+    },
+    {
+        text: 'Option A',
+        value: 'test',
+    },
+    {
+        text: 'Option B',
+        value: 'test2',
+        disabled: true,
+    },
+    {
+        text: 'Option C',
+        value: 'test3',
+        hidden: true,
+    },
+];
+
 describe('UiSelect', () => {
     let wrapper;
     let select;
@@ -8,28 +31,7 @@ describe('UiSelect', () => {
     beforeEach(() => {
         wrapper = mount(UiSelect, {
             propsData: {
-                options: [
-                    {
-                        text: 'Select a value',
-                        value: '',
-                        disabled: true,
-                        hidden: true,
-                    },
-                    {
-                        text: 'Option A',
-                        value: 'test',
-                    },
-                    {
-                        text: 'Option B',
-                        value: 'test2',
-                        disabled: true,
-                    },
-                    {
-                        text: 'Option C',
-                        value: 'test3',
-                        hidden: true,
-                    },
-                ],
+                options: optionsProps,
             },
         });
         select = wrapper.find('select');
