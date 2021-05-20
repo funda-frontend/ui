@@ -38,12 +38,7 @@ describe('UiSelect', () => {
         options = select.findAll('option');
     });
 
-    it('Should set selected option', async () => {
-        await options.at(2).setSelected();
-        expect(wrapper.find('option:checked').element.value).toBe('test2');
-    });
-
-    it('Should render status classes when isValid prop is set', async () => {
+    it('Select is valid', async () => {
         await wrapper.setProps({ isValid: false });
         expect(select.classes()).toContain('border-red-1');
 
@@ -51,23 +46,28 @@ describe('UiSelect', () => {
         expect(select.classes()).toContain('border-light-1');
     });
 
-    it('Should disable select', async () => {
+    it('Select is disabled', async () => {
         await wrapper.setProps({ disabled: true });
         expect(select.element.disabled).toBe(true);
         expect(select.classes()).toContain('bg-light-3');
     });
 
-    it('Should disable option when key is set', () => {
+    it('Option is selected', async () => {
+        await options.at(2).setSelected();
+        expect(wrapper.find('option:checked').element.value).toBe('test2');
+    });
+
+    it('Option is disabled', () => {
         expect(options.at(2).element.disabled).toBe(true);
         expect(options.at(3).element.disabled).toBe(false);
     });
 
-    it('Should determine visibility of option depending on hidden key', () => {
+    it('Option is hidden', () => {
         expect(options.at(2).isVisible()).toBe(true);
         expect(options.at(3).isVisible()).toBe(false);
     });
 
-    it('Should set values for option', () => {
+    it('Option text is set', () => {
         expect(options.at(2).text()).toBe('Option B');
     });
 });
