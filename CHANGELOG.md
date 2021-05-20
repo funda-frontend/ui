@@ -1,3 +1,10 @@
+## [5.1.1](https://github.com/funda-frontend/ui/compare/v5.1.0...v5.1.1) (2021-05-20)
+
+
+### Bug Fixes
+
+* **shadows:** update components with correct shadow ([f6a7a69](https://github.com/funda-frontend/ui/commit/f6a7a69cd05e7a1c4292fc373016d10484ab993d))
+
 # [5.1.0](https://github.com/funda-frontend/ui/compare/v5.0.0...v5.1.0) (2021-05-20)
 
 
