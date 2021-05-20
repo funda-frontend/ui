@@ -37,7 +37,7 @@ const Template = (args, { argTypes }) => ({
     template: `<div class="bg-blue-5 p-4">
             <ui-button :tone="tone" @click="onClick" :disabled="disabled" :small="small" class="mr-8">Button</ui-button>
             <ui-button href="#" :tone="tone" :disabled="disabled" :small="small" class="mr-8">Link</ui-button>
-            <ui-button href="#" :tone="tone" disabled small>Disabled</ui-button>
+            <ui-button href="#" :tone="tone" disabled :small="small">Disabled</ui-button>
         </div>`,
 });
 

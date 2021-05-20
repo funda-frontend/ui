@@ -1,18 +1,8 @@
 <template>
-    <a
-        v-if="href"
-        :href="href"
-        :class="cssClasses"
-        :disabled="disabled"
-    >
+    <a v-if="href" :href="href" :class="cssClasses" :disabled="disabled">
         <slot />
     </a>
-    <button
-        v-else
-        :class="cssClasses"
-        :disabled="disabled"
-        v-on="$listeners"
-    >
+    <button v-else :class="cssClasses" :disabled="disabled" v-on="$listeners">
         <slot />
     </button>
 </template>
