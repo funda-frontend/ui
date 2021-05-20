@@ -1,7 +1,7 @@
 import { mount } from '@vue/test-utils';
 import UiSelect from '@/components/ui-select.vue';
 
-describe('UiModal', () => {
+describe('UiSelect', () => {
     let wrapper;
     beforeEach(() => {
         wrapper = mount(UiSelect, {
