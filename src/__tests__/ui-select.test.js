@@ -1,7 +1,7 @@
 import { mount } from '@vue/test-utils';
 import UiSelect from '@/components/ui-select.vue';
 
-const optionsProps = [
+const optionsMock = [
     {
         text: 'Select a value',
         value: '',
@@ -31,7 +31,7 @@ describe('UiSelect', () => {
     beforeEach(() => {
         wrapper = mount(UiSelect, {
             propsData: {
-                options: optionsProps,
+                options: optionsMock,
             },
         });
         select = wrapper.find('select');
