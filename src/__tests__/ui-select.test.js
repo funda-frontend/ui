@@ -57,17 +57,17 @@ describe('UiSelect', () => {
         expect(select.classes()).toContain('bg-light-3');
     });
 
-    it('Should disable option when key is set', async () => {
+    it('Should disable option when key is set', () => {
         expect(options.at(2).element.disabled).toBe(true);
         expect(options.at(3).element.disabled).toBe(false);
     });
 
-    it('Should determine visibility of option depending on hidden key', async () => {
+    it('Should determine visibility of option depending on hidden key', () => {
         expect(options.at(2).isVisible()).toBe(true);
         expect(options.at(3).isVisible()).toBe(false);
     });
 
-    it('Should set values for option', async () => {
+    it('Should set values for option', () => {
         expect(options.at(2).text()).toBe('Option B');
     });
 });
