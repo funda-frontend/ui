@@ -9,17 +9,17 @@ const optionsMock = [
         hidden: true,
     },
     {
-        text: 'Option A',
-        value: 'test',
+        text: 'Asking price',
+        value: 'price',
     },
     {
-        text: 'Option B',
-        value: 'test2',
+        text: 'Floor area',
+        value: 'floorarea',
         disabled: true,
     },
     {
-        text: 'Option C',
-        value: 'test3',
+        text: 'Zip code',
+        value: 'zipcode',
         hidden: true,
     },
 ];
@@ -52,7 +52,7 @@ describe('UiSelect', () => {
 
     it('Option is selected', async () => {
         await options.at(2).setSelected();
-        expect(wrapper.find('option:checked').element.value).toBe('test2');
+        expect(wrapper.find('option:checked').element.value).toBe('floorarea');
     });
 
     it('Option is disabled', () => {
@@ -66,6 +66,6 @@ describe('UiSelect', () => {
     });
 
     it('Option text is set', () => {
-        expect(options.at(2).text()).toBe('Option B');
+        expect(options.at(1).text()).toBe('Asking price');
     });
 });
