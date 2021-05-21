@@ -38,9 +38,11 @@ describe('UiSelect', () => {
 
     it('Select is valid', async () => {
         await wrapper.setProps({ isValid: false });
+        expect(wrapper.vm.isValid).toBe(false);
         expect(select.classes()).toContain('border-red-1');
 
         await wrapper.setProps({ isValid: true });
+        expect(wrapper.vm.isValid).toBe(true);
         expect(select.classes()).toContain('border-light-1');
     });
 
