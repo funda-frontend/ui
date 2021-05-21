@@ -38,6 +38,9 @@ describe('UiInput', () => {
 
     it('Set slots', () => {
         expect(wrapper.text()).toContain(SLOT_PREFIX);
+        expect(input.classes()).toContain('pl-12');
+
         expect(wrapper.text()).toContain(SLOT_SUFIX);
+        expect(input.classes()).toContain('pr-12');
     });
 });
