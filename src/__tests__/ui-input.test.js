@@ -16,12 +16,7 @@ describe('UiInput', () => {
         input = wrapper.find('input');
     });
 
-    it('Set value', () => {
-        input.setValue('Amsterdam');
-        expect(input.element.value).toBe('Amsterdam');
-    });
-
-    it('Is valid', async () => {
+    it('Should set border classes when isValid is set', async () => {
         await wrapper.setProps({ isValid: false });
         expect(wrapper.vm.isValid).toBe(false);
         expect(input.classes()).toContain('border-red-1');
@@ -31,12 +26,12 @@ describe('UiInput', () => {
         expect(input.classes()).toContain('border-light-1');
     });
 
-    it('Set type', async () => {
+    it('Should set type when type prop is set', async () => {
         await wrapper.setProps({ type: 'number' });
         expect(wrapper.vm.type).toBe('number');
     });
 
-    it('Set slots', () => {
+    it('Should render slot when slot is set', () => {
         expect(wrapper.text()).toContain(SLOT_PREFIX);
         expect(input.classes()).toContain('pl-12');
 
