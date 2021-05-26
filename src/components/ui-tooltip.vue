@@ -1,10 +1,6 @@
 <template>
     <div>
-        <popper
-            :key="popperKey"
-            :trigger="trigger"
-            :options="{ placement: side }"
-        >
+        <popper :trigger="trigger" :options="options">
             <div
                 role="tooltip"
                 :class="backgroundClass"
@@ -42,17 +38,12 @@ export default {
                     value
                 ),
         },
-        side: {
-            type: String,
-            default: 'bottom',
-            validator: (value) =>
-                ['top', 'right', 'bottom', 'left'].includes(value),
+        options: {
+            type: Object,
+            default: () => {},
         },
     },
     computed: {
-        popperKey() {
-            return `${this.side}-${this.trigger}`;
-        },
         backgroundClass() {
             const specificClasses = {
                 white: 'bg-white',

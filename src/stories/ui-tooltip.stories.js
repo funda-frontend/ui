@@ -16,10 +16,9 @@ export default {
                 options: ['hover', 'clickToOpen', 'clickToToggle', 'focus'],
             },
         },
-        side: {
+        options: {
             control: {
-                type: 'select',
-                options: ['top', 'right', 'bottom', 'left'],
+                type: 'object',
             },
         },
     },
@@ -28,7 +27,7 @@ export default {
 const Template = (args, { argTypes }) => ({
     props: Object.keys(argTypes),
     components: { UiTooltip },
-    template: `<ui-tooltip :trigger="trigger" :side="side" :background="background">
+    template: `<ui-tooltip :trigger="trigger" :options="options" :background="background">
                     <template v-slot:content>
                         Lorem ipsum dolor sit amet, consectetur adipiscing.
                     </template>
@@ -41,8 +40,15 @@ const Template = (args, { argTypes }) => ({
 export const Tooltip = Template.bind({});
 Tooltip.args = {
     background: 'light',
-    trigger: 'hover',
-    side: 'bottom',
+    trigger: 'click',
+    options: {
+        placement: 'top',
+        modifiers: {
+            offset: {
+                offset: '1000px,0',
+            },
+        },
+    },
 };
 Tooltip.decorators = [
     () => ({
