@@ -13,7 +13,7 @@
                 <slot name="content" />
             </div>
 
-            <button slot="reference">
+            <button slot="reference" class="focus:outline-none">
                 <slot name="reference" />
             </button>
         </popper>
