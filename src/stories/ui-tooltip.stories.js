@@ -42,7 +42,8 @@ Tooltip.args = {
     background: 'light',
     trigger: 'click',
     options: {
-        placement: 'top',
+        // https://github.com/RobinCK/vue-popper#props
+        placement: 'bottom',
         modifiers: {
             offset: {
                 offset: '1000px,0',
