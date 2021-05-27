@@ -1,3 +1,20 @@
+# [6.0.0](https://github.com/funda-frontend/ui/compare/v5.1.1...v6.0.0) (2021-05-27)
+
+
+### Documentation
+
+* **tooltip:** add documentation ([99e311b](https://github.com/funda-frontend/ui/commit/99e311b1057910cafce2d63527e23131d3924a6f))
+
+
+### Features
+
+* **tooltip:** make popper options versatile ([ebf8091](https://github.com/funda-frontend/ui/commit/ebf8091fe7abb9590b77456c2c1d3480f3b83851))
+
+
+### BREAKING CHANGES
+
+* **tooltip:** options replacing side prop
+
 ## [5.1.1](https://github.com/funda-frontend/ui/compare/v5.1.0...v5.1.1) (2021-05-20)
 
 
