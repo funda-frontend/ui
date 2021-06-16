@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div :class="{ 'md:flex': alignHorizontal }">
         <ui-radio
             v-for="item in items"
             :id="`${id}_${item.value}`"
@@ -8,6 +8,7 @@
             :name="name"
             :checked="item.value === selected"
             :disabled="disabled"
+            :align-horizontal="alignHorizontal"
             @change="$emit('change', $event)"
         >
             {{ item.label }}
@@ -39,6 +40,10 @@ export default {
             default: '',
         },
         disabled: {
+            type: Boolean,
+            default: false,
+        },
+        alignHorizontal: {
             type: Boolean,
             default: false,
         },

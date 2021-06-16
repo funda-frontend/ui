@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div :class="{ 'md:flex-1': alignHorizontal }">
         <div class="py-2">
             <input
                 :id="id"
@@ -37,6 +37,10 @@ export default {
         name: {
             type: String,
             default: 'funda_radio_input',
+        },
+        alignHorizontal: {
+            type: Boolean,
+            default: false,
         },
     },
 };
