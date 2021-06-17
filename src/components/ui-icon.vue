@@ -5,7 +5,6 @@
 
 <script>
 import * as icons from '@funda/icons';
-
 export default {
     props: {
         icon: {
