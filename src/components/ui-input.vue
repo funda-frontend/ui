@@ -4,6 +4,7 @@
             <slot name="prefix"></slot>
         </template>
         <input
+            v-model="inputValue"
             class="w-full rounded-sm border bg-white shadow-inner py-2 px-4 outline-none text-base font-normal h-11 disabled:bg-light-3"
             :class="{
                 'border-light-1 focus:border-dark-3': isValid,
@@ -13,6 +14,7 @@
             }"
             v-bind="$attrs"
             v-on="$listeners"
+            @input="$emit('update:value', $event.target.value)"
         />
         <template v-if="hasSufix">
             <slot name="sufix"></slot>
@@ -33,6 +35,13 @@ export default {
             type: Boolean,
             default: true,
         },
+        value: {
+            type: String,
+            default: '',
+        },
+    },
+    data: function () {
+        return { inputValue: this.value };
     },
     computed: {
         hasPrefix() {
