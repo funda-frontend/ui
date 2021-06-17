@@ -1,3 +1,10 @@
+## [6.0.1](https://github.com/funda-frontend/ui/compare/v6.0.0...v6.0.1) (2021-06-17)
+
+
+### Bug Fixes
+
+* **radio-group:** add optional horizontal alignement ([3167f93](https://github.com/funda-frontend/ui/commit/3167f93381a37dc9f91e8c4d4c3b353abd5904a0))
+
 # [6.0.0](https://github.com/funda-frontend/ui/compare/v5.1.1...v6.0.0) (2021-05-27)
 
 
