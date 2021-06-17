@@ -9,6 +9,11 @@ export default {
                 options: [true, false],
             },
         },
+        alignHorizontal: {
+            control: {
+                options: [true, false],
+            },
+        },
     },
 };
 
@@ -16,7 +21,7 @@ const Template = (args, { argTypes }) => ({
     props: Object.keys(argTypes),
     components: { UiRadioGroup },
     template:
-        '<ui-radio-group :selected="selected" :items="items" :disabled="disabled" id="radio-group-id" @change="onChange" />',
+        '<ui-radio-group :selected="selected" :items="items" :disabled="disabled" id="radio-group-id" :align-horizontal="alignHorizontal" @change="onChange" />',
 });
 
 export const RadioGroup = Template.bind({});
@@ -45,5 +50,6 @@ RadioGroup.args = {
     ],
     selected: 'item2',
     disabled: false,
+    alignHorizontal: false,
     onChange() {},
 };
