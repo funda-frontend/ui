@@ -1,0 +1,27 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 99
+  reviewers:
+  - github-actions
+  ignore:
+  - dependency-name: "@storybook/vue"
+    versions:
+    - 6.2.6
+  - dependency-name: "@storybook/addon-essentials"
+    versions:
+    - 6.2.6
+  - dependency-name: husky
+    versions:
+    - 5.1.0
+    - 6.0.0
+  - dependency-name: "@funda/tailwind-config"
+    versions:
+    - 5.0.0
+    - 6.0.0
+  - dependency-name: "@babel/core"
+    versions:
+    - 7.13.0
