@@ -1,6 +1,7 @@
 <template>
     <div class="relative">
         <select
+            v-model="selectedValue"
             class="appearance-none cursor-pointer w-full rounded-sm border bg-white shadow-inner py-2 px-4 outline-none text-base font-normal h-11 disabled:bg-light-3"
             :disabled="disabled"
             :class="{
@@ -10,12 +11,12 @@
             }"
             v-bind="$attrs"
             v-on="$listeners"
+            @change="$emit('update:selected', $event.target.value)"
         >
             <option
                 v-for="option in options"
                 :key="option.value"
                 :value="option.value"
-                :selected="option.value === selected"
                 :disabled="option.disabled"
                 :hidden="option.hidden"
             >
@@ -54,6 +55,14 @@ export default {
         disabled: {
             type: Boolean,
             default: false,
+        },
+    },
+    data: function () {
+        return { selectedValue: this.selected };
+    },
+    watch: {
+        selected: function (newValue) {
+            this.selectedValue = newValue;
         },
     },
 };

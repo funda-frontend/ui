@@ -48,7 +48,7 @@ const Template = (args, { argTypes }) => ({
     props: Object.keys(argTypes),
     components: { UiSelect },
     template:
-        '<ui-select @change="onChange" :options="options" :selected="selected" :isValid="isValid" :disabled="disabled">Select</ui-select>',
+        '<ui-select @change="onChange" :options="options" :selected.sync="selected" :isValid="isValid" :disabled="disabled">Select</ui-select>',
 });
 
 export const Select = Template.bind({});
