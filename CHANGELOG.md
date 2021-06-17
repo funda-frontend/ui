@@ -1,3 +1,10 @@
+## [6.0.2](https://github.com/funda-frontend/ui/compare/v6.0.1...v6.0.2) (2021-06-17)
+
+
+### Bug Fixes
+
+* **icons:** revert breaking change ([8f0f543](https://github.com/funda-frontend/ui/commit/8f0f54398b67c261b30c9925a55870fee7c2e670))
+
 ## [6.0.1](https://github.com/funda-frontend/ui/compare/v6.0.0...v6.0.1) (2021-06-17)
 
 
