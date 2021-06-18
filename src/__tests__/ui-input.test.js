@@ -38,4 +38,10 @@ describe('UiInput', () => {
         expect(wrapper.text()).toContain(SLOT_SUFIX);
         expect(input.classes()).toContain('pr-12');
     });
+
+    it('Should emit input event with value', () => {
+        const value = 'test-emit-event';
+        input.setValue(value);
+        expect(wrapper.emitted().input[0]).toEqual([value]);
+    });
 });
