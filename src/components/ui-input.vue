@@ -12,7 +12,7 @@
                 'pr-12': hasSufix,
             }"
             v-bind="$attrs"
-            v-on="$listeners"
+            v-on="inputListeners"
         />
         <template v-if="hasSufix">
             <slot name="sufix"></slot>
@@ -35,6 +35,14 @@ export default {
         },
     },
     computed: {
+        inputListeners() {
+            var vm = this;
+            return Object.assign({}, this.$listeners, {
+                input(event) {
+                    vm.$emit('input', event.target.value);
+                },
+            });
+        },
         hasPrefix() {
             return Boolean(this.$slots['prefix']);
         },
