@@ -1,6 +1,6 @@
 import UiSelect from '@/components/ui-select.vue';
 
-const selected = '';
+const value = '';
 const options = [
     {
         text: 'Select a value',
@@ -14,7 +14,7 @@ const options = [
     },
     {
         text: 'Option B',
-        value: 2,
+        value: '2',
     },
     {
         text: 'Option C',
@@ -36,7 +36,7 @@ export default {
                 options: [true, false],
             },
         },
-        selected: {
+        value: {
             control: {
                 type: 'text',
             },
@@ -48,12 +48,12 @@ const Template = (args, { argTypes }) => ({
     props: Object.keys(argTypes),
     components: { UiSelect },
     template:
-        '<ui-select @change="onChange" :options="options" :selected="selected" :isValid="isValid" :disabled="disabled">Select</ui-select>',
+        '<ui-select @change="onChange" :options="options" :value="value" :isValid="isValid" :disabled="disabled">Select</ui-select>',
 });
 
 export const Select = Template.bind({});
 Select.args = {
-    selected,
+    value,
     options,
     onChange() {},
     isValid: true,
