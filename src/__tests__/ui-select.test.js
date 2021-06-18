@@ -52,8 +52,8 @@ describe('UiSelect', () => {
         expect(select.classes()).toContain('bg-light-3');
     });
 
-    it('Should select option when option is clicked', async () => {
-        await options.at(2).setSelected();
+    it('Should select option when option is clicked', () => {
+        options.at(2).setSelected();
         expect(wrapper.find('option:checked').element.value).toBe('floorarea');
     });
 
@@ -69,5 +69,17 @@ describe('UiSelect', () => {
 
     it('Should set text when text prop is set', () => {
         expect(options.at(1).text()).toBe('Asking price');
+    });
+
+    it('Should select option with prop value', async () => {
+        await wrapper.setProps({ value: optionsMock[2].value });
+        expect(wrapper.find('option:checked').element.value).toBe(
+            optionsMock[2].value
+        );
+    });
+
+    it('Should emit change event with value', () => {
+        options.at(2).setSelected();
+        expect(wrapper.emitted().change[0]).toEqual([optionsMock[2].value]);
     });
 });

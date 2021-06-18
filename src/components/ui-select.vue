@@ -9,13 +9,13 @@
                 'bg-light-3': disabled,
             }"
             v-bind="$attrs"
-            v-on="$listeners"
+            v-on="selectListeners"
         >
             <option
                 v-for="option in options"
                 :key="option.value"
                 :value="option.value"
-                :selected="option.value === selected"
+                :selected="option.value === value"
                 :disabled="option.disabled"
                 :hidden="option.hidden"
             >
@@ -43,9 +43,9 @@ export default {
             type: Array,
             required: true,
         },
-        selected: {
-            type: [Number, String],
-            required: true,
+        value: {
+            type: String,
+            default: '',
         },
         isValid: {
             type: Boolean,
@@ -54,6 +54,16 @@ export default {
         disabled: {
             type: Boolean,
             default: false,
+        },
+    },
+    computed: {
+        selectListeners() {
+            var vm = this;
+            return Object.assign({}, this.$listeners, {
+                change(event) {
+                    vm.$emit('change', event.target.value);
+                },
+            });
         },
     },
 };
