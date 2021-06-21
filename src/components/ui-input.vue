@@ -9,13 +9,13 @@
                 'border-light-1 focus:border-dark-3': isValid,
                 'border-red-1 focus:border-red-1': !isValid,
                 'pl-12': hasPrefix,
-                'pr-12': hasSufix,
+                'pr-12': hasSuffix,
             }"
             v-bind="$attrs"
             v-on="inputListeners"
         />
-        <template v-if="hasSufix">
-            <slot name="sufix"></slot>
+        <template v-if="hasSuffix">
+            <slot name="suffix"></slot>
         </template>
     </div>
 </template>
@@ -46,8 +46,8 @@ export default {
         hasPrefix() {
             return Boolean(this.$slots['prefix']);
         },
-        hasSufix() {
-            return Boolean(this.$slots['sufix']);
+        hasSuffix() {
+            return Boolean(this.$slots['suffix']);
         },
     },
 };

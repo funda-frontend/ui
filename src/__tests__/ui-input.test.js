@@ -2,7 +2,7 @@ import { mount } from '@vue/test-utils';
 import UiInput from '@/components/ui-input.vue';
 
 const SLOT_PREFIX = '€';
-const SLOT_SUFIX = 'icon';
+const SLOT_SUFFIX = 'icon';
 
 describe('UiInput', () => {
     let wrapper, input;
@@ -10,7 +10,7 @@ describe('UiInput', () => {
         wrapper = mount(UiInput, {
             slots: {
                 prefix: SLOT_PREFIX,
-                sufix: SLOT_SUFIX,
+                suffix: SLOT_SUFFIX,
             },
         });
         input = wrapper.find('input');
@@ -35,7 +35,7 @@ describe('UiInput', () => {
         expect(wrapper.text()).toContain(SLOT_PREFIX);
         expect(input.classes()).toContain('pl-12');
 
-        expect(wrapper.text()).toContain(SLOT_SUFIX);
+        expect(wrapper.text()).toContain(SLOT_SUFFIX);
         expect(input.classes()).toContain('pr-12');
     });
 
