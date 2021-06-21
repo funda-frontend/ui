@@ -1,3 +1,10 @@
+# [7.1.0](https://github.com/funda-frontend/ui/compare/v7.0.0...v7.1.0) (2021-06-21)
+
+
+### Features
+
+* **ui-input:** change typo in name ([ec2aebb](https://github.com/funda-frontend/ui/commit/ec2aebb41b52fa4a60e3ae524c287dd4690d1f1b))
+
 # [7.0.0](https://github.com/funda-frontend/ui/compare/v6.0.2...v7.0.0) (2021-06-21)
 
 
