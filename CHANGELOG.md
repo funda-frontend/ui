@@ -1,3 +1,16 @@
+# [7.0.0](https://github.com/funda-frontend/ui/compare/v6.0.2...v7.0.0) (2021-06-21)
+
+
+### Bug Fixes
+
+* **input:** add v-model support ([611ec90](https://github.com/funda-frontend/ui/commit/611ec90b040e5ed58b15c7e420e2eb8118104a79))
+* **select:** add v-model support ([34d0903](https://github.com/funda-frontend/ui/commit/34d0903e0463a6f99d8eef44c373f80a83934793))
+
+
+### BREAKING CHANGES
+
+* **select:** selected value use prop value instead of selected
+
 ## [6.0.2](https://github.com/funda-frontend/ui/compare/v6.0.1...v6.0.2) (2021-06-17)
 
 
