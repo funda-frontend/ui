@@ -4,29 +4,22 @@
         :class="[borderColorClass]"
     >
         <div class="mr-3" :aria-label="type">
-            <ui-icon
+            <icon-info
                 v-if="type === 'information'"
-                icon="info"
                 class="text-blue-1"
-            ></ui-icon>
+            ></icon-info>
 
-            <ui-icon
-                v-if="type === 'error'"
-                icon="error"
-                class="text-red-1"
-            ></ui-icon>
+            <icon-error v-if="type === 'error'" class="text-red-1"></icon-error>
 
-            <ui-icon
+            <icon-success
                 v-if="type === 'success'"
-                icon="success"
                 class="text-green-1"
-            ></ui-icon>
+            ></icon-success>
 
-            <ui-icon
+            <icon-warning
                 v-if="type === 'warning'"
-                icon="warning"
                 class="text-yellow-1"
-            ></ui-icon>
+            ></icon-warning>
         </div>
 
         <div class="m-0 flex-auto overflow-hidden">
@@ -39,7 +32,7 @@
             @click="close"
         >
             <span class="w-6 h-6" aria-hidden="true">
-                <ui-icon icon="close"></ui-icon>
+                <icon-close />
             </span>
         </ui-button>
     </div>
@@ -47,12 +40,22 @@
 
 <script>
 import UiButton from './ui-button.vue';
-import UiIcon from './ui-icon.vue';
+import {
+    Error as IconError,
+    Warning as IconWarning,
+    Success as IconSuccess,
+    Info as IconInfo,
+    Close as IconClose,
+} from '@funda/icons/lib/vue';
 
 export default {
     components: {
         UiButton,
-        UiIcon,
+        IconError,
+        IconWarning,
+        IconSuccess,
+        IconInfo,
+        IconClose,
     },
     props: {
         type: {

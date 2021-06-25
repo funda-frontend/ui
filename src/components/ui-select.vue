@@ -23,20 +23,19 @@
             </option>
         </select>
         <div class="absolute p-2 inline-flex right-0 top-0 pointer-events-none">
-            <ui-icon
-                icon="arrowDown"
+            <icon-arrow-down
                 class="text-blue-2"
                 :class="{ 'text-dark-3': disabled }"
-            ></ui-icon>
+            ></icon-arrow-down>
         </div>
     </div>
 </template>
 
 <script>
-import UiIcon from './ui-icon.vue';
+import { ArrowDown as IconArrowDown } from '@funda/icons/lib/vue';
 
 export default {
-    components: { UiIcon },
+    components: { IconArrowDown },
     inheritAttrs: false,
     props: {
         options: {

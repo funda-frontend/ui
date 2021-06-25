@@ -27,7 +27,7 @@
                         class="focus:outline-none absolute w-11 h-11 top-1.5 right-1.5 p-2"
                         @click="close"
                     >
-                        <ui-icon icon="close" class="text-blue-2" />
+                        <icon-close class="text-blue-2" />
                     </button>
                 </header>
                 <section
@@ -52,10 +52,11 @@
 </template>
 
 <script>
-import UiIcon from './ui-icon.vue';
+import { Close as IconClose } from '@funda/icons/lib/vue';
+
 export default {
     name: 'Modal',
-    components: { UiIcon },
+    components: { IconClose },
     props: {
         showCloseIcon: {
             type: Boolean,
