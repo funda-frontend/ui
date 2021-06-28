@@ -11,10 +11,10 @@
             <div class="flex justify-between items-center">
                 <slot name="title"></slot>
 
-                <ui-icon
+                <component
+                    :is="isExpanded ? 'IconArrowUp' : 'IconArrowDown'"
                     v-if="!disabled"
                     class="text-blue-1"
-                    :icon="isExpanded ? 'arrowUp' : 'arrowDown'"
                 />
             </div>
         </summary>
@@ -26,10 +26,13 @@
 </template>
 
 <script>
-import UiIcon from './ui-icon.vue';
+import {
+    ArrowDown as IconArrowDown,
+    ArrowUp as IconArrowUp,
+} from '@funda/icons/lib/vue';
 
 export default {
-    components: { UiIcon },
+    components: { IconArrowDown, IconArrowUp },
     props: {
         open: { type: Boolean, default: false },
         disabled: { type: Boolean, default: false },

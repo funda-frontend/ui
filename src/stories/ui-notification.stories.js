@@ -1,5 +1,5 @@
 import UiNotification from '@/components/ui-notification.vue';
-import UiIcon from '@/components/ui-icon.vue';
+import { Close as IconClose } from '@funda/icons/lib/vue';
 
 export default {
     title: 'Visual/Notification',
@@ -21,7 +21,7 @@ export default {
 
 const Template = (args, { argTypes }) => ({
     props: Object.keys(argTypes),
-    components: { UiNotification, UiIcon },
+    components: { UiNotification, IconClose },
     template: `<ui-notification :type="type" :rounded="rounded">
             <template v-slot:notificationBody>
                 <p class="m-0 flex-auto">    
@@ -34,7 +34,7 @@ const Template = (args, { argTypes }) => ({
                     aria-label="Close"
                 >
                     <span aria-hidden="true">
-                        <ui-icon icon="close"></ui-icon>
+                        <icon-close />
                     </span>
                 </button>
             </template>
