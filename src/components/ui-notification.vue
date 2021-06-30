@@ -1,29 +1,13 @@
 <template>
     <div :class="cssClasses" class="items-center flex p-3">
         <span class="mr-3" :aria-label="type">
-            <ui-icon
-                v-if="type === 'information'"
-                icon="info"
-                class="text-dark-1"
-            ></ui-icon>
+            <icon-info v-if="type === 'information'" class="text-dark-1" />
 
-            <ui-icon
-                v-if="type === 'error'"
-                icon="error"
-                class="text-red-1"
-            ></ui-icon>
+            <icon-error v-if="type === 'error'" class="text-red-1" />
 
-            <ui-icon
-                v-if="type === 'success'"
-                icon="success"
-                class="text-green-1"
-            ></ui-icon>
+            <icon-success v-if="type === 'success'" class="text-green-1" />
 
-            <ui-icon
-                v-if="type === 'warning'"
-                icon="warning"
-                class="text-yellow-1"
-            ></ui-icon>
+            <icon-warning v-if="type === 'warning'" class="text-yellow-1" />
         </span>
 
         <slot name="notificationBody" />
@@ -31,10 +15,15 @@
 </template>
 
 <script>
-import UiIcon from './ui-icon.vue';
+import {
+    Error as IconError,
+    Warning as IconWarning,
+    Success as IconSuccess,
+    Info as IconInfo,
+} from '@funda/icons/lib/vue';
 
 export default {
-    components: { UiIcon },
+    components: { IconError, IconWarning, IconSuccess, IconInfo },
     props: {
         type: {
             type: String,
