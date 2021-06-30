@@ -1,3 +1,17 @@
+# [8.0.0](https://github.com/funda-frontend/ui/compare/v7.1.0...v8.0.0) (2021-06-30)
+
+
+### Bug Fixes
+
+* **icon:** use self closing tag ([d453d1d](https://github.com/funda-frontend/ui/commit/d453d1de7cd6ddbbf8b74391b029db3e95acdb89))
+* **icons:** import icon directly from funda/icon package ([5e97eef](https://github.com/funda-frontend/ui/commit/5e97eef30f3b141aacd4a8a3c42d7adb76065588))
+* **icons:** remove ui-icon component ([55a8d37](https://github.com/funda-frontend/ui/commit/55a8d375e18b40a53c75e705e70d15354a13a9cc))
+
+
+### BREAKING CHANGES
+
+* **icons:** - ui-icon no longer exist
+
 # [7.1.0](https://github.com/funda-frontend/ui/compare/v7.0.0...v7.1.0) (2021-06-21)
 
 
