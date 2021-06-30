@@ -26,7 +26,7 @@
             <icon-arrow-down
                 class="text-blue-2"
                 :class="{ 'text-dark-3': disabled }"
-            ></icon-arrow-down>
+            />
         </div>
     </div>
 </template>

@@ -4,22 +4,13 @@
         :class="[borderColorClass]"
     >
         <div class="mr-3" :aria-label="type">
-            <icon-info
-                v-if="type === 'information'"
-                class="text-blue-1"
-            ></icon-info>
+            <icon-info v-if="type === 'information'" class="text-blue-1" />
 
-            <icon-error v-if="type === 'error'" class="text-red-1"></icon-error>
+            <icon-error v-if="type === 'error'" class="text-red-1" />
 
-            <icon-success
-                v-if="type === 'success'"
-                class="text-green-1"
-            ></icon-success>
+            <icon-success v-if="type === 'success'" class="text-green-1" />
 
-            <icon-warning
-                v-if="type === 'warning'"
-                class="text-yellow-1"
-            ></icon-warning>
+            <icon-warning v-if="type === 'warning'" class="text-yellow-1" />
         </div>
 
         <div class="m-0 flex-auto overflow-hidden">
