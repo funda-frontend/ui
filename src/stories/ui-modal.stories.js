@@ -14,6 +14,13 @@ export default {
                 options: [true, false],
             },
         },
+        closeButtonText: {
+            defaultValue: 'Close',
+            description: 'Displays the text instead of the default X icon',
+            control: {
+                type: 'text',
+            },
+        },
         customModalContainerClasses: {
             defaultValue:
                 'fixed inset-0 flex items-center justify-center z-50 transition duration-500 ease-in-out md:p-9',
@@ -84,6 +91,7 @@ const Template = (args, { argTypes }) => ({
             :customModalContainerClasses="customModalContainerClasses"
             :extraModalClasses="extraModalClasses"
             :showCloseIcon="showCloseIcon"
+            :closeButtonText="closeButtonText"
             :wideMode="wideMode"
             :noScroll="noScroll">
             <template v-slot:header>Modal header</template>

@@ -24,10 +24,17 @@
                     </h2>
                     <button
                         v-if="showCloseIcon"
-                        class="focus:outline-none absolute w-11 h-11 top-1.5 right-1.5 p-2"
+                        :class="[
+                            'focus:outline-none absolute w-11 h-11 top-1.5 right-1.5 p-2 text-blue-2 hover:text-blue-1',
+                            closeButtonTextClass,
+                        ]"
                         @click="close"
                     >
-                        <icon-close class="text-blue-2" />
+                        <icon-close
+                            v-if="!closeButtonText"
+                            :title="closeButtonTitle"
+                        />
+                        {{ closeButtonText }}
                     </button>
                 </header>
                 <section
@@ -61,6 +68,14 @@ export default {
         showCloseIcon: {
             type: Boolean,
         },
+        closeButtonText: {
+            type: String,
+            default: '',
+        },
+        closeButtonTitle: {
+            type: String,
+            default: '',
+        },
         customModalContainerClasses: {
             type: String,
             default:
@@ -82,6 +97,11 @@ export default {
         extraModalClasses: {
             type: String,
             default: '',
+        },
+    },
+    computed: {
+        closeButtonTextClass() {
+            return this.$props.closeButtonText ? 'w-auto' : '';
         },
     },
     beforeMount() {

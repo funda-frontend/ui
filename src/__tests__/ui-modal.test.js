@@ -39,6 +39,13 @@ describe('UiModal', () => {
         it('prop showCloseIcon', () => {
             expect(wrapper.find(BUTTON_SELECTOR).exists()).toBe(false);
         });
+
+        it('show text if close button text is passed as prop', async () => {
+            wrapper.setProps({ closeButtonText: 'close' });
+            wrapper.setProps({ showCloseIcon: true });
+            await wrapper.vm.$nextTick();
+            expect(wrapper.find(BUTTON_SELECTOR).text()).toBe('close');
+        });
     });
 
     describe('modal is fullscreen when wideMode prop equals true', () => {
