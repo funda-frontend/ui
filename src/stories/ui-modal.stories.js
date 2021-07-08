@@ -21,6 +21,13 @@ export default {
                 type: 'text',
             },
         },
+        closeButtonTitle: {
+            defaultValue: 'Close title',
+            description: 'Displays the title of the icon',
+            control: {
+                type: 'text',
+            },
+        },
         customModalContainerClasses: {
             defaultValue:
                 'fixed inset-0 flex items-center justify-center z-50 transition duration-500 ease-in-out md:p-9',
@@ -92,6 +99,7 @@ const Template = (args, { argTypes }) => ({
             :extraModalClasses="extraModalClasses"
             :showCloseIcon="showCloseIcon"
             :closeButtonText="closeButtonText"
+            :closeButtonTitle="closeButtonTitle"
             :wideMode="wideMode"
             :noScroll="noScroll">
             <template v-slot:header>Modal header</template>
@@ -130,6 +138,8 @@ const TemplateModalWithContent = (args, { argTypes }) => ({
             :extraModalClasses="extraModalClasses"
             :showCloseIcon="showCloseIcon"
             :wideMode="wideMode"
+            :closeButtonText="closeButtonText"
+            :closeButtonTitle="closeButtonTitle"
             :noScroll="noScroll">
             <template v-slot:header>Modal header</template>
             <template v-slot:body>

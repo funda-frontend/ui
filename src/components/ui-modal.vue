@@ -101,7 +101,7 @@ export default {
     },
     computed: {
         closeButtonTextClass() {
-            return this.$props.closeButtonText ? 'w-auto' : '';
+            return this.$props.closeButtonText ? 'w-auto pr-3' : '';
         },
     },
     beforeMount() {
