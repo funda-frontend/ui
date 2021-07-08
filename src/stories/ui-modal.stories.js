@@ -14,20 +14,6 @@ export default {
                 options: [true, false],
             },
         },
-        closeButtonText: {
-            defaultValue: 'Close',
-            description: 'Displays the text instead of the default X icon',
-            control: {
-                type: 'text',
-            },
-        },
-        closeButtonTitle: {
-            defaultValue: 'Close title',
-            description: 'Displays the title of the icon',
-            control: {
-                type: 'text',
-            },
-        },
         customModalContainerClasses: {
             defaultValue:
                 'fixed inset-0 flex items-center justify-center z-50 transition duration-500 ease-in-out md:p-9',
@@ -98,14 +84,20 @@ const Template = (args, { argTypes }) => ({
             :customModalContainerClasses="customModalContainerClasses"
             :extraModalClasses="extraModalClasses"
             :showCloseIcon="showCloseIcon"
-            :closeButtonText="closeButtonText"
-            :closeButtonTitle="closeButtonTitle"
             :wideMode="wideMode"
             :noScroll="noScroll">
             <template v-slot:header>Modal header</template>
+            <template v-slot:closeButton>
+                <button 
+                    @click="closeModal" 
+                    :class="['focus:outline-none focus:text-blue-1 absolute w-11 h-11 top-1.5 right-1.5 p-2 w-auto pr-3 text-blue-2 hover:text-blue-1 ']">
+                        Close
+                </button>
+            </template>
             <template v-slot:body>
                 <div class="mb-10 mx-12">Modal body</div>
             </template>
+            
         </ui-modal>
     </div>`,
 });
@@ -138,10 +130,15 @@ const TemplateModalWithContent = (args, { argTypes }) => ({
             :extraModalClasses="extraModalClasses"
             :showCloseIcon="showCloseIcon"
             :wideMode="wideMode"
-            :closeButtonText="closeButtonText"
-            :closeButtonTitle="closeButtonTitle"
             :noScroll="noScroll">
             <template v-slot:header>Modal header</template>
+            <template v-slot:closeButton>
+                <button 
+                    @click="closeModal" 
+                    :class="['focus:outline-none focus:text-blue-1 absolute w-11 h-11 top-1.5 right-1.5 p-2 w-auto pr-3 text-blue-2 hover:text-blue-1']">
+                        Close
+            </button>
+            </template>
             <template v-slot:body>
                 <ui-notification type="success" :rounded="false">
                     <template v-slot:notificationBody>

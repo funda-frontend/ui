@@ -14,6 +14,7 @@ const SLOT_TEMPLATE_HEADER = 'Modal header';
 const SLOT_TEMPLATE_BODY =
     'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua';
 const SLOT_TEMPLATE_FOOTER = 'footer';
+const SLOT_TEMPLATE_CLOSE_BUTTON = '<div data-testid="closeButton"></div>';
 
 describe('UiModal', () => {
     let vm;
@@ -30,6 +31,7 @@ describe('UiModal', () => {
                 header: SLOT_TEMPLATE_HEADER,
                 body: SLOT_TEMPLATE_BODY,
                 footer: SLOT_TEMPLATE_FOOTER,
+                closeButton: SLOT_TEMPLATE_CLOSE_BUTTON,
             },
         });
         vm = wrapper.vm;
@@ -40,11 +42,16 @@ describe('UiModal', () => {
             expect(wrapper.find(BUTTON_SELECTOR).exists()).toBe(false);
         });
 
-        it('show text if close button text is passed as prop', async () => {
-            wrapper.setProps({ closeButtonText: 'close' });
-            wrapper.setProps({ showCloseIcon: true });
+        it('show close button slot when slot is passed', () => {
+            const closeButton = '[data-testid="closeButton"]';
+            expect(wrapper.find(closeButton).exists()).toBe(true);
+        });
+        it('do not show close icon if close button slot is passed', async () => {
+            wrapper.setProps({
+                showCloseIcon: true,
+            });
             await wrapper.vm.$nextTick();
-            expect(wrapper.find(BUTTON_SELECTOR).text()).toBe('close');
+            expect(wrapper.find(BUTTON_SELECTOR).exists()).toBe(false);
         });
     });
 

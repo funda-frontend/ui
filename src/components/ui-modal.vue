@@ -22,19 +22,18 @@
                     <h2 v-if="$slots.header" class="m-0 font-semibold text-2xl">
                         <slot name="header"></slot>
                     </h2>
+                    <slot
+                        v-if="$slots.closeButton"
+                        name="closeButton"
+                        @click="close"
+                    ></slot>
+
                     <button
-                        v-if="showCloseIcon"
-                        :class="[
-                            'focus:outline-none focus:text-blue-1 absolute w-11 h-11 top-1.5 right-1.5 p-2 text-blue-2 hover:text-blue-1',
-                            closeButtonTextClass,
-                        ]"
+                        v-if="showCloseIcon && !$slots.closeButton"
+                        class="focus:outline-none absolute w-11 h-11 top-1.5 right-1.5 p-2"
                         @click="close"
                     >
-                        <icon-close
-                            v-if="!closeButtonText"
-                            :title="closeButtonTitle"
-                        />
-                        {{ closeButtonText }}
+                        <icon-close class="text-blue-2" />
                     </button>
                 </header>
                 <section
@@ -68,14 +67,6 @@ export default {
         showCloseIcon: {
             type: Boolean,
         },
-        closeButtonText: {
-            type: String,
-            default: '',
-        },
-        closeButtonTitle: {
-            type: String,
-            default: '',
-        },
         customModalContainerClasses: {
             type: String,
             default:
@@ -99,11 +90,7 @@ export default {
             default: '',
         },
     },
-    computed: {
-        closeButtonTextClass() {
-            return this.$props.closeButtonText ? 'w-auto pr-3' : '';
-        },
-    },
+
     beforeMount() {
         const onEscape = (e) => {
             if (e.keyCode === 27) {
