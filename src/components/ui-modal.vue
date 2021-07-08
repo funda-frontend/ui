@@ -25,7 +25,7 @@
                     <button
                         v-if="showCloseIcon"
                         :class="[
-                            'focus:outline-none absolute w-11 h-11 top-1.5 right-1.5 p-2 text-blue-2 hover:text-blue-1',
+                            'focus:outline-none focus:text-blue-1 absolute w-11 h-11 top-1.5 right-1.5 p-2 text-blue-2 hover:text-blue-1',
                             closeButtonTextClass,
                         ]"
                         @click="close"
