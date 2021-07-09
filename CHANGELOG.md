@@ -1,3 +1,15 @@
+# [8.1.0](https://github.com/funda-frontend/ui/compare/v8.0.0...v8.1.0) (2021-07-09)
+
+
+### Features
+
+* **design_change:** add modal with close example on stories ([dcc02a0](https://github.com/funda-frontend/ui/commit/dcc02a06cfdf9b443331fb42e27dc59b948853fe))
+* **modal_close_button:** add focus text color ([e55efae](https://github.com/funda-frontend/ui/commit/e55efaeaa3bf11327ce38fe3a56bd50853ca8a55))
+* **modal_close_button:** add space and icon title on stories ([6e2e1d1](https://github.com/funda-frontend/ui/commit/6e2e1d102ecfb8947915241f0e7e4c63707d9d5b))
+* **modal_close_button:** add text option for close modal button ([f96428e](https://github.com/funda-frontend/ui/commit/f96428ed62a5655416c632783ee5d495a257ac8e))
+* **modal_close_button:** make x as default on stories for modal ([711d974](https://github.com/funda-frontend/ui/commit/711d974e1eae5f6ed32600bf6a02cafe09908ce4))
+* **modal_close_button:** revert previous and add slot close button ([c4f0206](https://github.com/funda-frontend/ui/commit/c4f0206f9febf6c351bd324a9ae37d4c0c38b474))
+
 # [8.0.0](https://github.com/funda-frontend/ui/compare/v7.1.0...v8.0.0) (2021-06-30)
 
 
