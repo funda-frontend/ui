@@ -144,3 +144,49 @@ const TemplateModalWithContent = (args, { argTypes }) => ({
 });
 
 export const ModalExtended = TemplateModalWithContent.bind({});
+
+const TemplateModalWithCustomCloseButton = (args, { argTypes }) => ({
+    props: Object.keys(argTypes),
+    components: { UiButton, UiModal, UiNotification },
+    data() {
+        return {
+            isModalVisible: false,
+        };
+    },
+    methods: {
+        showModal() {
+            this.isModalVisible = true;
+        },
+        closeModal() {
+            this.isModalVisible = false;
+        },
+    },
+
+    template: `
+    <div>
+        <ui-button tone="primary" @click="showModal">Open modal</ui-button>
+        <ui-modal
+            v-show="isModalVisible"
+            @close="closeModal"
+            :customModalContainerClasses="customModalContainerClasses"
+            :extraModalClasses="extraModalClasses"
+            :showCloseIcon="showCloseIcon"
+            :wideMode="wideMode"
+            :noScroll="noScroll">
+            <template v-slot:header>Modal header</template>
+            <template v-slot:closeButton>
+                <button  @click="closeModal" class="focus:outline-none absolute w-11 h-11 top-1.5 right-1.5 p-2 text-blue-2 hover:text-blue-1 w-auto mr-2">
+                    Close
+                </button>
+            </template>
+            <template v-slot:body>
+                <div class="mb-10 mx-12">Modal body</div>
+            </template>
+            
+        </ui-modal>
+    </div>`,
+});
+
+export const ModalWithCustomCloseButton = TemplateModalWithCustomCloseButton.bind(
+    {}
+);
