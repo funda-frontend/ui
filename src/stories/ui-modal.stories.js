@@ -87,13 +87,6 @@ const Template = (args, { argTypes }) => ({
             :wideMode="wideMode"
             :noScroll="noScroll">
             <template v-slot:header>Modal header</template>
-            <template v-slot:closeButton>
-                <button 
-                    @click="closeModal" 
-                    :class="['focus:outline-none focus:text-blue-1 absolute w-11 h-11 top-1.5 right-1.5 p-2 w-auto pr-3 text-blue-2 hover:text-blue-1 ']">
-                        Close
-                </button>
-            </template>
             <template v-slot:body>
                 <div class="mb-10 mx-12">Modal body</div>
             </template>
@@ -132,13 +125,6 @@ const TemplateModalWithContent = (args, { argTypes }) => ({
             :wideMode="wideMode"
             :noScroll="noScroll">
             <template v-slot:header>Modal header</template>
-            <template v-slot:closeButton>
-                <button 
-                    @click="closeModal" 
-                    :class="['focus:outline-none focus:text-blue-1 absolute w-11 h-11 top-1.5 right-1.5 p-2 w-auto pr-3 text-blue-2 hover:text-blue-1']">
-                        Close
-            </button>
-            </template>
             <template v-slot:body>
                 <ui-notification type="success" :rounded="false">
                     <template v-slot:notificationBody>
