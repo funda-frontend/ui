@@ -22,8 +22,14 @@
                     <h2 v-if="$slots.header" class="m-0 font-semibold text-2xl">
                         <slot name="header"></slot>
                     </h2>
+                    <slot
+                        v-if="$slots.closeButton"
+                        name="closeButton"
+                        @click="close"
+                    ></slot>
+
                     <button
-                        v-if="showCloseIcon"
+                        v-if="showCloseIcon && !$slots.closeButton"
                         class="focus:outline-none absolute w-11 h-11 top-1.5 right-1.5 p-2"
                         @click="close"
                     >
@@ -84,6 +90,7 @@ export default {
             default: '',
         },
     },
+
     beforeMount() {
         const onEscape = (e) => {
             if (e.keyCode === 27) {
