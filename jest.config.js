@@ -1,4 +1,5 @@
 module.exports = {
+    testEnvironment: 'jsdom',
     moduleNameMapper: {
         '^vue$': 'vue/dist/vue.min.js',
         '@/(.*)$': '<rootDir>/src/$1',
