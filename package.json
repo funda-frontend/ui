@@ -22,11 +22,14 @@
         "prepublishOnly": "npm run generateExports",
         "generateExports": "node ./src/generateExports.js",
         "test": "jest",
-        "test-watch": "jest --watch"
+        "test-watch": "jest --watch",
+        "postinstall": "husky install"
     },
     "devDependencies": {
         "@babel/core": "^7.12.9",
         "@babel/preset-env": "^7.14.7",
+        "@commitlint/cli": "^12.1.4",
+        "@commitlint/config-conventional": "^12.1.4",
         "@funda/eslint-config": "^1.0.0",
         "@semantic-release/changelog": "^5.0.1",
         "@semantic-release/commit-analyzer": "^8.0.1",
@@ -45,7 +48,7 @@
         "eslint-config-prettier": "^8.0.0",
         "eslint-plugin-prettier": "^3.1.4",
         "eslint-plugin-vue": "^7.13.0",
-        "husky": "^6.0.0",
+        "husky": "^7.0.1",
         "jest": "^27.0.6",
         "jest-serializer-vue": "^2.0.2",
         "jest-watch-typeahead": "^0.6.1",
