@@ -11,6 +11,7 @@
             />
             <ui-label
                 class="cursor-pointer flex py-1 hover:text-blue-1"
+                :class="{ 'items-center': centerRadioVertically }"
                 :for="id"
             >
                 <div
@@ -39,6 +40,10 @@ export default {
             default: 'funda_radio_input',
         },
         alignHorizontal: {
+            type: Boolean,
+            default: false,
+        },
+        centerRadioVertically: {
             type: Boolean,
             default: false,
         },
