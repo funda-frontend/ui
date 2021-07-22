@@ -39,15 +39,22 @@ export default {
 
 https://funda-frontend.github.io/ui/latest/
 
+# Contributing
 
 ## How to push your changes
 
 This repo uses [commitlint](https://github.com/conventional-changelog/commitlint), which means that it follows specific commit message rules.
-If the messages are not on the expected format it wont be possible to commit/push your changes.
+If the messages are not in the expected format, it won't be possible to commit/push your changes.
 
-Example of commit message: 
+Examples of commit messages:
 
-    'feat(branch_name): commit message' or 'fix(branch_name): commit message'
+* `feat(branch_name): commit message`
+* `fix(branch_name): commit message`
 
 PS: It is recommended to use the terminal for commit, if you use any GUI it might be necessary to update you local variable PATH on your GUI.
-Reference: [Husky issues](https://typicode.github.io/husky/#/?id=command-not-found) 
+Reference: [Husky issues](https://typicode.github.io/husky/#/?id=command-not-found)
+
+## Releasing a new version
+
+This project has GitHub integrations that will automatically increment the package version and generate a changelog entry based on the new commits.
+Simply following the commitlint standard and merging your changes into master will release the project.

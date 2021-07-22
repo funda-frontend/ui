@@ -29,7 +29,13 @@ const TemplateSlotLabel = (args, { argTypes }) => ({
     props: Object.keys(argTypes),
     components: { UiRadio },
     template: `
-        <ui-radio change="onChange" :disabled="disabled" id="input-slot-extras-id" :checked="true">
+        <ui-radio
+            :centerRadioVertically="centerRadioVertically"
+            :checked="true"
+            :disabled="disabled"
+            change="onChange"
+            id="input-slot-extras-id"
+        >
             <div>
                 <h3 class="font-bold">Radio Title</h3>
                 <div class="text-dark-2">Description</div>
@@ -40,5 +46,6 @@ const TemplateSlotLabel = (args, { argTypes }) => ({
 export const InputSlotLabel = TemplateSlotLabel.bind({});
 InputSlotLabel.args = {
     disabled: false,
+    centerRadioVertically: false,
     onChange() {},
 };
